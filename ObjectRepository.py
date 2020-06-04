@@ -1,24 +1,46 @@
 # ObjectRepository.py
-from xml.dom import minidom
+import xml.etree.ElementTree as ET
 
+xmlData = """<data> 
+    <Modules>
+        <Module type="RadarLogic" name="item1"></Module>
+        <Module type="RadarManager" name="item2"></Module>
+    </Modules>
+</data>"""
 
 class ObjectRepository:
 
     def __init__(self):
-        commands = {}
+        objectTypes = {}
 
-    def LoadRestApiModules(self):
-        for file in os.listdir('.'):
+    def loadConfigurationFromFile(self, inFile):
+        tree = ET.parse('country_data.xml')
+        root = tree.getroot()  
+        self.parseConfiguration(root)
+
+    def loadConfiguration(self, instring):
+        root = ET.fromstring(xmlData)
+        self.parseConfiguration(root)
+
+    def parseConfiguration(self, root):
+        items = root.find('Modules')
+        for item in items:
+            print(item.attrib)
+            for key in item.attrib:
+                print (key, item.attrib[key])
+
+    def LoadModules(self, inPath = '.'):
+        for file in os.listdir(inPath):
             lowerfile = file.lower()
             # print(lowerfile)
-            if lowerfile.startswith('rest') and lowerfile.endswith('.py'):
+            if lowerfile.endswith('.py'):
                 module = __import__(file.strip('.py'))
                 if 'Initialize' in dir(module):
                     getattr(module, 'Initialize')()
                 #print ('initializing Rest API from ' + file)
                 InitializeRestAPI(module)
 
-    def InitializeRestAPI(self, inModule):
+    def InitializeModules(self, inModule):
         # find all functions that starts with REST in this module
         x = dir(inModule)
         for func in dir(inModule):
@@ -48,5 +70,11 @@ class ObjectRepository:
             return self.commands[inCommand][action]
         return None
 
-
 # LoadRestApiModules()
+
+
+if __name__ == "__main__":
+    OR = ObjectRepository()
+
+    OR.loadConfiguration(xmlData)
+
