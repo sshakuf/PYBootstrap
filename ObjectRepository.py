@@ -18,7 +18,7 @@ sys.path.insert(0, currentdir + '/Modules')
 
 xmlData = """<data> 
     <Modules>
-        <Module type="RadarLogic" id="TheOneAndOnly_RadarLogic"></Module>
+        <Module type="RadarLogic" id="TheOneAndOnly_RadarLogic" stamProp="myProp"></Module>
         <Module type="RadarManager" id="TheOneAndOnly_RadarManager"></Module>
     </Modules>
 </data>"""
@@ -45,8 +45,8 @@ class ObjectRepository:
             # print(item.attrib)
             instance = self.CreateInstance(item.attrib['type'])
             for key in item.attrib:
-                if key in instance.__dict__:
-                    setattr(instance, key, item.attrib[key])
+                if key != 'type':
+                    instance.__setattr__(key, item.attrib[key])
                 print(key, item.attrib[key])
 
     def LoadModules(self, inPath='.'):
@@ -61,23 +61,6 @@ class ObjectRepository:
                         if isinstance(obj, type):
                             print(f"Class found {func} in module {file}")
                             self.AddType(func, obj, False)
-
-    def InitializeModules(self, inModule):
-        # find all functions that starts with REST in this module
-        x = dir(inModule)
-        for func in dir(inModule):
-            if func.startswith('R_'):
-                command = func[2:]
-                defaultptr = getattr(inModule, func)
-                getptr = None
-                setptr = None
-                functions = dir(inModule)
-                if "Get_"+command in functions:
-                    getptr = getattr(inModule, "Get_"+func[2:])
-                if "Set_"+command in functions:
-                    setptr = getattr(inModule, "Set_"+func[2:])
-                self.AddRestEndPoint(command, defaultptr, getptr, setptr)
-                # print ('Endpoint: ' + command)
 
     def AddType(self, inTypeName, inType, isSingleton):
         # TODO check type not exist... if so rase error

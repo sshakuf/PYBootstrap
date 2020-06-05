@@ -1,6 +1,5 @@
-                                                                                                                                                                                                                                                                                                                                                                                                                             
+
 
 class RadarLogic:
     def __init__(self):
-        self.id=''
-        print("RadarLogic init...")                            
+        print("RadarLogic init...")
