@@ -1,4 +1,17 @@
 # ObjectRepository.py
+import sys
+import os
+import os,sys,inspect
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0,parentdir) 
+
+sys.path.insert(0, parentdir + '/tools')
+sys.path.insert(0, parentdir + '/logic')
+
+sys.path.insert(0, currentdir + '/Modules')
+
+
 import xml.etree.ElementTree as ET
 
 xmlData = """<data> 
@@ -11,7 +24,8 @@ xmlData = """<data>
 class ObjectRepository:
 
     def __init__(self):
-        objectTypes = {}
+        self.objectTypes = {}
+        self.instances = {}
 
     def loadConfigurationFromFile(self, inFile):
         tree = ET.parse('country_data.xml')
@@ -35,10 +49,12 @@ class ObjectRepository:
             # print(lowerfile)
             if lowerfile.endswith('.py'):
                 module = __import__(file.strip('.py'))
-                if 'Initialize' in dir(module):
-                    getattr(module, 'Initialize')()
-                #print ('initializing Rest API from ' + file)
-                InitializeRestAPI(module)
+                for func in dir(module):
+                    if not func.startswith("_"):
+                        obj = getattr(module, func)
+                        if isinstance(obj, type):
+                            print(f"Class found {func} in module {file}")
+                            self.AddType(func, obj, False)
 
     def InitializeModules(self, inModule):
         # find all functions that starts with REST in this module
@@ -57,17 +73,21 @@ class ObjectRepository:
                 self.AddRestEndPoint(command, defaultptr, getptr, setptr)
                 # print ('Endpoint: ' + command)
 
-    def AddRestEndPoint(self, inCommand, inHandler, inGet=None, inSet=None):
+    def AddType(self, inTypeName, inType, isSingleton):
+        #TODO check type not exist... if so rase error
+        self.objectTypes[inTypeName] = {'type': inType, 'isSingleton':isSingleton}
 
-        self.commands[inCommand] = {
-            'default': inHandler, 'get': inGet, 'set': inSet}
+    def CreateInstance(self, inTypeName):
+        if inTypeName in self.objectTypes:
+            newObj = self.objectTypes[inTypeName]['type']()
+            if inTypeName not in self.instances.keys():
+                self.instances[inTypeName] = []
+            self.instances[inTypeName].append(newObj)
 
-    def Gethandler(self, inCommand, action):
-        if inCommand in commands:
-            # if commands[inCommand][action] == None:
-            #     return commands[inCommand]['default']
 
-            return self.commands[inCommand][action]
+    def getInstances(self, inTypeName):
+        if inTypeName in self.instances.keys():
+            return self.instances[inTypeName]
         return None
 
 # LoadRestApiModules()
@@ -75,6 +95,6 @@ class ObjectRepository:
 
 if __name__ == "__main__":
     OR = ObjectRepository()
-
+    OR.LoadModules("./Modules")
     OR.loadConfiguration(xmlData)
 
