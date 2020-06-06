@@ -1,0 +1,6 @@
+<data> 
+    <Modules>
+        <Module type="RadarLogic" id="TheOneAndOnly_RadarLogic" stamProp="myProp" ></Module>
+        <Module type="RadarManager" id="TheOneAndOnly_RadarManager"></Module>
+    </Modules>
+</data>

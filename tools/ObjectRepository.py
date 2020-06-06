@@ -13,12 +13,12 @@ sys.path.insert(0, parentdir)
 sys.path.insert(0, parentdir + '/tools')
 sys.path.insert(0, parentdir + '/logic')
 
-sys.path.insert(0, currentdir + '/Modules')
+sys.path.insert(0, currentdir + '../Modules')
 
 
 xmlData = """<data> 
     <Modules>
-        <Module type="RadarLogic" id="TheOneAndOnly_RadarLogic" stamProp="myProp"></Module>
+        <Module type="RadarLogic" id="TheOneAndOnly_RadarLogic" stamProp="myProp" ></Module>
         <Module type="RadarManager" id="TheOneAndOnly_RadarManager"></Module>
     </Modules>
 </data>"""
@@ -31,7 +31,7 @@ class ObjectRepository:
         self.instances = {}
 
     def loadConfigurationFromFile(self, inFile):
-        tree = ET.parse('country_data.xml')
+        tree = ET.parse(inFile)
         root = tree.getroot()
         self.parseConfiguration(root)
 
