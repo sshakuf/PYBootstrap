@@ -1,3 +1,4 @@
 {
-    "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "python.pythonPath": "/Users/sshakuf/Transcend/Development/PYBootstrap/venv/bin/python"
 }

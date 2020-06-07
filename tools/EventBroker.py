@@ -1,6 +1,6 @@
-#EventBroker
+# EventBroker
 
-class Broker:
+class EventBroker:
 
     def __init__(self):
         self.events = {}
@@ -15,11 +15,10 @@ class Broker:
             self.events[name] = []
         self.events[name].append(handler)
 
-
-    def fireEvent(name, data = None):
+    def fireEvent(name, data=None):
         if self.events.has_key(name):
             for handler in self.events[name]:
                 handler(data)
 
-broker = Broker()
 
+# broker = EventBroker()

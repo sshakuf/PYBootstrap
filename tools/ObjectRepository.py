@@ -1,7 +1,7 @@
 # ObjectRepository.py
+from dotmap import DotMap
+
 import xml.etree.ElementTree as ET
-import sys
-import os
 import os
 import sys
 import inspect
@@ -13,7 +13,7 @@ sys.path.insert(0, parentdir)
 sys.path.insert(0, parentdir + '/tools')
 sys.path.insert(0, parentdir + '/logic')
 
-sys.path.insert(0, currentdir + '../Modules')
+sys.path.insert(0, currentdir + '/../Modules')
 
 
 xmlData = """<data> 
@@ -27,8 +27,9 @@ xmlData = """<data>
 class ObjectRepository:
 
     def __init__(self):
-        self.objectTypes = {}
-        self.instances = {}
+        self._objectTypes = {}
+        self._instances = {}
+        self.instances = DotMap(self._instances)
 
     def loadConfigurationFromFile(self, inFile):
         tree = ET.parse(inFile)
@@ -64,27 +65,39 @@ class ObjectRepository:
 
     def AddType(self, inTypeName, inType, isSingleton):
         # TODO check type not exist... if so rase error
-        self.objectTypes[inTypeName] = {
+        self._objectTypes[inTypeName] = {
             'type': inType, 'isSingleton': isSingleton}
 
     def CreateInstance(self, inTypeName):
-        if inTypeName in self.objectTypes:
-            newObj = self.objectTypes[inTypeName]['type']()
-            if inTypeName not in self.instances.keys():
-                self.instances[inTypeName] = []
-            self.instances[inTypeName].append(newObj)
+        if inTypeName in self._objectTypes:
+            newObj = self._objectTypes[inTypeName]['type']()
+            self.AddInstance(inTypeName, newObj)
             return newObj
 
+    def AddInstance(self, inTypeName, newObj):
+        if inTypeName not in self._instances.keys():
+            self._instances[inTypeName] = []
+        self._instances[inTypeName].append(newObj)
+        self.instances[inTypeName] = newObj
+
     def getInstances(self, inTypeName):
-        if inTypeName in self.instances.keys():
-            return self.instances[inTypeName]
+        if inTypeName in self._instances.keys():
+            return self._instances[inTypeName]
         return None
 
     def getFirstInstance(self, inTypeName):
-        if inTypeName in self.instances.keys():
-            return self.instances[inTypeName][0]
+        if inTypeName in self._instances.keys():
+            return self._instances[inTypeName][0]
         return None
 
+    def getInstancesByType(self, inType):
+        retVal = []
+        for typeName in self._instances.keys():
+            for obj in self._instances[typeName]:
+                if isinstance(obj, inType):
+                    retVal.append(obj)
+
+        return retVal
 
 # LoadRestApiModules()
 

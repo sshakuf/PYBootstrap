@@ -14,8 +14,7 @@ settings = ''
 
 def getDefaultSettings():
     prop = {}
-    prop['Connection_string'] = "udp:127.0.0.1:14551"  # SImulation or PI
-    prop['ConnectOnStartup'] = "True"  # SImulation or PI
+    prop['example'] = "udp:127.0.0.1:14551"
 
     return prop
 
@@ -23,7 +22,7 @@ def getDefaultSettings():
 def mergeWithDefaults():
     prop = getDefaultSettings()
     for e in prop.keys():
-        if not settings.has_key(e):
+        if e not in settings.keys():
             settings[e] = prop[e]
 
 
@@ -41,8 +40,6 @@ else:
     # load data
     with open(filename, 'r') as f:
         settings = json.load(f)
-        logger.info("Loaded settings from " + filename +
-                    " " + settings['SerialPort'])
         # Todo merge values that done exist
         mergeWithDefaults()
 
