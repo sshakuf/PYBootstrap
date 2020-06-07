@@ -1,5 +1,6 @@
 from EventBroker import EventBroker
 import DataStore
+from EngineComponent import EngineComponent
 import ObjectRepository
 
 import logging
@@ -17,17 +18,6 @@ def AddEnginComponent(inObj):
 def RemoveEnginComponent(inObj):
     if inObj in _engineComponentList:
         _engineComponentList.remove(inObj)
-
-
-class EngineComponenet:
-    def initialize(self):
-        pass
-
-    def start(self):
-        pass
-
-    def stop(self):
-        pass
 
 
 class Engine:
@@ -49,14 +39,29 @@ class Engine:
         # OR.loadConfiguration(xmlData)
         self.objectRepository.loadConfigurationFromFile(infile)
 
-    def initialize(self):
-        pass
+    def Initialize(self):
+        componenets = self.objectRepository.getInstancesByType(
+            EngineComponent)
+        for component in componenets:
+            component.Initialize()
 
-    def start(self):
-        pass
+    def Start(self):
+        componenets = self.objectRepository.getInstancesByType(
+            EngineComponent)
+        for component in componenets:
+            component.Start()
 
-    def stop(self):
-        pass
+    def Run(self):
+        componenets = self.objectRepository.getInstancesByType(
+            EngineComponent)
+        for component in componenets:
+            component.Run()
+
+    def Stop(self):
+        componenets = self.objectRepository.getInstancesByType(
+            EngineComponent)
+        for component in componenets:
+            component.Stop()
 
 
 _engine = Engine()
