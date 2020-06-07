@@ -1,0 +1,18 @@
+06-07 15:15 Engine       INFO     Loading Configuration /Users/sshakuf/Transcend/Development/PYBootstrap/configurations/conf1.xml
+06-07 15:17 Engine       INFO     Loading Configuration /Users/sshakuf/Transcend/Development/PYBootstrap/configurations/conf1.xml
+06-07 15:18 Engine       INFO     Loading Configuration /Users/sshakuf/Transcend/Development/PYBootstrap/configurations/conf1.xml
+06-07 15:18 Engine       INFO     Loading Configuration /Users/sshakuf/Transcend/Development/PYBootstrap/configurations/conf1.xml
+06-07 15:23 __main__     INFO     ________Start_________Main_________
+06-07 15:23 Engine       INFO     Loading Configuration /Users/sshakuf/Transcend/Development/PYBootstrap/configurations/conf1.xml
+06-07 15:47 __main__     INFO     ________Start_________Main_________
+06-07 15:47 Engine       INFO     Loading Configuration /Users/sshakuf/Transcend/Development/PYBootstrap/configurations/conf1.xml
+06-07 15:47 RadarLogic   DEBUG    RadarLogic init...
+06-07 15:47 RadarManager DEBUG    RadarManager init
+06-07 15:47 RadarLogic   DEBUG    RadarLogic, onEventTest
+06-07 15:48 __main__     INFO     ________Start_________Main_________
+06-07 15:48 Engine       INFO     Loading Configuration /Users/sshakuf/Transcend/Development/PYBootstrap/configurations/conf1.xml
+06-07 15:48 RadarLogic   DEBUG    RadarLogic init...
+06-07 15:48 RadarManager DEBUG    init
+06-07 15:48 RadarLogic   DEBUG    onEventTest
+06-07 15:48 RadarManager DEBUG    onEventTest2
+06-07 15:48 RadarLogic   DEBUG    onEventTest2

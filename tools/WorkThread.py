@@ -1,8 +1,9 @@
 import sys
-import thread
+import _thread
 import logging
 
 logger = logging.getLogger(__name__)
+
 
 def startWorking(worker):
     # print(tracker)
@@ -17,11 +18,10 @@ class WorkThread:
 
     def Start(self):
         if (self.isWorking == False):
-            thread.start_new_thread(startWorking, (self,))
+            _thread.start_new_thread(startWorking, (self,))
 
     def Stop(self):
         self.isWorking = False
-
 
     def workThreadLogic(self):
         self.beforeWork()
@@ -43,4 +43,3 @@ class WorkThread:
 
     def afterWork(self):
         pass
-
