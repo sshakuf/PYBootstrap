@@ -9,5 +9,8 @@ if __name__ == "__main__":
 
     print(engine.objectRepository.instances.RadarLogic)
     print(engine.objectRepository.instances.RadarManager)
+
+    engine.objectRepository.instances.eventBroker.fireEvent('Test')
+
     x = 5
     x = x+3

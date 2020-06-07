@@ -1,6 +1,6 @@
 from EventBroker import EventBroker
 import DataStore
-from ObjectRepository import ObjectRepository
+import ObjectRepository
 
 _engineComponentList = []
 
@@ -28,7 +28,7 @@ class EngineComponenet:
 
 class Engine:
     def __init__(self):
-        self.objectRepository = ObjectRepository()
+        self.objectRepository = ObjectRepository.GetObjectRepository()
         self.eventBroker = EventBroker()
 
         # add to ObjectFactory we can use in . notation

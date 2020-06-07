@@ -102,6 +102,13 @@ class ObjectRepository:
 # LoadRestApiModules()
 
 
+_objectRepository = ObjectRepository()
+
+
+def GetObjectRepository():
+    return _objectRepository
+
+
 if __name__ == "__main__":
     OR = ObjectRepository()
     OR.LoadModules("./Modules")
