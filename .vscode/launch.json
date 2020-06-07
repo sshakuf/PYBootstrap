@@ -5,6 +5,15 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "run.py",
+      "type": "python",
+      "request": "launch",
+      "stopOnEntry": false,
+      "pythonPath": "${config:python.interpreterPath}",
+      "program": "${workspaceRoot}/run.py",
+      "args": ["conf1.xml"]
+    },
+    {
       "name": "Python: Current File",
       "type": "python",
       "request": "launch",
