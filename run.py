@@ -13,8 +13,8 @@ if __name__ == "__main__":
     engine = Engine.GetEngine()
     engine.LoadConfiguration(imports.currentdir+"/configurations/conf1.xml")
 
-    print(engine.objectRepository.instances.RadarLogic)
-    print(engine.objectRepository.instances.RadarManager)
+    # print(engine.objectRepository.instances.RadarLogic)
+    # print(engine.objectRepository.instances.RadarManager)
 
     engine.Initialize()
     engine.Start()

@@ -67,3 +67,39 @@
 06-07 16:42 RadarLogic   DEBUG    onEventTest
 06-07 16:42 RadarManager DEBUG    onEventTest2
 06-07 16:42 RadarLogic   DEBUG    onEventTest2
+06-07 16:50 __main__     INFO     ________Start_________Main_________
+06-07 16:50 Engine       INFO     Loading Configuration /Users/sshakuf/Transcend/Development/PYBootstrap/configurations/conf1.xml
+06-07 16:50 RadarLogic   DEBUG    RadarLogic init...
+06-07 16:50 RadarManager DEBUG    init
+06-07 16:51 __main__     INFO     ________Start_________Main_________
+06-07 16:51 Engine       INFO     Loading Configuration /Users/sshakuf/Transcend/Development/PYBootstrap/configurations/conf1.xml
+06-07 16:51 RadarLogic   DEBUG    RadarLogic init...
+06-07 16:51 RadarManager DEBUG    init
+06-07 16:52 RadarLogic   DEBUG    Initialize
+06-07 16:52 RadarManager DEBUG    Initialize
+06-07 16:52 RadarLogic   DEBUG    Start
+06-07 16:52 RadarManager DEBUG    Start
+06-07 16:52 RadarLogic   DEBUG    Start
+06-07 16:52 RadarManager DEBUG    Start
+06-07 16:52 RadarLogic   DEBUG    Stop
+06-07 16:52 RadarManager DEBUG    Stop
+06-07 16:52 RadarLogic   DEBUG    onEventTest
+06-07 16:52 RadarManager DEBUG    onEventTest2
+06-07 16:52 RadarLogic   DEBUG    onEventTest2
+06-07 16:56 __main__     INFO     ________Start_________Main_________
+06-07 16:56 Engine       INFO     Loading Configuration /Users/sshakuf/Transcend/Development/PYBootstrap/configurations/conf1.xml
+06-07 16:56 RadarLogic   DEBUG    RadarLogic init...
+06-07 16:56 RadarManager DEBUG    init
+06-07 16:56 Gil          DEBUG    I am small person
+06-07 16:56 RadarLogic   DEBUG    Initialize
+06-07 16:56 RadarManager DEBUG    Initialize
+06-07 16:56 RadarLogic   DEBUG    Start
+06-07 16:56 RadarManager DEBUG    Start
+06-07 16:56 RadarLogic   DEBUG    Start
+06-07 16:56 RadarManager DEBUG    Start
+06-07 16:56 RadarLogic   DEBUG    Stop
+06-07 16:56 RadarManager DEBUG    Stop
+06-07 16:56 Gil          DEBUG    TEST
+06-07 16:56 RadarLogic   DEBUG    onEventTest
+06-07 16:56 RadarManager DEBUG    onEventTest2
+06-07 16:56 RadarLogic   DEBUG    onEventTest2
