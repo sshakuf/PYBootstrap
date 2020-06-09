@@ -11,6 +11,11 @@ class RxNode(Node):
     def __init__(self):
         logger.debug("init")
 
+    def onBeforeInitialized(self):
+        return True
+    def onAfterInitialized(self):
+        pass
+
     def onBeforeStart(self):
         return True
 
@@ -28,4 +33,6 @@ class RxNode(Node):
 
     def onAfterStop(self):
         pass
+
+
 
