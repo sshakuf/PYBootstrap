@@ -21,7 +21,11 @@ class Node():
 
     def Initialize(self):
         self.engine = Engine.GetEngine()
-        self._state= eNums.RuningState.INITIALIZED
+        if self.onBeforeInitialized():
+            self._state = eNums.RuningState.INITIALIZED
+            self.onAfterInitialized()
+            return True
+        return False
 
     def Start(self):
         if self.onBeforeStart():
@@ -44,6 +48,10 @@ class Node():
             return True
         return False
 
+    def onBeforeInitialized(self):
+        return True
+    def onAfterInitialized(self):
+        pass
 
     def onBeforeStart(self):
         return True
