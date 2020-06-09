@@ -14,7 +14,9 @@ sys.path.insert(0, parentdir + '/tools')
 sys.path.insert(0, parentdir + '/logic')
 
 sys.path.insert(0, currentdir + '/../Modules')
+import logging
 
+logger = logging.getLogger(__name__)
 
 xmlData = """<data> 
     <Modules>
@@ -72,6 +74,7 @@ class ObjectRepository:
         if inTypeName in self._objectTypes:
             newObj = self._objectTypes[inTypeName]['type']()
             self.AddInstance(inTypeName, newObj)
+            logger.info("Object Created "  + inTypeName  )
             return newObj
 
     def AddInstance(self, inTypeName, newObj):
@@ -79,6 +82,14 @@ class ObjectRepository:
             self._instances[inTypeName] = []
         self._instances[inTypeName].append(newObj)
         self.instances[inTypeName] = newObj
+
+    def getInstancesById(self, inIdName):
+        for objs in self._instances.keys():
+            for obj in self._instances[objs]:
+                if hasattr(obj, "id"):
+                    if getattr(obj,"id") == inIdName:
+                        return obj
+        return None
 
     def getInstances(self, inTypeName):
         if inTypeName in self._instances.keys():

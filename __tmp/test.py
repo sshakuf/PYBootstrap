@@ -17,6 +17,7 @@ def my_decorator(name):
     return imy_decorator
 
 
+
 @my_decorator(name="s")
 def test1():
     print("asd")

@@ -103,3 +103,499 @@
 06-07 16:56 RadarLogic   DEBUG    onEventTest
 06-07 16:56 RadarManager DEBUG    onEventTest2
 06-07 16:56 RadarLogic   DEBUG    onEventTest2
+06-09 10:30 __main__     INFO     ________Start_________Main_________
+06-09 10:30 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 10:31 __main__     INFO     ________Start_________Main_________
+06-09 10:31 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 10:33 __main__     INFO     ________Start_________Main_________
+06-09 10:33 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 10:33 __main__     INFO     ________Start_________Main_________
+06-09 10:33 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 10:34 __main__     INFO     ________Start_________Main_________
+06-09 10:34 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 10:36 __main__     INFO     ________Start_________Main_________
+06-09 10:36 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 10:38 __main__     INFO     ________Start_________Main_________
+06-09 10:38 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 10:57 __main__     INFO     ________Start_________Main_________
+06-09 10:57 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 10:58 RadarLogic   DEBUG    RadarLogic init...
+06-09 10:58 RadarManager DEBUG    init
+06-09 10:59 __main__     INFO     ________Start_________Main_________
+06-09 10:59 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 10:59 tools.Engine INFO     Engine Init
+06-09 10:59 RadarLogic   DEBUG    RadarLogic init...
+06-09 10:59 RadarManager DEBUG    init
+06-09 11:00 __main__     INFO     ________Start_________Main_________
+06-09 11:00 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:00 tools.Engine INFO     Engine Init
+06-09 11:00 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:00 RadarManager DEBUG    init
+06-09 11:01 __main__     INFO     ________Start_________Main_________
+06-09 11:01 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:01 tools.Engine INFO     Engine Init
+06-09 11:01 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:01 RadarManager DEBUG    init
+06-09 11:02 __main__     INFO     ________Start_________Main_________
+06-09 11:02 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:02 tools.Engine INFO     Engine Init
+06-09 11:02 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:02 RadarManager DEBUG    init
+06-09 11:02 TxManager    DEBUG    init
+06-09 11:02 Gil          DEBUG    I am small person
+06-09 11:02 RadarLogic   DEBUG    Initialize
+06-09 11:02 RadarManager DEBUG    Initialize
+06-09 11:02 RadarLogic   DEBUG    Start
+06-09 11:02 RadarManager DEBUG    Start
+06-09 11:02 RadarLogic   DEBUG    Start
+06-09 11:02 RadarManager DEBUG    Start
+06-09 11:02 RadarLogic   DEBUG    Stop
+06-09 11:02 RadarManager DEBUG    Stop
+06-09 11:02 RadarManager DEBUG    onEventTest2
+06-09 11:02 RxManager    DEBUG    onEventTest2
+06-09 11:02 RxNode       DEBUG    onEventTest2
+06-09 11:02 TxManager    DEBUG    onEventTest2
+06-09 11:02 TxNode       DEBUG    onEventTest2
+06-09 11:08 __main__     INFO     ________Start_________Main_________
+06-09 11:08 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:08 tools.Engine INFO     Engine Init
+06-09 11:08 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:08 RadarManager DEBUG    init
+06-09 11:08 TxManager    DEBUG    init
+06-09 11:08 Gil          DEBUG    I am small person
+06-09 11:08 RadarLogic   DEBUG    Initialize
+06-09 11:08 RadarManager DEBUG    Initialize
+06-09 11:09 __main__     INFO     ________Start_________Main_________
+06-09 11:09 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:09 tools.Engine INFO     Engine Init
+06-09 11:09 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:09 RadarManager DEBUG    init
+06-09 11:09 TxManager    DEBUG    init
+06-09 11:09 Gil          DEBUG    I am small person
+06-09 11:09 RadarLogic   DEBUG    Initialize
+06-09 11:09 RadarManager DEBUG    Initialize
+06-09 11:11 __main__     INFO     ________Start_________Main_________
+06-09 11:11 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:11 tools.Engine INFO     Engine Init
+06-09 11:11 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:11 RadarManager DEBUG    init
+06-09 11:11 TxManager    DEBUG    init
+06-09 11:11 Gil          DEBUG    I am small person
+06-09 11:11 RadarLogic   DEBUG    Initialize
+06-09 11:11 RadarManager DEBUG    Initialize
+06-09 11:18 __main__     INFO     ________Start_________Main_________
+06-09 11:18 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:18 tools.Engine INFO     Engine Init
+06-09 11:18 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:18 RadarManager DEBUG    init
+06-09 11:18 TxManager    DEBUG    init
+06-09 11:18 Gil          DEBUG    I am small person
+06-09 11:18 RadarLogic   DEBUG    Initialize
+06-09 11:18 RadarManager DEBUG    Initialize
+06-09 11:19 __main__     INFO     ________Start_________Main_________
+06-09 11:19 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:19 tools.Engine INFO     Engine Init
+06-09 11:19 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:19 RadarManager DEBUG    init
+06-09 11:19 TxManager    DEBUG    init
+06-09 11:19 Gil          DEBUG    I am small person
+06-09 11:19 RadarLogic   DEBUG    Initialize
+06-09 11:19 RadarManager DEBUG    Initialize
+06-09 11:23 __main__     INFO     ________Start_________Main_________
+06-09 11:23 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:23 tools.Engine INFO     Engine Init
+06-09 11:23 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:23 RadarManager DEBUG    init
+06-09 11:23 TxManager    DEBUG    init
+06-09 11:23 Gil          DEBUG    I am small person
+06-09 11:23 RadarLogic   DEBUG    Initialize
+06-09 11:23 RadarManager DEBUG    Initialize
+06-09 11:25 __main__     INFO     ________Start_________Main_________
+06-09 11:25 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:25 tools.Engine INFO     Engine Init
+06-09 11:25 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:25 RadarManager DEBUG    init
+06-09 11:25 TxManager    DEBUG    init
+06-09 11:25 Gil          DEBUG    I am small person
+06-09 11:25 RadarLogic   DEBUG    Initialize
+06-09 11:25 RadarManager DEBUG    Initialize
+06-09 11:26 __main__     INFO     ________Start_________Main_________
+06-09 11:26 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:26 tools.Engine INFO     Engine Init
+06-09 11:26 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:26 RadarManager DEBUG    init
+06-09 11:26 TxManager    DEBUG    init
+06-09 11:26 Gil          DEBUG    I am small person
+06-09 11:26 RadarLogic   DEBUG    Initialize
+06-09 11:26 RadarManager DEBUG    Initialize
+06-09 11:26 RadarLogic   DEBUG    Start
+06-09 11:26 RadarManager DEBUG    Start
+06-09 11:26 RadarLogic   DEBUG    Start
+06-09 11:26 RadarManager DEBUG    Start
+06-09 11:26 RadarLogic   DEBUG    Stop
+06-09 11:26 RadarManager DEBUG    Stop
+06-09 11:26 RadarManager DEBUG    onEventTest2
+06-09 11:26 RxManager    DEBUG    onEventTest2
+06-09 11:26 RxNode       DEBUG    onEventTest2
+06-09 11:26 TxManager    DEBUG    onEventTest2
+06-09 11:26 TxNode       DEBUG    onEventTest2
+06-09 11:27 __main__     INFO     ________Start_________Main_________
+06-09 11:27 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:27 tools.Engine INFO     Engine Init
+06-09 11:27 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:27 RadarManager DEBUG    init
+06-09 11:27 TxManager    DEBUG    init
+06-09 11:27 Gil          DEBUG    I am small person
+06-09 11:27 RadarLogic   DEBUG    Initialize
+06-09 11:27 RadarManager DEBUG    Initialize
+06-09 11:28 __main__     INFO     ________Start_________Main_________
+06-09 11:28 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:28 tools.Engine INFO     Engine Init
+06-09 11:28 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:28 RadarManager DEBUG    init
+06-09 11:28 TxManager    DEBUG    init
+06-09 11:28 Gil          DEBUG    I am small person
+06-09 11:28 RadarLogic   DEBUG    Initialize
+06-09 11:28 RadarManager DEBUG    Initialize
+06-09 11:29 __main__     INFO     ________Start_________Main_________
+06-09 11:29 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:29 tools.Engine INFO     Engine Init
+06-09 11:29 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:29 RadarManager DEBUG    init
+06-09 11:29 TxManager    DEBUG    init
+06-09 11:29 Gil          DEBUG    I am small person
+06-09 11:29 RadarLogic   DEBUG    Initialize
+06-09 11:29 RadarManager DEBUG    Initialize
+06-09 11:29 __main__     INFO     ________Start_________Main_________
+06-09 11:29 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:29 tools.Engine INFO     Engine Init
+06-09 11:29 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:29 RadarManager DEBUG    init
+06-09 11:29 TxManager    DEBUG    init
+06-09 11:29 Gil          DEBUG    I am small person
+06-09 11:29 RadarLogic   DEBUG    Initialize
+06-09 11:29 RadarManager DEBUG    Initialize
+06-09 11:33 __main__     INFO     ________Start_________Main_________
+06-09 11:33 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:33 tools.Engine INFO     Engine Init
+06-09 11:33 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:33 RadarManager DEBUG    init
+06-09 11:33 TxManager    DEBUG    init
+06-09 11:33 Gil          DEBUG    I am small person
+06-09 11:33 RadarLogic   DEBUG    Initialize
+06-09 11:33 RadarManager DEBUG    Initialize
+06-09 11:36 __main__     INFO     ________Start_________Main_________
+06-09 11:36 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:36 tools.Engine INFO     Engine Init
+06-09 11:36 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:36 RadarManager DEBUG    init
+06-09 11:36 TxManager    DEBUG    init
+06-09 11:36 Gil          DEBUG    I am small person
+06-09 11:36 RadarLogic   DEBUG    Initialize
+06-09 11:36 RadarManager DEBUG    Initialize
+06-09 11:37 __main__     INFO     ________Start_________Main_________
+06-09 11:37 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:37 tools.Engine INFO     Engine Init
+06-09 11:37 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:37 RadarManager DEBUG    init
+06-09 11:37 TxManager    DEBUG    init
+06-09 11:37 Gil          DEBUG    I am small person
+06-09 11:37 RadarLogic   DEBUG    Initialize
+06-09 11:37 RadarManager DEBUG    Initialize
+06-09 11:37 __main__     INFO     ________Start_________Main_________
+06-09 11:37 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:37 tools.Engine INFO     Engine Init
+06-09 11:37 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:37 RadarManager DEBUG    init
+06-09 11:37 TxManager    DEBUG    init
+06-09 11:37 Gil          DEBUG    I am small person
+06-09 11:37 RadarLogic   DEBUG    Initialize
+06-09 11:37 RadarManager DEBUG    Initialize
+06-09 11:38 __main__     INFO     ________Start_________Main_________
+06-09 11:38 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:38 tools.Engine INFO     Engine Init
+06-09 11:38 __main__     INFO     ________Start_________Main_________
+06-09 11:38 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:38 tools.Engine INFO     Engine Init
+06-09 11:38 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:38 RadarManager DEBUG    init
+06-09 11:38 TxManager    DEBUG    init
+06-09 11:38 Gil          DEBUG    I am small person
+06-09 11:38 RadarLogic   DEBUG    Initialize
+06-09 11:38 RadarManager DEBUG    Initialize
+06-09 11:39 __main__     INFO     ________Start_________Main_________
+06-09 11:39 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:39 tools.Engine INFO     Engine Init
+06-09 11:39 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:39 RadarManager DEBUG    init
+06-09 11:39 TxManager    DEBUG    init
+06-09 11:39 Gil          DEBUG    I am small person
+06-09 11:39 RadarLogic   DEBUG    Initialize
+06-09 11:39 RadarManager DEBUG    Initialize
+06-09 11:39 __main__     INFO     ________Start_________Main_________
+06-09 11:39 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:39 tools.Engine INFO     Engine Init
+06-09 11:39 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:39 RadarManager DEBUG    init
+06-09 11:39 TxManager    DEBUG    init
+06-09 11:39 Gil          DEBUG    I am small person
+06-09 11:39 RadarLogic   DEBUG    Initialize
+06-09 11:39 RadarManager DEBUG    Initialize
+06-09 11:40 __main__     INFO     ________Start_________Main_________
+06-09 11:40 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:40 tools.Engine INFO     Engine Init
+06-09 11:40 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:40 RadarManager DEBUG    init
+06-09 11:40 TxManager    DEBUG    init
+06-09 11:40 Gil          DEBUG    I am small person
+06-09 11:40 RadarLogic   DEBUG    Initialize
+06-09 11:40 RadarManager DEBUG    Initialize
+06-09 11:40 __main__     INFO     ________Start_________Main_________
+06-09 11:40 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:40 tools.Engine INFO     Engine Init
+06-09 11:40 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:40 RadarManager DEBUG    init
+06-09 11:40 TxManager    DEBUG    init
+06-09 11:40 Gil          DEBUG    I am small person
+06-09 11:40 RadarLogic   DEBUG    Initialize
+06-09 11:40 RadarManager DEBUG    Initialize
+06-09 11:41 __main__     INFO     ________Start_________Main_________
+06-09 11:41 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:41 tools.Engine INFO     Engine Init
+06-09 11:41 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:41 RadarManager DEBUG    init
+06-09 11:41 TxManager    DEBUG    init
+06-09 11:41 Gil          DEBUG    I am small person
+06-09 11:41 RadarLogic   DEBUG    Initialize
+06-09 11:41 RadarManager DEBUG    Initialize
+06-09 11:42 TxNode       DEBUG    init
+06-09 11:42 TxNode       DEBUG    init
+06-09 11:48 __main__     INFO     ________Start_________Main_________
+06-09 11:48 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:48 tools.Engine INFO     Engine Init
+06-09 11:48 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:48 RadarManager DEBUG    init
+06-09 11:48 TxManager    DEBUG    init
+06-09 11:48 RxManager    DEBUG    init
+06-09 11:48 Gil          DEBUG    I am small person
+06-09 11:48 RadarLogic   DEBUG    Initialize
+06-09 11:48 RadarManager DEBUG    Initialize
+06-09 11:48 RadarLogic   DEBUG    Start
+06-09 11:48 RadarManager DEBUG    Start
+06-09 11:48 RadarLogic   DEBUG    Start
+06-09 11:48 RadarManager DEBUG    Start
+06-09 11:48 RadarLogic   DEBUG    Stop
+06-09 11:48 RadarManager DEBUG    Stop
+06-09 11:48 RadarManager DEBUG    onEventTest2
+06-09 11:48 RxManager    DEBUG    onEventTest2
+06-09 11:48 RxNode       DEBUG    onEventTest2
+06-09 11:48 TxManager    DEBUG    onEventTest2
+06-09 11:48 TxNode       DEBUG    onEventTest2
+06-09 11:50 __main__     INFO     ________Start_________Main_________
+06-09 11:50 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:50 tools.Engine INFO     Engine Init
+06-09 11:50 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:50 ObjectRepository INFO     Object Created RadarLogic
+06-09 11:50 RadarManager DEBUG    init
+06-09 11:50 ObjectRepository INFO     Object Created RadarManager
+06-09 11:50 TxManager    DEBUG    init
+06-09 11:50 ObjectRepository INFO     Object Created TxManager
+06-09 11:50 RxManager    DEBUG    init
+06-09 11:50 ObjectRepository INFO     Object Created RxManager
+06-09 11:50 Gil          DEBUG    I am small person
+06-09 11:50 ObjectRepository INFO     Object Created Gil
+06-09 11:50 RadarLogic   DEBUG    Initialize
+06-09 11:50 RadarManager DEBUG    Initialize
+06-09 11:50 RadarLogic   DEBUG    Start
+06-09 11:50 RadarManager DEBUG    Start
+06-09 11:50 RadarLogic   DEBUG    Start
+06-09 11:50 RadarManager DEBUG    Start
+06-09 11:50 RadarLogic   DEBUG    Stop
+06-09 11:50 RadarManager DEBUG    Stop
+06-09 11:50 RadarManager DEBUG    onEventTest2
+06-09 11:50 RxManager    DEBUG    onEventTest2
+06-09 11:50 RxNode       DEBUG    onEventTest2
+06-09 11:50 TxManager    DEBUG    onEventTest2
+06-09 11:50 TxNode       DEBUG    onEventTest2
+06-09 11:50 __main__     INFO     ________Start_________Main_________
+06-09 11:50 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:50 tools.Engine INFO     Engine Init
+06-09 11:50 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:50 ObjectRepository INFO     Object Created RadarLogic
+06-09 11:50 RadarManager DEBUG    init
+06-09 11:50 ObjectRepository INFO     Object Created RadarManager
+06-09 11:50 TxManager    DEBUG    init
+06-09 11:50 ObjectRepository INFO     Object Created TxManager
+06-09 11:50 RxManager    DEBUG    init
+06-09 11:50 ObjectRepository INFO     Object Created RxManager
+06-09 11:50 Gil          DEBUG    I am small person
+06-09 11:50 ObjectRepository INFO     Object Created Gil
+06-09 11:50 RadarLogic   DEBUG    Initialize
+06-09 11:50 RadarManager DEBUG    Initialize
+06-09 11:50 RadarLogic   DEBUG    Start
+06-09 11:50 RadarManager DEBUG    Start
+06-09 11:50 RadarLogic   DEBUG    Start
+06-09 11:50 RadarManager DEBUG    Start
+06-09 11:50 RadarLogic   DEBUG    Stop
+06-09 11:50 RadarManager DEBUG    Stop
+06-09 11:50 RadarManager DEBUG    onEventTest2
+06-09 11:50 RxManager    DEBUG    onEventTest2
+06-09 11:50 RxNode       DEBUG    onEventTest2
+06-09 11:50 TxManager    DEBUG    onEventTest2
+06-09 11:50 TxNode       DEBUG    onEventTest2
+06-09 11:51 __main__     INFO     ________Start_________Main_________
+06-09 11:51 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:51 tools.Engine INFO     Engine Init
+06-09 11:51 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:51 ObjectRepository INFO     Object Created RadarLogic
+06-09 11:51 RadarManager DEBUG    init
+06-09 11:51 ObjectRepository INFO     Object Created RadarManager
+06-09 11:51 TxManager    DEBUG    init
+06-09 11:51 ObjectRepository INFO     Object Created TxManager
+06-09 11:51 RxManager    DEBUG    init
+06-09 11:51 ObjectRepository INFO     Object Created RxManager
+06-09 11:51 Gil          DEBUG    I am small person
+06-09 11:51 ObjectRepository INFO     Object Created Gil
+06-09 11:51 RadarLogic   DEBUG    Initialize
+06-09 11:51 RadarManager DEBUG    Initialize
+06-09 11:51 TxManager    DEBUG    Initialize
+06-09 11:51 TxNode       DEBUG    init
+06-09 11:51 ObjectRepository INFO     Object Created TxNode
+06-09 11:51 RxManager    DEBUG    Initialize
+06-09 11:51 RxNode       DEBUG    init
+06-09 11:51 ObjectRepository INFO     Object Created RxNode
+06-09 11:51 RxNode       DEBUG    init
+06-09 11:51 ObjectRepository INFO     Object Created RxNode
+06-09 11:51 RxNode       DEBUG    init
+06-09 11:51 ObjectRepository INFO     Object Created RxNode
+06-09 11:51 RxNode       DEBUG    init
+06-09 11:51 ObjectRepository INFO     Object Created RxNode
+06-09 11:51 RadarLogic   DEBUG    Start
+06-09 11:51 RadarManager DEBUG    Start
+06-09 11:51 RadarLogic   DEBUG    Start
+06-09 11:51 RadarManager DEBUG    Start
+06-09 11:51 RadarLogic   DEBUG    Stop
+06-09 11:51 RadarManager DEBUG    Stop
+06-09 11:51 RadarManager DEBUG    onEventTest2
+06-09 11:51 RxManager    DEBUG    onEventTest2
+06-09 11:51 RxNode       DEBUG    onEventTest2
+06-09 11:51 TxManager    DEBUG    onEventTest2
+06-09 11:51 TxNode       DEBUG    onEventTest2
+06-09 11:59 __main__     INFO     ________Start_________Main_________
+06-09 11:59 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 11:59 tools.Engine INFO     Engine Init
+06-09 11:59 RadarLogic   DEBUG    RadarLogic init...
+06-09 11:59 ObjectRepository INFO     Object Created RadarLogic
+06-09 11:59 RadarManager DEBUG    init
+06-09 11:59 ObjectRepository INFO     Object Created RadarManager
+06-09 12:01 __main__     INFO     ________Start_________Main_________
+06-09 12:01 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 12:01 tools.Engine INFO     Engine Init
+06-09 12:01 RadarLogic   DEBUG    RadarLogic init...
+06-09 12:01 ObjectRepository INFO     Object Created RadarLogic
+06-09 12:01 RadarManager DEBUG    init
+06-09 12:01 ObjectRepository INFO     Object Created RadarManager
+06-09 12:02 __main__     INFO     ________Start_________Main_________
+06-09 12:02 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 12:02 tools.Engine INFO     Engine Init
+06-09 12:02 RadarLogic   DEBUG    RadarLogic init...
+06-09 12:02 ObjectRepository INFO     Object Created RadarLogic
+06-09 12:02 RadarManager DEBUG    init
+06-09 12:02 ObjectRepository INFO     Object Created RadarManager
+06-09 12:02 __main__     INFO     ________Start_________Main_________
+06-09 12:02 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 12:02 tools.Engine INFO     Engine Init
+06-09 12:02 RadarLogic   DEBUG    RadarLogic init...
+06-09 12:02 ObjectRepository INFO     Object Created RadarLogic
+06-09 12:02 RadarManager DEBUG    init
+06-09 12:02 ObjectRepository INFO     Object Created RadarManager
+06-09 12:02 Modules.Helpers.NodeManager DEBUG    init
+06-09 12:02 ObjectRepository INFO     Object Created TxManager
+06-09 12:02 Modules.Helpers.NodeManager DEBUG    init
+06-09 12:02 ObjectRepository INFO     Object Created RxManager
+06-09 12:02 Gil          DEBUG    I am small person
+06-09 12:02 ObjectRepository INFO     Object Created Gil
+06-09 12:02 RadarLogic   DEBUG    Initialize
+06-09 12:02 RadarManager DEBUG    Initialize
+06-09 12:02 Modules.Helpers.NodeManager DEBUG    Initialize
+06-09 12:02 TxNode       DEBUG    init
+06-09 12:02 ObjectRepository INFO     Object Created TxNode
+06-09 12:02 Modules.Helpers.NodeManager DEBUG    Initialize
+06-09 12:02 RxNode       DEBUG    init
+06-09 12:02 ObjectRepository INFO     Object Created RxNode
+06-09 12:02 RxNode       DEBUG    init
+06-09 12:02 ObjectRepository INFO     Object Created RxNode
+06-09 12:02 RxNode       DEBUG    init
+06-09 12:02 ObjectRepository INFO     Object Created RxNode
+06-09 12:02 RxNode       DEBUG    init
+06-09 12:02 ObjectRepository INFO     Object Created RxNode
+06-09 12:02 RadarLogic   DEBUG    Start
+06-09 12:02 RadarManager DEBUG    Start
+06-09 12:02 Modules.Helpers.NodeManager DEBUG    Start
+06-09 12:02 TxNode       DEBUG    Start
+06-09 12:02 Modules.Helpers.NodeManager DEBUG    Start
+06-09 12:02 RxNode       DEBUG    Start
+06-09 12:02 RxNode       DEBUG    Start
+06-09 12:02 RxNode       DEBUG    Start
+06-09 12:02 RxNode       DEBUG    Start
+06-09 12:02 RadarLogic   DEBUG    Start
+06-09 12:02 RadarManager DEBUG    Start
+06-09 12:02 Modules.Helpers.NodeManager DEBUG    Start
+06-09 12:02 TxNode       DEBUG    Start
+06-09 12:02 Modules.Helpers.NodeManager DEBUG    Start
+06-09 12:02 RxNode       DEBUG    Start
+06-09 12:02 RxNode       DEBUG    Start
+06-09 12:02 RxNode       DEBUG    Start
+06-09 12:02 RxNode       DEBUG    Start
+06-09 12:02 RadarLogic   DEBUG    Stop
+06-09 12:02 RadarManager DEBUG    Stop
+06-09 12:02 Modules.Helpers.NodeManager DEBUG    Stop
+06-09 12:02 TxNode       DEBUG    Stop
+06-09 12:02 Modules.Helpers.NodeManager DEBUG    Stop
+06-09 12:02 RxNode       DEBUG    Stop
+06-09 12:02 RxNode       DEBUG    Stop
+06-09 12:02 RxNode       DEBUG    Stop
+06-09 12:02 RxNode       DEBUG    Stop
+06-09 12:02 RadarManager DEBUG    onEventTest2
+06-09 12:02 RxNode       DEBUG    onEventTest2
+06-09 12:02 TxNode       DEBUG    onEventTest2
+06-09 12:22 __main__     INFO     ________Start_________Main_________
+06-09 12:22 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 12:22 tools.Engine INFO     Engine Init
+06-09 12:23 __main__     INFO     ________Start_________Main_________
+06-09 12:23 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 12:23 tools.Engine INFO     Engine Init
+06-09 12:23 __main__     INFO     ________Start_________Main_________
+06-09 12:23 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 12:23 tools.Engine INFO     Engine Init
+06-09 12:23 RadarLogic   DEBUG    RadarLogic init...
+06-09 12:23 ObjectRepository INFO     Object Created RadarLogic
+06-09 12:23 RadarManager DEBUG    init
+06-09 12:23 ObjectRepository INFO     Object Created RadarManager
+06-09 12:23 Modules.Helpers.NodeManager DEBUG    init
+06-09 12:23 ObjectRepository INFO     Object Created TxManager
+06-09 12:23 Modules.Helpers.NodeManager DEBUG    init
+06-09 12:23 ObjectRepository INFO     Object Created RxManager
+06-09 12:23 Gil          DEBUG    I am small person
+06-09 12:23 ObjectRepository INFO     Object Created Gil
+06-09 12:23 RadarLogic   DEBUG    Initialize
+06-09 12:23 RadarManager DEBUG    Initialize
+06-09 12:23 Modules.Helpers.NodeManager DEBUG    Initialize
+06-09 12:23 TxNode       DEBUG    init
+06-09 12:23 ObjectRepository INFO     Object Created TxNode
+06-09 12:23 Modules.Helpers.NodeManager DEBUG    Initialize
+06-09 12:23 RxNode       DEBUG    init
+06-09 12:23 ObjectRepository INFO     Object Created RxNode
+06-09 12:23 RxNode       DEBUG    init
+06-09 12:23 ObjectRepository INFO     Object Created RxNode
+06-09 12:23 RxNode       DEBUG    init
+06-09 12:23 ObjectRepository INFO     Object Created RxNode
+06-09 12:23 RxNode       DEBUG    init
+06-09 12:23 ObjectRepository INFO     Object Created RxNode
+06-09 12:23 RadarLogic   DEBUG    Start
+06-09 12:23 RadarManager DEBUG    Start
+06-09 12:23 RadarLogic   DEBUG    Start
+06-09 12:23 RadarManager DEBUG    Start
+06-09 12:23 RadarLogic   DEBUG    Stop
+06-09 12:23 RadarManager DEBUG    Stop
+06-09 12:23 RadarManager DEBUG    onEventTest2
