@@ -6,11 +6,11 @@ logger = logging.getLogger(__name__)
 import Modules.Helpers.eNums as eNums
 
 
-class EngineComponent():
+class EngineComponent:
     def __init__(self):
         logger.debug("init")
         self.id = "1"
-        self._state= eNums.RuningState.NOTINITIALIZED
+        self._state = eNums.RuningState.NOTINITIALIZED
 
     def getState(self):
         return self._state

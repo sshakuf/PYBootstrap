@@ -2,23 +2,33 @@ import EventBroker
 from EngineComponent import EngineComponent
 import logging
 import tools.Engine as Engine
+import tools.DataStore as DataStore
 import tools.ObjectRepository
 
 logger = logging.getLogger(__name__)
 
 
+# what is the relationship between radar_manager and radar_logic?
+
+
 class RadarManager(EngineComponent):
     def __init__(self):
         logger.debug("init")
-        # _txManager = Engine.GetEngine().objectRepository.CreateInstance("TxManager")
+        self.data_store = DataStore.DataStore()
+        self._txManager = None
+        self._rxManager = None
+        self._radarLogic = None
+        self.engine = None
 
     def onBeforeInitialized(self):
         self.engine = Engine.GetEngine()
         self._txManager = self.engine.objectRepository.getInstancesById("TxManager")
         self._rxManager = self.engine.objectRepository.getInstancesById("RxManager")
+        self._radarLogic = self.engine.objectRepository.getInstancesById("TheOneAndOnly_RadarLogic")
 
         self._txManager.Initialize()
         self._rxManager.Initialize()
+        self._radarLogic.Initialize()
         return True
 
     def onAfterInitialized(self):
@@ -44,9 +54,6 @@ class RadarManager(EngineComponent):
     def onAfterStop(self):
         pass
 
-
-
-
-    @EventBroker.RegisterListener("Test2")
-    def onEventTest2(a):
-        logger.debug("onEventTest2")
+    # @EventBroker.RegisterListener("Test2")
+    # def onEventTest2(a):
+    #     logger.debug("onEventTest2")

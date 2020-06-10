@@ -74,7 +74,7 @@ class ObjectRepository:
         if inTypeName in self._objectTypes:
             newObj = self._objectTypes[inTypeName]['type']()
             self.AddInstance(inTypeName, newObj)
-            logger.info("Object Created "  + inTypeName  )
+            logger.info("Object Created " + inTypeName)
             return newObj
 
     def AddInstance(self, inTypeName, newObj):

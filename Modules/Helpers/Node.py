@@ -1,20 +1,24 @@
-import EventBroker
-from EngineComponent import EngineComponent
+# import EventBroker
+# from EngineComponent import EngineComponent
 import tools.Engine as Engine
 import tools.ObjectRepository
 from enum import Enum
 import logging
-
+from Modules.Helpers.eNums import BoardType
+from Modules.Helpers.eNums import *
+import Modules.Helpers.eNums as eNums
 logger = logging.getLogger(__name__)
 
-import Modules.Helpers.eNums as eNums
+# ### Node now have only behavior functions which shared with all components (rx, tx and synt) ### #
 
 
-class Node():
+class Node:
     def __init__(self):
         logger.debug("init")
         self.id = "1"
-        self._state= eNums.RuningState.NOTINITIALIZED
+        self._state = eNums.RuningState.NOTINITIALIZED
+        self.is_verbose = True
+        self.engine = None
 
     def getState(self):
         return self._state
@@ -50,19 +54,89 @@ class Node():
 
     def onBeforeInitialized(self):
         return True
+
     def onAfterInitialized(self):
         pass
 
     def onBeforeStart(self):
         return True
+
     def onAfterStart(self):
         pass
+
     def onBeforeRun(self):
         return True
+
     def onAfterRun(self):
         pass
+
     def onBeforeStop(self):
         return True
+
     def onAfterStop(self):
         pass
 
+    # #################################################################### #
+    # ### Functions shared with all base mid classes from Doron's code ### #
+    # #################################################################### #
+
+    def get_version(self):
+        pass
+
+    def disconnect(self):  # CLEANUP?
+        if self.before_disconnect():
+            self.after_disconnect()
+            self._state = eNums.RuningState.CONNECTED
+            return True
+        return False
+
+    def before_disconnect(self):
+        return True
+
+    def after_disconnect(self):
+        pass
+
+    def connect(self, hw_interface_type: HWInterfaceType, can_bus_unit_id: CanBusUnitID):
+        if self.before_connect(hw_interface_type, can_bus_unit_id):
+            self.after_connect()
+            self._state = eNums.RuningState.CONNECTED
+            return True
+        return False
+
+    def before_connect(self, hw_interface_type: HWInterfaceType, can_bus_unit_id: CanBusUnitID):
+        return True
+
+    def after_connect(self):
+        pass
+
+    def get_status(self):
+        pass
+
+    def config_frame(self):  # same signature at doron's code, different implementation
+        pass
+
+    def init_hw(self):
+        pass
+
+    def set_init_flag(self, flag_val: bool):  # only rx and tx has it
+        pass
+
+    def get_init_flag(self):  # only rx and tx has it
+        pass
+
+    def set_run_mode(self):
+        pass
+
+    def start_hardware(self):
+        pass
+
+    def set_high_speed_debug_mem(self, test_data):# test_data: np.dtype('complex')):
+        pass
+
+    def get_high_speed_debug_mem(self):
+        pass
+
+    def set_img_format(self):
+        pass
+
+    # ### Added by us to support Doron's code ### #
