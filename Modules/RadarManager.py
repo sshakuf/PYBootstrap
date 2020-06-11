@@ -14,12 +14,20 @@ class RadarManager(EngineComponent):
 
     def onBeforeInitialized(self):
         self.engine = Engine.GetEngine()
-        self._txManager = self.engine.objectRepository.getInstancesById("TxManager")
-        self._rxManager = self.engine.objectRepository.getInstancesById("RxManager")
+        self._txManager = self.engine.objectRepository.getInstancesById(
+            "TxManager")
+        self._rxManager = self.engine.objectRepository.getInstancesById(
+            "RxManager")
 
         self._txManager.Initialize()
         self._rxManager.Initialize()
+
+        self.setDefaultProps()
+
         return True
+
+    def setDefaultProps(self):
+        #self.engine.props.freq = 500
 
     def onAfterInitialized(self):
         pass
@@ -31,22 +39,27 @@ class RadarManager(EngineComponent):
 
     def onAfterStart(self):
         pass
+
     def onBeforeRun(self):
         self._txManager.Run()
         self._rxManager.Run()
         return True
+
     def onAfterRun(self):
         pass
+
     def onBeforeStop(self):
         self._txManager.Stop()
         self._rxManager.Stop()
         return True
+
     def onAfterStop(self):
         pass
-
-
-
 
     @EventBroker.RegisterListener("Test2")
     def onEventTest2(a):
         logger.debug("onEventTest2")
+
+    @EventBroker.RegisterListener("PropertyChanged")
+    def onPropertyChanged(self, data):
+        logger.debug("propertyChanged")

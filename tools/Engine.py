@@ -1,4 +1,4 @@
-from EventBroker import EventBroker
+from EventBroker import EventBroker, NotificationProps
 import DataStore
 from EngineComponent import EngineComponent
 import ObjectRepository
@@ -26,6 +26,7 @@ class Engine:
 
         self.objectRepository = ObjectRepository.GetObjectRepository()
         self.eventBroker = EventBroker()
+        #self.props = NotificationProps(self.eventBroker)
 
         # add to ObjectFactory we can use in . notation
         self.objectRepository.AddInstance(
@@ -62,7 +63,6 @@ class Engine:
             EngineComponent)
         for component in componenets:
             component.Stop()
-
 
 _engine = Engine()
 

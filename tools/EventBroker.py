@@ -1,4 +1,5 @@
 # EventBroker
+from dotmap import DotMap
 import functools
 import ObjectRepository
 
@@ -36,6 +37,21 @@ class EventBroker:
             for handler in self.events[name]:
                 handler(data)
 
+
+class NotificationProps(DotMap):
+    def __init__(self, eventBroker):
+        self.eventBroker = eventBroker
+
+    def __setitem__(self, k, v):
+        oldVal = None
+        if k in self._map:
+            oldVal = self[k]
+        self.eventBroker.fire("PropertyBeforeChange", {
+                              "Name": k, "oldVal": oldVal, "newVal": v})
+        retVal = super(NotificationProps, self).__setitem__(k, v)
+        self.eventBroker.fire("PropertyChanged", {
+                              "Name": k, "oldVal": oldVal, "newVal": v})
+        return retVal
 
 # broker = EventBroker()
 
