@@ -15,6 +15,7 @@ class RxManager(NodeManager):
 
     def onBeforeInitialized(self):
         return True
+
     def onAfterInitialized(self):
         pass
 

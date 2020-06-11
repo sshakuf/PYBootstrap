@@ -2,15 +2,23 @@ import EventBroker
 from EngineComponent import EngineComponent
 import logging
 import tools.Engine as Engine
+import tools.DataStore as DataStore
 import tools.ObjectRepository
 
 logger = logging.getLogger(__name__)
 
 
+# what is the relationship between radar_manager and radar_logic?
+
+
 class RadarManager(EngineComponent):
     def __init__(self):
         logger.debug("init")
-        # _txManager = Engine.GetEngine().objectRepository.CreateInstance("TxManager")
+        self.data_store = DataStore.DataStore()
+        self._txManager = None
+        self._rxManager = None
+        self._radarLogic = None
+        self.engine = None
 
     def onBeforeInitialized(self):
         self.engine = Engine.GetEngine()
@@ -18,16 +26,19 @@ class RadarManager(EngineComponent):
             "TxManager")
         self._rxManager = self.engine.objectRepository.getInstancesById(
             "RxManager")
+        self._radarLogic = self.engine.objectRepository.getInstancesById(
+            "TheOneAndOnly_RadarLogic")
 
         self._txManager.Initialize()
         self._rxManager.Initialize()
+        self._radarLogic.Initialize()
 
         self.setDefaultProps()
-
         return True
 
     def setDefaultProps(self):
-        #self.engine.props.freq = 500
+        # self.engine.props.freq = 500
+        pass
 
     def onAfterInitialized(self):
         pass

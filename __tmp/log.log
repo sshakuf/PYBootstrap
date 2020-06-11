@@ -723,3 +723,129 @@
 06-09 12:52 RadarLogic   DEBUG    Start
 06-09 12:52 RadarLogic   DEBUG    Stop
 06-09 12:52 RadarManager DEBUG    onEventTest2
+06-09 14:19 __main__     INFO     ________Start_________Main_________
+06-09 14:19 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-09 14:19 tools.Engine INFO     Engine Init
+06-09 14:19 RadarLogic   DEBUG    RadarLogic init...
+06-09 14:19 ObjectRepository INFO     Object Created RadarLogic
+06-09 14:19 RadarManager DEBUG    init
+06-09 14:19 ObjectRepository INFO     Object Created RadarManager
+06-09 14:19 Modules.Helpers.NodeManager DEBUG    init
+06-09 14:19 ObjectRepository INFO     Object Created TxManager
+06-09 14:19 Modules.Helpers.NodeManager DEBUG    init
+06-09 14:19 ObjectRepository INFO     Object Created RxManager
+06-09 14:19 Gil          DEBUG    I am small person
+06-09 14:19 ObjectRepository INFO     Object Created Gil
+06-09 14:19 RadarLogic   DEBUG    Initialize
+06-09 14:19 Modules.Helpers.NodeManager DEBUG    Initialize
+06-09 14:19 TxNode       DEBUG    init
+06-09 14:19 ObjectRepository INFO     Object Created TxNode
+06-09 14:19 Modules.Helpers.NodeManager DEBUG    Initialize
+06-09 14:19 RxNode       DEBUG    init
+06-09 14:19 ObjectRepository INFO     Object Created RxNode
+06-09 14:19 RxNode       DEBUG    init
+06-09 14:19 ObjectRepository INFO     Object Created RxNode
+06-09 14:19 RxNode       DEBUG    init
+06-09 14:19 ObjectRepository INFO     Object Created RxNode
+06-09 14:19 RxNode       DEBUG    init
+06-09 14:19 ObjectRepository INFO     Object Created RxNode
+06-09 14:19 RadarLogic   DEBUG    Start
+06-09 14:19 RadarLogic   DEBUG    Start
+06-09 14:19 RadarLogic   DEBUG    Stop
+06-09 14:19 RadarManager DEBUG    onEventTest2
+06-10 11:05 __main__     INFO     ________Start_________Main_________
+06-10 11:05 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 11:05 Gil          DEBUG    init
+06-10 14:34 __main__     INFO     ________Start_________Main_________
+06-10 14:34 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 14:34 __main__     INFO     ________Start_________Main_________
+06-10 14:34 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 14:35 __main__     INFO     ________Start_________Main_________
+06-10 14:36 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 14:36 __main__     INFO     ________Start_________Main_________
+06-10 14:37 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 14:37 __main__     INFO     ________Start_________Main_________
+06-10 14:37 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 14:38 __main__     INFO     ________Start_________Main_________
+06-10 14:38 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 14:38 __main__     INFO     ________Start_________Main_________
+06-10 14:38 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 14:39 __main__     INFO     ________Start_________Main_________
+06-10 14:39 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 14:40 __main__     INFO     ________Start_________Main_________
+06-10 14:40 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 14:41 __main__     INFO     ________Start_________Main_________
+06-10 14:41 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 14:42 __main__     INFO     ________Start_________Main_________
+06-10 14:42 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 14:44 __main__     INFO     ________Start_________Main_________
+06-10 14:44 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 14:45 __main__     INFO     ________Start_________Main_________
+06-10 14:45 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 14:47 __main__     INFO     ________Start_________Main_________
+06-10 14:47 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 14:49 __main__     INFO     ________Start_________Main_________
+06-10 14:49 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 14:50 __main__     INFO     ________Start_________Main_________
+06-10 14:50 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 15:07 __main__     INFO     ________Start_________Main_________
+06-10 15:07 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 15:07 tools.Engine INFO     Engine Init
+06-10 15:54 __main__     INFO     ________Start_________Main_________
+06-10 15:54 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 15:55 __main__     INFO     ________Start_________Main_________
+06-10 15:55 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 15:57 __main__     INFO     ________Start_________Main_________
+06-10 15:57 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 15:58 __main__     INFO     ________Start_________Main_________
+06-10 15:58 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 16:00 __main__     INFO     ________Start_________Main_________
+06-10 16:00 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 16:07 __main__     INFO     ________Start_________Main_________
+06-10 16:07 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 16:09 __main__     INFO     ________Start_________Main_________
+06-10 16:09 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 16:09 __main__     INFO     ________Start_________Main_________
+06-10 16:09 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 16:09 tools.Engine INFO     Engine Init
+06-10 16:09 __main__     INFO     ________Start_________Main_________
+06-10 16:09 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 16:09 tools.Engine INFO     Engine Init
+06-10 16:13 __main__     INFO     ________Start_________Main_________
+06-10 16:13 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 16:13 tools.Engine INFO     Engine Init
+06-10 16:30 __main__     INFO     ________Start_________Main_________
+06-10 16:30 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 16:30 tools.Engine INFO     Engine Init
+06-10 16:32 __main__     INFO     ________Start_________Main_________
+06-10 16:32 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 16:32 tools.Engine INFO     Engine Init
+06-10 16:32 __main__     INFO     ________Start_________Main_________
+06-10 16:32 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 16:32 tools.Engine INFO     Engine Init
+06-10 16:33 __main__     INFO     ________Start_________Main_________
+06-10 16:33 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 16:33 tools.Engine INFO     Engine Init
+06-10 16:33 Modules.Helpers.Node DEBUG    init
+06-10 16:33 RxNode       DEBUG    init
+06-10 16:33 RadarLogic   DEBUG    RadarLogic init...
+06-10 16:33 ObjectRepository INFO     Object Created RadarLogic
+06-10 16:33 RadarManager DEBUG    init
+06-10 16:33 ObjectRepository INFO     Object Created RadarManager
+06-10 16:33 Modules.Helpers.NodeManager DEBUG    init
+06-10 16:33 ObjectRepository INFO     Object Created TxManager
+06-10 16:33 Modules.Helpers.NodeManager DEBUG    init
+06-10 16:33 ObjectRepository INFO     Object Created RxManager
+06-10 17:08 __main__     INFO     ________Start_________Main_________
+06-10 17:08 Engine       INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-10 17:08 tools.Engine INFO     Engine Init
+06-10 17:08 Modules.Helpers.Node DEBUG    init
+06-10 17:08 RxNode       DEBUG    init
+06-10 17:08 RadarLogic   DEBUG    RadarLogic init...
+06-10 17:08 tools.ObjectRepository INFO     Object Created RadarLogic
+06-10 17:08 RadarManager DEBUG    init
+06-10 17:08 tools.ObjectRepository INFO     Object Created RadarManager
+06-10 17:08 Modules.Helpers.NodeManager DEBUG    init
+06-10 17:08 tools.ObjectRepository INFO     Object Created TxManager
+06-10 17:08 Modules.Helpers.NodeManager DEBUG    init
+06-10 17:08 tools.ObjectRepository INFO     Object Created RxManager

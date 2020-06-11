@@ -1,7 +1,7 @@
 # EventBroker
 from dotmap import DotMap
 import functools
-import ObjectRepository
+from tools import ObjectRepository
 
 
 def RegisterListener(name):
@@ -32,10 +32,10 @@ class EventBroker:
             self.events[name] = []
         self.events[name].append(handler)
 
-    def fireEvent(self, name, data=None):
+    def fireEvent(self, name, **kwargs):
         if name in self.events.keys():
             for handler in self.events[name]:
-                handler(data)
+                handler(**kwargs)
 
 
 class NotificationProps(DotMap):

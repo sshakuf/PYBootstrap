@@ -4,19 +4,19 @@ import tools.Engine as Engine
 import tools.ObjectRepository
 from enum import Enum
 import logging
+import Modules.Helpers.eNums as eNums
 
 logger = logging.getLogger(__name__)
 
-import Modules.Helpers.eNums as eNums
 
-
-class NodeManager():
+class NodeManager:
     def __init__(self):
         logger.debug("init")
         self.numOfNodes = "1"
         self._nodes = []
         self._nodeTypeName = ""
-        self._state= eNums.RuningState.NOTINITIALIZED
+        self._state = eNums.RuningState.NOTINITIALIZED
+        self.engine = None
 
     def getState(self):
         return self._state
@@ -26,11 +26,11 @@ class NodeManager():
         self.engine = Engine.GetEngine()
         if self.onBeforeInitialized():
             for nodeId in range(0, int(self.numOfNodes)):
-                node = self.engine.objectRepository.CreateInstance(self._nodeTypeName)
+                node = self.engine.objectRepository.CreateInstance(self._nodeTypeName)  # creates here mid-level object
                 node.id = nodeId
                 node.Initialize()
                 self._nodes.append(node)
-            self._state= eNums.RuningState.INITIALIZED
+            self._state = eNums.RuningState.INITIALIZED
             self.onAfterInitialized()
             return True
         return False
