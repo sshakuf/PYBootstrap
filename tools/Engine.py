@@ -8,17 +8,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-_engineComponentList = []
-
-
-def AddEnginComponent(inObj):
-    if inObj not in _engineComponentList:
-        _engineComponentList.append(inObj)
-
-
-def RemoveEnginComponent(inObj):
-    if inObj in _engineComponentList:
-        _engineComponentList.remove(inObj)
+_engine = None
 
 
 class Engine:
@@ -66,8 +56,8 @@ class Engine:
             component.Stop()
 
 
-_engine = Engine()
-
-
 def GetEngine():
+    global _engine
+    if _engine == None:
+        _engine = Engine()
     return _engine
