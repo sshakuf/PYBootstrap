@@ -1,4 +1,5 @@
 *.log
+log.log
 
 # Editors
 .vscode/
@@ -15,6 +16,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.pyc
+*.*.pyc
 
 
 # C extensions
@@ -91,3 +93,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+Modules/__pycache__/Gil.cpython-37.pyc
+Modules/__pycache__/RadarLogic.cpython-37.pyc
+__tmp/log.log
+__tmp/log.log

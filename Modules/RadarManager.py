@@ -68,7 +68,7 @@ class RadarManager(EngineComponent):
         pass
 
     @EventBroker.RegisterListener("Test2")
-    def onEventTest2(a):
+    def onEventTest2():
         logger.debug("onEventTest2")
 
     @EventBroker.RegisterListener("PropertyChanged")

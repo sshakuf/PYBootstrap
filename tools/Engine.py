@@ -17,6 +17,8 @@ class Engine:
 
         self.objectRepository = ObjectRepository.GetObjectRepository()
         self.eventBroker = EventBroker()
+        self.objectRepository.eventBroker = self.eventBroker
+
         #self.props = NotificationProps(self.eventBroker)
 
         # add to ObjectFactory we can use in . notation

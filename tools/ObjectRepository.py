@@ -1,4 +1,6 @@
 # ObjectRepository.py
+from EventBroker import EventBroker
+import logging
 from dotmap import DotMap
 
 import xml.etree.ElementTree as ET
@@ -14,9 +16,9 @@ sys.path.insert(0, parentdir + '/tools')
 sys.path.insert(0, parentdir + '/logic')
 
 sys.path.insert(0, currentdir + '/../Modules')
-import logging
 
 logger = logging.getLogger(__name__)
+
 
 xmlData = """<data> 
     <Modules>
@@ -32,6 +34,7 @@ class ObjectRepository:
         self._objectTypes = {}
         self._instances = {}
         self.instances = DotMap(self._instances)
+        self.eventBroker = None
 
     def loadConfigurationFromFile(self, inFile):
         tree = ET.parse(inFile)
@@ -75,6 +78,8 @@ class ObjectRepository:
             newObj = self._objectTypes[inTypeName]['type']()
             self.AddInstance(inTypeName, newObj)
             logger.info("Object Created " + inTypeName)
+            self.eventBroker.fireEvent("ObjectCreatedEvent", {
+                                       "TypeName": inTypeName, "obj": newObj})
             return newObj
 
     def AddInstance(self, inTypeName, newObj):
@@ -87,7 +92,7 @@ class ObjectRepository:
         for objs in self._instances.keys():
             for obj in self._instances[objs]:
                 if hasattr(obj, "id"):
-                    if getattr(obj,"id") == inIdName:
+                    if getattr(obj, "id") == inIdName:
                         return obj
         return None
 

@@ -4,12 +4,17 @@ import logging
 logger = logging.getLogger(__name__)
 
 
+@RegisterListener("Test")
+def onTestEvent1():
+    logger.debug("TEST")
+
+
 class Gil:
     def __init__(self):
         logger.debug("I am small person")
 
     @RegisterListener("Test")
-    def onTestEvent(self):
+    def onTestEvent():
         logger.debug("TEST")
 
 
@@ -77,5 +82,3 @@ class Gil:
 # # rx_node.onBeforeStop()
 # rx_node.Stop()
 #
-
-

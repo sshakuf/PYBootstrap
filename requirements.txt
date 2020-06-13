@@ -16,3 +16,7 @@ construct~=2.10.56
 canlib~=1.12.251
 # reikna~=0.7.5
 v4l2~=0.2
+
+
+numpy
+serial
