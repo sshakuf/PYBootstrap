@@ -28,7 +28,9 @@ class EventBroker:
                             "onObjectCreated", self)
 
     def onObjectCreated(self, inData):
-        print("eee")
+        if hasattr(inData["obj"], 'RegisterEvents'):
+            func = getattr(inData["obj"], 'RegisterEvents')
+            func()
 
     def registerEvent(self, name):
         if name not in self.events.keys():
