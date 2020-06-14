@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     engine.objectRepository.instances.eventBroker.fireEvent('Test')
     engine.objectRepository.instances.eventBroker.fireEvent('Test2')
-    # engine.props["s"] = "1"
+    engine.props["s"] = "1"
 
     x = 5
     x = x+3

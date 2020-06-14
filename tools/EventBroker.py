@@ -60,20 +60,26 @@ class EventBroker:
 
 
 class NotificationProps(DotMap):
-    def __init__(self, eventBroker):
-        self.eventBroker = eventBroker
+    def __init__(self, *args, **kwargs):
+        super(NotificationProps, self).__init__(*args, **kwargs)
+        # self.eventBroker = args[0]
 
     def __setitem__(self, k, v):
         oldVal = None
-        if k in self._map:
-            oldVal = self[k]
-        self.eventBroker.fire("PropertyBeforeChange", {
-                              "Name": k, "oldVal": oldVal, "newVal": v})
-        retVal = super(NotificationProps, self).__setitem__(k, v)
-        self.eventBroker.fire("PropertyChanged", {
-                              "Name": k, "oldVal": oldVal, "newVal": v})
+        if k != "eventBroker":
+            if k in self._map:
+                oldVal = self[k]
+            self.eventBroker.fireEvent("PropertyBeforeChange", {
+                "Name": k, "oldVal": oldVal, "newVal": v})
+            retVal = super(NotificationProps, self).__setitem__(k, v)
+            self.eventBroker.fireEvent("PropertyChanged", {
+                "Name": k, "oldVal": oldVal, "newVal": v})
+        else:
+            retVal = super(NotificationProps, self).__setitem__(k, v)
         return retVal
 
+    def __getitem__(self, k):
+        return super(NotificationProps, self).__getitem__(k)
 # broker = EventBroker()
 
 

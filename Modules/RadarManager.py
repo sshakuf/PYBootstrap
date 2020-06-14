@@ -67,10 +67,13 @@ class RadarManager(EngineComponent):
     def onAfterStop(self):
         pass
 
+    def RegisterEvents(self):
+        Engine.GetEngine().eventBroker.subscribeEvent(
+            'PropertyChanged', "onPropertyChanged", self)
+
+    def onPropertyChanged(self, data):
+        logger.debug("propertyChanged")
+
     @EventBroker.RegisterListener("Test2")
     def onEventTest2():
         logger.debug("onEventTest2")
-
-    @EventBroker.RegisterListener("PropertyChanged")
-    def onPropertyChanged(self, data):
-        logger.debug("propertyChanged")
