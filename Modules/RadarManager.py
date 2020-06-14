@@ -81,7 +81,7 @@ class RadarManager(EngineComponent):
 
     def onPropertyChanged(self, data):
         logger.debug("propertyChanged")
-        # print("prop changed is: " + str(data))
+        print("prop changed is: " + str(data))
 
     # @EventBroker.RegisterListener("Test2")
     # def onEventTest2():

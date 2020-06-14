@@ -19,6 +19,8 @@ class RxManager(NodeManager):
         return True
 
     def onAfterInitialized(self):
+        # rx shared params should be initialized here
+
         pass
 
     def onBeforeStart(self):
