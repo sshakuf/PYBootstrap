@@ -14,13 +14,19 @@ class Gil:
     def __init__(self):
         logger.debug("I am small person")
 
-    @RegisterListener("Test")
-    def onTestEvent():
+    # @RegisterListener("Test")
+    def onTestEvent(self):
         logger.debug("TEST")
 
     def RegisterEvents(self):
+        Engine.GetEngine().eventBroker.subscribeEvent(
+            'Test', "onTestEvent", self)
+        Engine.GetEngine().eventBroker.subscribeEvent(
+            'PropertyBeforeChange', "onPropertyChanged", self)
+
+    def onPropertyChanged(self, inData):
+        logger.debug("TEST")
         pass
-        # Engine.GetEngine().eventBroker.SubscribeEvent(self, 'Test' Gil.onTestEvent)
 
         # class Node2:
         #     def __init__(self):
