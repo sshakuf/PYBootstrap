@@ -37,7 +37,7 @@ if __name__ == "__main__":
     # test the usage
     print(engine.props.frequency)
     engine.props.rx_FrameGen_N_Samples = 112
-    engine.props.frequency = 321321
+    engine.props.frequency = 32132
     print(engine.props.frequency)
 
     # engine.props["s"] = 11
