@@ -1,9 +1,10 @@
-import EventBroker
-from EngineComponent import EngineComponent
+import tools.EventBroker
+from tools.EngineComponent import EngineComponent
 import logging
 import tools.Engine as Engine
-import tools.DataStore as DataStore
+# import tools.DataStore as DataStore
 import tools.ObjectRepository
+from tools.DataStore import *
 
 logger = logging.getLogger(__name__)
 
@@ -13,12 +14,14 @@ logger = logging.getLogger(__name__)
 
 class RadarManager(EngineComponent):
     def __init__(self):
+        super().__init__()
         logger.debug("init")
-        self.data_store = DataStore.DataStore()
+        self.data_store = DataStore()
         self._txManager = None
         self._rxManager = None
         self._radarLogic = None
         self.engine = None
+        self.global_params = GlobalParams()
 
     def onBeforeInitialized(self):
         self.engine = Engine.GetEngine()
@@ -34,13 +37,18 @@ class RadarManager(EngineComponent):
         self._radarLogic.Initialize()
 
         self.setDefaultProps()
+        # self.engine.eventBroker.subscribeEvent("PropertyBeforeChange", self.onPropertyChanged)
         return True
 
     def setDefaultProps(self):
-        # self.engine.props.freq = 500
+        # assign all global parameters to their engine properties
+        global_param_dict = vars(self.global_params)
+        for key in global_param_dict:
+            self.engine.props[str(key)] = global_param_dict[key]
         pass
 
     def onAfterInitialized(self):
+        # self.engine.eventBroker.subscribeEvent("PropertyBeforeChange", self.onPropertyChanged)
         pass
 
     def onBeforeStart(self):
@@ -73,7 +81,8 @@ class RadarManager(EngineComponent):
 
     def onPropertyChanged(self, data):
         logger.debug("propertyChanged")
+        # print("prop changed is: " + str(data))
 
-    @EventBroker.RegisterListener("Test2")
-    def onEventTest2():
-        logger.debug("onEventTest2")
+    # @EventBroker.RegisterListener("Test2")
+    # def onEventTest2():
+    #     logger.debug("onEventTest2")

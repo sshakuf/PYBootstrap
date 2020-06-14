@@ -1,12 +1,15 @@
 # import EventBroker
 # from EngineComponent import EngineComponent
 import tools.Engine as Engine
-import tools.ObjectRepository
+from tools.DataStore import *
 from enum import Enum
 import logging
 from Modules.Helpers.eNums import BoardType
 from Modules.Helpers.eNums import *
 import Modules.Helpers.eNums as eNums
+from Modules.Helpers.RxParams import *
+
+
 logger = logging.getLogger(__name__)
 
 # ### Node now have only behavior functions which shared with all components (rx, tx and synt) ### #
@@ -19,6 +22,8 @@ class Node:
         self._state = eNums.RuningState.NOTINITIALIZED
         self.is_verbose = True
         self.engine = None
+        self.shared_params = get_rx_shared()  # singleton object
+        self.global_params = get_global_params()  # singleton object (should be on engine?)
 
     def getState(self):
         return self._state
@@ -124,7 +129,7 @@ class Node:
     def get_init_flag(self):  # only rx and tx has it
         pass
 
-    def set_run_mode(self):
+    def set_run_mode(self, run_mode):
         pass
 
     def start_hardware(self):

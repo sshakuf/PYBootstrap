@@ -1,6 +1,7 @@
 import EventBroker
 from tools.EngineComponent import EngineComponent
 import logging
+import tools.Engine as Engine
 
 logger = logging.getLogger(__name__)
 
@@ -8,10 +9,10 @@ logger = logging.getLogger(__name__)
 class RadarLogic(EngineComponent):
     def __init__(self):
         logger.debug("RadarLogic init...")
-        self.engine = None
+        self.engine = Engine.GetEngine()
 
     # change frequency should be on radarLogic
-    def change_frequency(self, freq):
+    def param_change(self, param):
         self.engine.eventBroker.fireEvent("changed_freq", freq)
 
     def Initialize(self):

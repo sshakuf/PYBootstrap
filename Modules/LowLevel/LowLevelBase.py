@@ -4,7 +4,7 @@ import numpy as np
 from Modules.Helpers.eNums import *
 import logging
 # from Core.Enums import HWInterfaceType, NiArtException
-# from HWModules.RX.RxEnums import *
+from Modules.Helpers.Enums.RxEnums import *
 # from Core.BaseNiArtObject import BaseNiArtObject
 
 
@@ -66,6 +66,15 @@ class LowLevelBase:
 
     def disconnect(self):
         pass
+
+    def read_reg_float_val(self, block: RXBlock, address: int):
+        res = self.read_reg(block, address, ExpResType.Int)
+        res = res / 10 if res >= 0 else 0.0
+        return res
+
+    def modify_cpu_control_reg(self, command: int):
+        res = self.write_reg(RXBlock.CpuRegisters, RxCpuBlockAddr.ControlReg.value, command)
+        return res
 
     def read_reg(self, block: Enum, address: int, expected_res: ExpResType):
         pass

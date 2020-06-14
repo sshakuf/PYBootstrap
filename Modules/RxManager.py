@@ -3,6 +3,7 @@ from EngineComponent import EngineComponent
 import tools.Engine as Engine
 import tools.ObjectRepository
 from Modules.Helpers.NodeManager import NodeManager
+from Modules.Helpers.RxParams import *
 import logging
 
 logger = logging.getLogger(__name__)
@@ -12,6 +13,7 @@ class RxManager(NodeManager):
     def __init__(self):
         super().__init__()
         self._nodeTypeName = "RxNode"
+        # this will return a singleton rx params which will be shared across al rx's
 
     def onBeforeInitialized(self):
         return True

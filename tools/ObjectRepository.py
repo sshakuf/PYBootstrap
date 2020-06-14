@@ -1,5 +1,5 @@
 # ObjectRepository.py
-from EventBroker import EventBroker
+# from tools.EventBroker import EventBroker
 import logging
 from dotmap import DotMap
 
@@ -121,7 +121,6 @@ class ObjectRepository(Singleton):
             for obj in self._instances[typeName]:
                 if isinstance(obj, inType):
                     retVal.append(obj)
-
         return retVal
 
 # LoadRestApiModules()

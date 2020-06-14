@@ -89,6 +89,7 @@ class SyntMipiRamBlockAddr(Enum):  # new in ver 00.10
 #     R8192_A256 = 3  # 48bit per pixel, 6.479ms
 
 
+# MOVED TO GLOBAL TRIGGER MODE
 class SyntRunMode(Enum):
     Stop = 0
     Manual = 1

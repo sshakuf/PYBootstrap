@@ -35,6 +35,7 @@ class RXChanSelectMode(Enum):
     Single = 2
 
 
+# MOVED TO GLOBAL TRIGGER MODE
 class RxTriggerMode(Enum):
     Stop = 0
     Manual = 1  # Write 1 to generate 1 frame --> Use this mode for Debug Data output

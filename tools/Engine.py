@@ -70,6 +70,7 @@ class Engine(Singleton):
             component.Stop()
 
 
+# Singleton engine
 def GetEngine():
     global _engine
     if _engine == None:

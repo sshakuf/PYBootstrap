@@ -74,4 +74,14 @@ class RuningState(Enum):
     CONNECTED = 5
 
 
+class DebugOutputInterface(Enum):
+    MIPI = 0
+    CAN = 1
 
+
+class TriggerMode(Enum):
+    Stop = 0
+    Manual = 1  # Write 1 to generate 1 frame --> Use this mode for Debug Data output
+    FreeRun = 2
+    External = 4
+    ExternalDebug = 8

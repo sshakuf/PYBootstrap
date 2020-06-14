@@ -112,6 +112,7 @@ class TxFrameGenCmdRegBits(Enum):
     ExtSync = 2  # 1=triggered from external SYNC
 
 
+# MOVED TO GLOBAL TRIGGER MODE
 class TxTriggerMode(Enum):
     Stop = 0
     Manual = 1   # Write 1 to generate 1 frame --> Use this mode for Debug Data output

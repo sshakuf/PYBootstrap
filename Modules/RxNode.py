@@ -22,7 +22,7 @@ class RxNode(Node):
     def __init__(self):
         super().__init__()
         logger.debug("init")
-        self.rx_param = RxParams()
+        self.rx_param = RxLocalParams()
         self.status = RxStatus()
         self.version = NodeVersion()
         # Doron's part #
@@ -38,8 +38,13 @@ class RxNode(Node):
 
     def onBeforeInitialized(self):
         logger.info("RxNode initializing")
-        self.engine.eventBroker.subscribeEvent("changed_freq", self.frequency_change)
+        # self.engine.eventBroker.subscribeEvent("changed_freq", self.frequency_change)
+        self.engine.eventBroker.subscribeEvent("PropertyBeforeChange", self.prop_changed)
         return True
+
+    def prop_changed(self, prop):
+        if prop["Name"] == "freq":
+            print("Freq changed, doing something from rx" + str(self.id))
 
     def onAfterInitialized(self):
         logger.info("RxNode initialized")
@@ -52,6 +57,11 @@ class RxNode(Node):
         pass
 
     def onBeforeRun(self):
+        # if self.id == 1:
+        #     print("AHHHH LOOK AT ME IM MISTER MISIX!")
+        # if self.id == 2:
+        #     print("RX ID 2 IS DOING ANOTHER THINGS IN ADDITION!")
+        # print("FREQUENCY FROM RX ID: " + str(self.id) + " IS: " + str(self.engine.props.frequency))
         return True
 
     def onAfterRun(self):
@@ -294,7 +304,7 @@ class RxNode(Node):
 
     def config_fir(self, fir_index: int = None):
         fir_index = fir_index if fir_index is not None else self.rx_param.rx_FIR_Index
-        super().config_fir(fir_index)
+        # super().config_fir(fir_index)
         filt_bank = [
             [256, -228, 328, -455, 617, -823, 1090, -1443, 1934, -2674, 3949, -6818, 20815, 20815, -6818, 3949, -2674,
              1934, -1443, 1090, -823, 617, -455, 328, -228, 256, 0, 0],
@@ -321,7 +331,7 @@ class RxNode(Node):
 
     def config_decimator(self, decim_factor: int = None, num_samples_out: int = None):
         decim_factor = decim_factor if decim_factor is not None else self.rx_param.rx_DecimationRatio
-        num_samples_out = num_samples_out if num_samples_out is not None else self.rx_param.rx_NumSamplesOut
+        num_samples_out = num_samples_out if num_samples_out is not None else self.shared_params.rx_NumSamplesOut
         # super().config_decimator(decim_factor)
         rx = self.radar_low_level
         val = decim_factor
@@ -411,7 +421,7 @@ class RxNode(Node):
         rx = self.radar_low_level
 
         sig_len = 8192
-        tt = np.linspace(0, (sig_len - 1) / (SysConfig.fs / (2.0 ** self.rx_param.rx_DecimationRatio)),
+        tt = np.linspace(0, (sig_len - 1) / (SysConfig.fs / (2.0 ** self.global_params.rx_DecimationRatio)),
                          sig_len)
 
         self.rx_param.rx_SSB_Amp = amp
@@ -443,9 +453,9 @@ class RxNode(Node):
         self.rx_param.rx_RAM_tone_freq = freq
         self.rx_param.rx_RAM_STD = noise_std
 
-        length = self.rx_param.rx_RAM_SamplesNum
+        length = self.shared_params.rx_RAM_SamplesNum
         t = np.linspace(0, (length - 1) / self.rx_param.fs, length)
-        signal = self.rx_param.rx_RAM_Amp * np.cos(2 * np.pi * self.rx_param.rx_RAM_tone_freq * t)
+        signal = self.shared_params.rx_RAM_Amp * np.cos(2 * np.pi * self.rx_param.rx_RAM_tone_freq * t)
         noise = (self.rx_param.rx_RAM_STD * np.random.randn(length, 1))
         combine_signal = np.round(signal + noise)
         upload_data = combine_signal.astype(dtype=np.int16)
@@ -487,7 +497,7 @@ class RxNode(Node):
         logger.info(" Init Frame Generator")
         rx = self.radar_low_level
         # turn off frame generator
-        run_mode_keep = self.rx_param.rx_TriggerMode
+        run_mode_keep = self.shared_params.rx_TriggerMode
         self.set_run_mode(RxTriggerMode.Stop)
         # rx.write_reg(RXBlock.FrameGen, RxFrameGenBlockAddr.ControlReg.value, TriggerMode.Stop.value)
 
@@ -565,7 +575,7 @@ class RxNode(Node):
         self.rx_param.rx_Bit_Shift = bit_shift
 
         rx.write_reg(RXBlock.Decimation, RxDecimationBlockAddr.Decimation.value,
-                     8 * self.rx_param.channel + self.rx_param.rx_DecimationRatio)
+                     8 * self.rx_param.channel + self.global_params.rx_DecimationRatio)
         rx.write_reg(RXBlock.DebugMem, RxDbgMemBlockAddr.Multiplexer,
                      16 * self.rx_param.rx_Bit_Shift + self.rx_param.rx_DebugInputSource.value)
 

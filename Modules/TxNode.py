@@ -4,16 +4,30 @@ from EngineComponent import EngineComponent
 import logging
 
 from Modules.Helpers.Node import Node
+from Modules.Helpers.TxParams import *
+from Modules.Helpers.Enums.TxEnums import *
+from tools.DataStore import *
+from Modules.LowLevel import LowLevelBase, LowLevelCanBus, LowLevelI2C, LowLevelSerial
+
 
 logger = logging.getLogger(__name__)
 
 
 class TxNode(Node):
     def __init__(self):
+        super().__init__()
         logger.debug("init")
+        self.rx_param = TxLocalParams()
+        self.status = TxStatus()
+        self.version = NodeVersion()
+        # Doron's part #
+        self.is_connected = False
+        self.is_hw_initialized = False
+        self.is_started = False
 
     def onBeforeInitialized(self):
         return True
+
     def onAfterInitialized(self):
         pass
 
