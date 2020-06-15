@@ -22,7 +22,6 @@ class Node:
         self._state = eNums.RuningState.NOTINITIALIZED
         self.is_verbose = True
         self.engine = None
-        self.shared_params = get_rx_shared()  # singleton object
         self.global_params = get_global_params()  # singleton object (should be on engine?)
 
     def getState(self):
@@ -117,7 +116,8 @@ class Node:
     def get_status(self):
         pass
 
-    def config_frame(self):  # same signature at doron's code, different implementation
+    # same signature at doron's code, different implementation
+    def config_frame(self, num_samples: int = None, frame_len_usec: int = None, sync_delay: int = None):
         pass
 
     def init_hw(self):

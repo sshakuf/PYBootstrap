@@ -9334,3 +9334,651 @@ Rx temp: [0.0, 69.5, 69.5, 68.0, 66.5, 65.0, 71.0, 71.0, 69.5, 69.5, 69.5, 72.5,
 
 
 06-15 11:18 Modules.LowLevel.LowLevelI2C ERROR    LowLevel hw_interface exception: [Errno 110] Connection timed out
+06-15 11:36 __main__     INFO     ________Start_________Main_________
+06-15 11:36 tools.Engine INFO     Engine Init
+06-15 11:36 tools.Engine INFO     Loading Configuration /ext_ssd/PrjGL/radar-control-v2/configurations/conf1.xml
+06-15 11:36 Modules.Helpers.Node DEBUG    init
+06-15 11:36 RxNode       DEBUG    init
+06-15 11:36 RadarLogic   DEBUG    RadarLogic init...
+06-15 11:36 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 11:36 tools.EngineComponent DEBUG    init
+06-15 11:36 RadarManager DEBUG    init
+06-15 11:36 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 11:36 Modules.Helpers.NodeManager DEBUG    init
+06-15 11:36 tools.ObjectRepository INFO     Object Created TxManager
+06-15 11:36 Modules.Helpers.NodeManager DEBUG    init
+06-15 11:36 tools.ObjectRepository INFO     Object Created RxManager
+06-15 11:36 Gil          DEBUG    I am small person
+06-15 11:36 tools.ObjectRepository INFO     Object Created Gil
+06-15 11:36 Engine       INFO     Engine Init
+06-15 11:36 RadarLogic   DEBUG    Initialize
+06-15 11:36 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 11:36 Modules.Helpers.Node DEBUG    init
+06-15 11:36 TxNode       DEBUG    init
+06-15 11:36 tools.ObjectRepository INFO     Object Created TxNode
+06-15 11:36 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 11:36 Modules.Helpers.Node DEBUG    init
+06-15 11:36 RxNode       DEBUG    init
+06-15 11:36 tools.ObjectRepository INFO     Object Created RxNode
+06-15 11:36 RxNode       INFO     RxNode initializing
+06-15 11:36 RxNode       INFO     RxNode initialized
+06-15 11:36 Modules.Helpers.Node DEBUG    init
+06-15 11:36 RxNode       DEBUG    init
+06-15 11:36 tools.ObjectRepository INFO     Object Created RxNode
+06-15 11:36 RxNode       INFO     RxNode initializing
+06-15 11:36 RxNode       INFO     RxNode initialized
+06-15 11:36 Modules.Helpers.Node DEBUG    init
+06-15 11:36 RxNode       DEBUG    init
+06-15 11:36 tools.ObjectRepository INFO     Object Created RxNode
+06-15 11:36 RxNode       INFO     RxNode initializing
+06-15 11:36 RxNode       INFO     RxNode initialized
+06-15 11:36 Modules.Helpers.Node DEBUG    init
+06-15 11:36 RxNode       DEBUG    init
+06-15 11:36 tools.ObjectRepository INFO     Object Created RxNode
+06-15 11:36 RxNode       INFO     RxNode initializing
+06-15 11:36 RxNode       INFO     RxNode initialized
+06-15 11:36 RadarLogic   DEBUG    Initialize
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarLogic   DEBUG    Start
+06-15 11:36 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-15 11:36 RxNode       INFO     =============== Connected ==============
+06-15 11:36 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-15 11:36 Modules.LowLevel.LowLevelI2C DEBUG    Going on I2C bus
+
+
+06-15 11:36 RxNode       INFO     rx_fpga_version: -1.ff
+06-15 11:36 RxNode       INFO     rx_board_type: Undef
+06-15 11:36 RxNode       INFO     rx_serial_num: -0001
+06-15 11:36 RxNode       INFO     FPGA Temp:  37.0.
+Rx temp: [-0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, 45.3, 45.3, 43.8]
+
+06-15 11:36 RxNode       INFO     Board temp:  36.8 C. Board Humidity: 26.47 %
+
+06-15 11:36 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.03])
+06-15 11:36 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-15 11:36 RxNode       INFO     =============== Connected ==============
+06-15 11:36 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-15 11:36 RxNode       INFO     rx_fpga_version: 00.11
+06-15 11:36 RxNode       INFO     rx_board_type: RX
+06-15 11:36 RxNode       INFO     rx_serial_num: 01234
+06-15 11:36 RxNode       INFO     FPGA Temp:  37.0.
+Rx temp: [0.0, 45.3, 45.3, 45.3, 45.3, 45.3, 45.3, 48.4, 45.3, 45.3, 45.3, 45.3, 45.3, 45.3, 45.3, 43.8]
+
+06-15 11:36 RxNode       INFO     Board temp:  36.8 C. Board Humidity: 26.47 %
+
+06-15 11:36 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.03])
+06-15 11:36 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-15 11:36 RxNode       INFO     =============== Connected ==============
+06-15 11:36 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-15 11:36 RxNode       INFO     rx_fpga_version: 00.11
+06-15 11:36 RxNode       INFO     rx_board_type: RX
+06-15 11:36 RxNode       INFO     rx_serial_num: 01234
+06-15 11:36 RxNode       INFO     FPGA Temp:  37.0.
+Rx temp: [0.0, 45.3, 45.3, 45.3, 45.3, 45.3, 45.3, 46.9, 45.3, 45.3, 43.8, 43.8, 43.8, 45.3, 45.3, 45.3]
+
+06-15 11:36 RxNode       INFO     Board temp:  36.8 C. Board Humidity: 26.47 %
+
+06-15 11:36 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.03])
+06-15 11:36 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-15 11:36 RxNode       INFO     =============== Connected ==============
+06-15 11:36 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-15 11:36 RxNode       INFO     rx_fpga_version: 00.11
+06-15 11:36 RxNode       INFO     rx_board_type: RX
+06-15 11:36 RxNode       INFO     rx_serial_num: 01234
+06-15 11:36 RxNode       INFO     FPGA Temp:  37.0.
+Rx temp: [0.0, 45.3, 45.3, 43.8, 45.3, 43.8, 43.8, 46.9, 45.3, 45.3, 43.8, 43.8, 43.8, 45.3, 45.3, 45.3]
+
+06-15 11:36 RxNode       INFO     Board temp:  36.8 C. Board Humidity: 26.47 %
+
+06-15 11:36 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.03])
+06-15 11:36 RadarLogic   DEBUG    Start
+06-15 11:36 RadarLogic   DEBUG    Stop
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:36 RadarManager DEBUG    propertyChanged
+06-15 11:38 __main__     INFO     ________Start_________Main_________
+06-15 11:38 tools.Engine INFO     Engine Init
+06-15 11:38 tools.Engine INFO     Loading Configuration /ext_ssd/PrjGL/radar-control-v2/configurations/conf1.xml
+06-15 11:38 Modules.Helpers.Node DEBUG    init
+06-15 11:38 RxNode       DEBUG    init
+06-15 11:38 RadarLogic   DEBUG    RadarLogic init...
+06-15 11:38 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 11:38 tools.EngineComponent DEBUG    init
+06-15 11:38 RadarManager DEBUG    init
+06-15 11:38 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 11:38 Modules.Helpers.NodeManager DEBUG    init
+06-15 11:38 tools.ObjectRepository INFO     Object Created TxManager
+06-15 11:38 Modules.Helpers.NodeManager DEBUG    init
+06-15 11:38 tools.ObjectRepository INFO     Object Created RxManager
+06-15 11:38 Gil          DEBUG    I am small person
+06-15 11:38 tools.ObjectRepository INFO     Object Created Gil
+06-15 11:38 Engine       INFO     Engine Init
+06-15 11:38 RadarLogic   DEBUG    Initialize
+06-15 11:38 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 11:38 Modules.Helpers.Node DEBUG    init
+06-15 11:38 TxNode       DEBUG    init
+06-15 11:38 tools.ObjectRepository INFO     Object Created TxNode
+06-15 11:38 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 11:38 Modules.Helpers.Node DEBUG    init
+06-15 11:38 RxNode       DEBUG    init
+06-15 11:38 tools.ObjectRepository INFO     Object Created RxNode
+06-15 11:38 RxNode       INFO     RxNode initializing
+06-15 11:38 RxNode       INFO     RxNode initialized
+06-15 11:38 Modules.Helpers.Node DEBUG    init
+06-15 11:38 RxNode       DEBUG    init
+06-15 11:38 tools.ObjectRepository INFO     Object Created RxNode
+06-15 11:38 RxNode       INFO     RxNode initializing
+06-15 11:38 RxNode       INFO     RxNode initialized
+06-15 11:38 Modules.Helpers.Node DEBUG    init
+06-15 11:38 RxNode       DEBUG    init
+06-15 11:38 tools.ObjectRepository INFO     Object Created RxNode
+06-15 11:38 RxNode       INFO     RxNode initializing
+06-15 11:38 RxNode       INFO     RxNode initialized
+06-15 11:38 Modules.Helpers.Node DEBUG    init
+06-15 11:38 RxNode       DEBUG    init
+06-15 11:38 tools.ObjectRepository INFO     Object Created RxNode
+06-15 11:38 RxNode       INFO     RxNode initializing
+06-15 11:38 RxNode       INFO     RxNode initialized
+06-15 11:38 RadarLogic   DEBUG    Initialize
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarLogic   DEBUG    Start
+06-15 11:38 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-15 11:38 RxNode       INFO     =============== Connected ==============
+06-15 11:38 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-15 11:38 Modules.LowLevel.LowLevelI2C DEBUG    Going on I2C bus
+
+
+06-15 11:38 RxNode       INFO     rx_fpga_version: 00.11
+06-15 11:38 RxNode       INFO     rx_board_type: RX
+06-15 11:38 RxNode       INFO     rx_serial_num: 01234
+06-15 11:38 RxNode       INFO     FPGA Temp:  37.0.
+Rx temp: [0.0, 46.9, 45.3, 45.3, 43.8, 45.3, 45.3, 46.9, 45.3, 45.3, 46.9, 45.3, 45.3, 46.9, 46.9, 46.9]
+
+06-15 11:38 RxNode       INFO     Board temp:  38.8 C. Board Humidity: 26.71 %
+
+06-15 11:38 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.03])
+06-15 11:38 RxNode       INFO      ************** Init HW **************
+06-15 11:38 RxNode       DEBUG    Configure Bias DACs
+06-15 11:38 RxNode       DEBUG    Configure ADC mode
+06-15 11:38 RxNode       DEBUG    Configure receiver
+06-15 11:38 RxNode       DEBUG     **************Finished HW Init**************
+06-15 11:38 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-15 11:38 RxNode       INFO     =============== Connected ==============
+06-15 11:38 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-15 11:38 RxNode       INFO     rx_fpga_version: 00.11
+06-15 11:38 RxNode       INFO     rx_board_type: RX
+06-15 11:38 RxNode       INFO     rx_serial_num: 01234
+06-15 11:38 RxNode       INFO     FPGA Temp:  37.0.
+Rx temp: [0.0, 46.9, 45.3, 45.3, 43.8, 45.3, 45.3, 46.9, 45.3, 45.3, 46.9, 45.3, 45.3, 46.9, 46.9, 46.9]
+
+06-15 11:38 RxNode       INFO     Board temp:  38.8 C. Board Humidity: 26.71 %
+
+06-15 11:38 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.03])
+06-15 11:38 RxNode       INFO      ************** Init HW **************
+06-15 11:38 RxNode       DEBUG    Configure Bias DACs
+06-15 11:38 RxNode       DEBUG    Configure ADC mode
+06-15 11:38 RxNode       DEBUG    Configure receiver
+06-15 11:38 RxNode       DEBUG     **************Finished HW Init**************
+06-15 11:38 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-15 11:38 RxNode       INFO     =============== Connected ==============
+06-15 11:38 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-15 11:38 RxNode       INFO     rx_fpga_version: 00.11
+06-15 11:38 RxNode       INFO     rx_board_type: RX
+06-15 11:38 RxNode       INFO     rx_serial_num: 01234
+06-15 11:38 RxNode       INFO     FPGA Temp:  37.0.
+Rx temp: [0.0, 55.9, 55.9, 54.4, 55.9, 54.4, 55.9, 55.9, 55.9, 55.9, 55.9, 55.9, 55.9, 55.9, 57.4, 57.4]
+
+06-15 11:38 RxNode       INFO     Board temp:  38.8 C. Board Humidity: 26.71 %
+
+06-15 11:38 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.03])
+06-15 11:38 RxNode       INFO      ************** Init HW **************
+06-15 11:38 RxNode       DEBUG    Configure Bias DACs
+06-15 11:38 RxNode       DEBUG    Configure ADC mode
+06-15 11:38 RxNode       DEBUG    Configure receiver
+06-15 11:38 RxNode       DEBUG     **************Finished HW Init**************
+06-15 11:38 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-15 11:38 RxNode       INFO     =============== Connected ==============
+06-15 11:38 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-15 11:38 RxNode       INFO     rx_fpga_version: 00.11
+06-15 11:38 RxNode       INFO     rx_board_type: RX
+06-15 11:38 RxNode       INFO     rx_serial_num: 01234
+06-15 11:38 RxNode       INFO     FPGA Temp:  37.0.
+Rx temp: [0.0, 55.9, 55.9, 54.4, 55.9, 54.4, 55.9, 55.9, 55.9, 55.9, 55.9, 55.9, 55.9, 55.9, 57.4, 57.4]
+
+06-15 11:38 RxNode       INFO     Board temp:  38.8 C. Board Humidity: 26.71 %
+
+06-15 11:38 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.03])
+06-15 11:38 RxNode       INFO      ************** Init HW **************
+06-15 11:38 RxNode       DEBUG    Configure Bias DACs
+06-15 11:38 RxNode       DEBUG    Configure ADC mode
+06-15 11:38 RxNode       DEBUG    Configure receiver
+06-15 11:38 RxNode       DEBUG     **************Finished HW Init**************
+06-15 11:38 RadarLogic   DEBUG    Start
+06-15 11:38 RadarLogic   DEBUG    Stop
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 11:38 RadarManager DEBUG    propertyChanged
+06-15 12:22 __main__     INFO     ________Start_________Main_________
+06-15 12:22 tools.Engine INFO     Engine Init
+06-15 12:22 tools.Engine INFO     Loading Configuration /ext_ssd/PrjGL/radar-control-v2/configurations/conf1.xml
+06-15 12:22 Modules.Helpers.Node DEBUG    init
+06-15 12:22 RxNode       DEBUG    init
+06-15 12:22 RadarLogic   DEBUG    RadarLogic init...
+06-15 12:22 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 12:22 tools.EngineComponent DEBUG    init
+06-15 12:22 RadarManager DEBUG    init
+06-15 12:22 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 12:22 Modules.Helpers.NodeManager DEBUG    init
+06-15 12:22 tools.ObjectRepository INFO     Object Created TxManager
+06-15 12:22 Modules.Helpers.NodeManager DEBUG    init
+06-15 12:22 tools.ObjectRepository INFO     Object Created RxManager
+06-15 12:22 Gil          DEBUG    I am small person
+06-15 12:22 tools.ObjectRepository INFO     Object Created Gil
+06-15 12:22 Engine       INFO     Engine Init
+06-15 12:22 RadarLogic   DEBUG    Initialize
+06-15 12:22 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 12:22 Modules.Helpers.Node DEBUG    init
+06-15 12:22 TxNode       DEBUG    init
+06-15 12:22 tools.ObjectRepository INFO     Object Created TxNode
+06-15 12:22 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 12:22 Modules.Helpers.Node DEBUG    init
+06-15 12:22 RxNode       DEBUG    init
+06-15 12:22 tools.ObjectRepository INFO     Object Created RxNode
+06-15 12:22 RxNode       INFO     RxNode initializing
+06-15 12:22 RxNode       INFO     RxNode initialized
+06-15 12:22 Modules.Helpers.Node DEBUG    init
+06-15 12:22 RxNode       DEBUG    init
+06-15 12:22 tools.ObjectRepository INFO     Object Created RxNode
+06-15 12:22 RxNode       INFO     RxNode initializing
+06-15 12:22 RxNode       INFO     RxNode initialized
+06-15 12:22 Modules.Helpers.Node DEBUG    init
+06-15 12:22 RxNode       DEBUG    init
+06-15 12:22 tools.ObjectRepository INFO     Object Created RxNode
+06-15 12:22 RxNode       INFO     RxNode initializing
+06-15 12:22 RxNode       INFO     RxNode initialized
+06-15 12:22 Modules.Helpers.Node DEBUG    init
+06-15 12:22 RxNode       DEBUG    init
+06-15 12:22 tools.ObjectRepository INFO     Object Created RxNode
+06-15 12:22 RxNode       INFO     RxNode initializing
+06-15 12:22 RxNode       INFO     RxNode initialized
+06-15 12:22 RadarLogic   DEBUG    Initialize
+06-15 12:22 RadarManager DEBUG    propertyChanged
+06-15 12:22 RadarManager DEBUG    propertyChanged
+06-15 12:22 RadarManager DEBUG    propertyChanged
+06-15 12:22 RadarManager DEBUG    propertyChanged
+06-15 12:22 RadarManager DEBUG    propertyChanged
+06-15 12:22 RadarManager DEBUG    propertyChanged
+06-15 12:22 RadarManager DEBUG    propertyChanged
+06-15 12:22 RadarManager DEBUG    propertyChanged
+06-15 12:22 RadarManager DEBUG    propertyChanged
+06-15 12:22 RadarManager DEBUG    propertyChanged
+06-15 12:22 RadarManager DEBUG    propertyChanged
+06-15 12:22 RadarManager DEBUG    propertyChanged
+06-15 12:22 RadarManager DEBUG    propertyChanged
+06-15 12:22 RadarManager DEBUG    propertyChanged
+06-15 12:22 RadarManager DEBUG    propertyChanged
+06-15 12:22 RadarManager DEBUG    propertyChanged
+06-15 12:22 RadarLogic   DEBUG    Start
+06-15 12:22 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-15 12:22 RxNode       INFO     =============== Connected ==============
+06-15 12:22 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-15 12:22 Modules.LowLevel.LowLevelI2C DEBUG    Going on I2C bus
+
+
+06-15 12:22 RxNode       INFO     rx_fpga_version: 00.11
+06-15 12:22 RxNode       INFO     rx_board_type: RX
+06-15 12:22 RxNode       INFO     rx_serial_num: 01234
+06-15 12:22 RxNode       INFO     FPGA Temp:  37.0.
+Rx temp: [0.0, 66.5, 68.0, 65.0, 66.5, 66.5, 68.0, 68.0, 69.5, 68.0, 66.5, 68.0, 66.5, 68.0, 66.5, 69.5]
+
+06-15 12:22 RxNode       INFO     Board temp:  43.7 C. Board Humidity: 21.58 %
+
+06-15 12:22 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.03])
+06-15 12:22 RxNode       INFO      ************** Init HW **************
+06-15 12:22 RxNode       DEBUG    Configure Bias DACs
+06-15 12:22 RxNode       DEBUG    Configure ADC mode
+06-15 12:22 RxNode       DEBUG    Configure receiver
+06-15 12:22 RxNode       DEBUG     **************Finished HW Init**************
+06-15 12:24 __main__     INFO     ________Start_________Main_________
+06-15 12:24 tools.Engine INFO     Engine Init
+06-15 12:24 tools.Engine INFO     Loading Configuration /ext_ssd/PrjGL/radar-control-v2/configurations/conf1.xml
+06-15 12:24 Modules.Helpers.Node DEBUG    init
+06-15 12:24 RxNode       DEBUG    init
+06-15 12:24 RadarLogic   DEBUG    RadarLogic init...
+06-15 12:24 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 12:24 tools.EngineComponent DEBUG    init
+06-15 12:24 RadarManager DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 12:24 Modules.Helpers.NodeManager DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created TxManager
+06-15 12:24 Modules.Helpers.NodeManager DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created RxManager
+06-15 12:24 Gil          DEBUG    I am small person
+06-15 12:24 tools.ObjectRepository INFO     Object Created Gil
+06-15 12:24 Engine       INFO     Engine Init
+06-15 12:24 RadarLogic   DEBUG    Initialize
+06-15 12:24 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 12:24 Modules.Helpers.Node DEBUG    init
+06-15 12:24 TxNode       DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created TxNode
+06-15 12:24 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 12:24 Modules.Helpers.Node DEBUG    init
+06-15 12:24 RxNode       DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created RxNode
+06-15 12:24 RxNode       INFO     RxNode initializing
+06-15 12:24 RxNode       INFO     RxNode initialized
+06-15 12:24 Modules.Helpers.Node DEBUG    init
+06-15 12:24 RxNode       DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created RxNode
+06-15 12:24 RxNode       INFO     RxNode initializing
+06-15 12:24 RxNode       INFO     RxNode initialized
+06-15 12:24 Modules.Helpers.Node DEBUG    init
+06-15 12:24 RxNode       DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created RxNode
+06-15 12:24 RxNode       INFO     RxNode initializing
+06-15 12:24 RxNode       INFO     RxNode initialized
+06-15 12:24 Modules.Helpers.Node DEBUG    init
+06-15 12:24 RxNode       DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created RxNode
+06-15 12:24 RxNode       INFO     RxNode initializing
+06-15 12:24 RxNode       INFO     RxNode initialized
+06-15 12:24 RadarLogic   DEBUG    Initialize
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarLogic   DEBUG    Start
+06-15 12:24 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-15 12:24 RxNode       INFO     =============== Connected ==============
+06-15 12:24 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-15 12:24 Modules.LowLevel.LowLevelI2C DEBUG    Going on I2C bus
+
+
+06-15 12:24 RxNode       INFO     rx_fpga_version: 00.11
+06-15 12:24 RxNode       INFO     rx_board_type: RX
+06-15 12:24 RxNode       INFO     rx_serial_num: 01234
+06-15 12:24 RxNode       INFO     FPGA Temp:  37.0.
+Rx temp: [0.0, 68.0, 68.0, 66.5, 68.0, 66.5, 66.5, 68.0, 69.5, 68.0, 66.5, 66.5, 68.0, 68.0, 68.0, 71.0]
+
+06-15 12:24 RxNode       INFO     Board temp:  43.8 C. Board Humidity: 21.55 %
+
+06-15 12:24 RxNode       INFO     Rx Accelerometer: ([0.01, -1.0, 0.03])
+06-15 12:24 RxNode       INFO      ************** Init HW **************
+06-15 12:24 RxNode       DEBUG    Configure Bias DACs
+06-15 12:24 RxNode       DEBUG    Configure ADC mode
+06-15 12:24 RxNode       DEBUG    Configure receiver
+06-15 12:24 RxNode       DEBUG     **************Finished HW Init**************
+06-15 12:24 __main__     INFO     ________Start_________Main_________
+06-15 12:24 tools.Engine INFO     Engine Init
+06-15 12:24 tools.Engine INFO     Loading Configuration /ext_ssd/PrjGL/radar-control-v2/configurations/conf1.xml
+06-15 12:24 Modules.Helpers.Node DEBUG    init
+06-15 12:24 RxNode       DEBUG    init
+06-15 12:24 RadarLogic   DEBUG    RadarLogic init...
+06-15 12:24 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 12:24 tools.EngineComponent DEBUG    init
+06-15 12:24 RadarManager DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 12:24 Modules.Helpers.NodeManager DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created TxManager
+06-15 12:24 Modules.Helpers.NodeManager DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created RxManager
+06-15 12:24 Gil          DEBUG    I am small person
+06-15 12:24 tools.ObjectRepository INFO     Object Created Gil
+06-15 12:24 Engine       INFO     Engine Init
+06-15 12:24 RadarLogic   DEBUG    Initialize
+06-15 12:24 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 12:24 Modules.Helpers.Node DEBUG    init
+06-15 12:24 TxNode       DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created TxNode
+06-15 12:24 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 12:24 Modules.Helpers.Node DEBUG    init
+06-15 12:24 RxNode       DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created RxNode
+06-15 12:24 RxNode       INFO     RxNode initializing
+06-15 12:24 RxNode       INFO     RxNode initialized
+06-15 12:24 Modules.Helpers.Node DEBUG    init
+06-15 12:24 RxNode       DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created RxNode
+06-15 12:24 RxNode       INFO     RxNode initializing
+06-15 12:24 RxNode       INFO     RxNode initialized
+06-15 12:24 Modules.Helpers.Node DEBUG    init
+06-15 12:24 RxNode       DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created RxNode
+06-15 12:24 RxNode       INFO     RxNode initializing
+06-15 12:24 RxNode       INFO     RxNode initialized
+06-15 12:24 Modules.Helpers.Node DEBUG    init
+06-15 12:24 RxNode       DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created RxNode
+06-15 12:24 RxNode       INFO     RxNode initializing
+06-15 12:24 RxNode       INFO     RxNode initialized
+06-15 12:24 RadarLogic   DEBUG    Initialize
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarLogic   DEBUG    Start
+06-15 12:24 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-15 12:24 RxNode       INFO     =============== Connected ==============
+06-15 12:24 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-15 12:24 Modules.LowLevel.LowLevelI2C DEBUG    Going on I2C bus
+
+
+06-15 12:24 RxNode       INFO     rx_fpga_version: 00.11
+06-15 12:24 RxNode       INFO     rx_board_type: RX
+06-15 12:24 RxNode       INFO     rx_serial_num: 01234
+06-15 12:24 RxNode       INFO     FPGA Temp:  37.0.
+Rx temp: [0.0, 68.0, 68.0, 66.5, 68.0, 66.5, 68.0, 69.5, 69.5, 69.5, 66.5, 68.0, 68.0, 68.0, 68.0, 71.0]
+
+06-15 12:24 RxNode       INFO     Board temp:  43.9 C. Board Humidity: 21.52 %
+
+06-15 12:24 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.04])
+06-15 12:24 RxNode       INFO      ************** Init HW **************
+06-15 12:24 RxNode       DEBUG    Configure Bias DACs
+06-15 12:24 RxNode       DEBUG    Configure ADC mode
+06-15 12:24 RxNode       DEBUG    Configure receiver
+06-15 12:24 RxNode       DEBUG     **************Finished HW Init**************
+06-15 12:24 Modules.LowLevel.LowLevelI2C ERROR    LowLevel hw_interface exception: required argument is not an integer
+06-15 12:24 __main__     INFO     ________Start_________Main_________
+06-15 12:24 tools.Engine INFO     Engine Init
+06-15 12:24 tools.Engine INFO     Loading Configuration /ext_ssd/PrjGL/radar-control-v2/configurations/conf1.xml
+06-15 12:24 Modules.Helpers.Node DEBUG    init
+06-15 12:24 RxNode       DEBUG    init
+06-15 12:24 RadarLogic   DEBUG    RadarLogic init...
+06-15 12:24 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 12:24 tools.EngineComponent DEBUG    init
+06-15 12:24 RadarManager DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 12:24 Modules.Helpers.NodeManager DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created TxManager
+06-15 12:24 Modules.Helpers.NodeManager DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created RxManager
+06-15 12:24 Gil          DEBUG    I am small person
+06-15 12:24 tools.ObjectRepository INFO     Object Created Gil
+06-15 12:24 Engine       INFO     Engine Init
+06-15 12:24 RadarLogic   DEBUG    Initialize
+06-15 12:24 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 12:24 Modules.Helpers.Node DEBUG    init
+06-15 12:24 TxNode       DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created TxNode
+06-15 12:24 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 12:24 Modules.Helpers.Node DEBUG    init
+06-15 12:24 RxNode       DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created RxNode
+06-15 12:24 RxNode       INFO     RxNode initializing
+06-15 12:24 RxNode       INFO     RxNode initialized
+06-15 12:24 Modules.Helpers.Node DEBUG    init
+06-15 12:24 RxNode       DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created RxNode
+06-15 12:24 RxNode       INFO     RxNode initializing
+06-15 12:24 RxNode       INFO     RxNode initialized
+06-15 12:24 Modules.Helpers.Node DEBUG    init
+06-15 12:24 RxNode       DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created RxNode
+06-15 12:24 RxNode       INFO     RxNode initializing
+06-15 12:24 RxNode       INFO     RxNode initialized
+06-15 12:24 Modules.Helpers.Node DEBUG    init
+06-15 12:24 RxNode       DEBUG    init
+06-15 12:24 tools.ObjectRepository INFO     Object Created RxNode
+06-15 12:24 RxNode       INFO     RxNode initializing
+06-15 12:24 RxNode       INFO     RxNode initialized
+06-15 12:24 RadarLogic   DEBUG    Initialize
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarLogic   DEBUG    Start
+06-15 12:24 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-15 12:24 RxNode       INFO     =============== Connected ==============
+06-15 12:24 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-15 12:24 Modules.LowLevel.LowLevelI2C DEBUG    Going on I2C bus
+
+
+06-15 12:24 RxNode       INFO     rx_fpga_version: 00.11
+06-15 12:24 RxNode       INFO     rx_board_type: RX
+06-15 12:24 RxNode       INFO     rx_serial_num: 01234
+06-15 12:24 RxNode       INFO     FPGA Temp:  37.0.
+Rx temp: [0.0, 68.0, 68.0, 66.5, 66.5, 66.5, 68.0, 69.5, 68.0, 68.0, 68.0, 66.5, 65.0, 68.0, 68.0, 71.0]
+
+06-15 12:24 RxNode       INFO     Board temp:  43.9 C. Board Humidity: 21.46 %
+
+06-15 12:24 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.03])
+06-15 12:24 RxNode       INFO      ************** Init HW **************
+06-15 12:24 RxNode       DEBUG    Configure Bias DACs
+06-15 12:24 RxNode       DEBUG    Configure ADC mode
+06-15 12:24 RxNode       DEBUG    Configure receiver
+06-15 12:24 RxNode       DEBUG     **************Finished HW Init**************
+06-15 12:24 RxNode       INFO     **************Finished FIR-Filter Config**************
+06-15 12:24 RxNode       INFO      Init Frame Generator
+06-15 12:24 RxNode       DEBUG     Configure NCO
+06-15 12:24 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-15 12:24 RxNode       INFO     =============== Connected ==============
+06-15 12:24 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-15 12:24 RxNode       INFO     rx_fpga_version: 00.11
+06-15 12:24 RxNode       INFO     rx_board_type: RX
+06-15 12:24 RxNode       INFO     rx_serial_num: 01234
+06-15 12:24 RxNode       INFO     FPGA Temp:  37.0.
+Rx temp: [0.0, 68.0, 68.0, 66.5, 66.5, 66.5, 68.0, 69.5, 68.0, 69.5, 68.0, 66.5, 66.5, 68.0, 68.0, 71.0]
+
+06-15 12:24 RxNode       INFO     Board temp:  43.9 C. Board Humidity: 21.46 %
+
+06-15 12:24 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.03])
+06-15 12:24 RxNode       INFO      ************** Init HW **************
+06-15 12:24 RxNode       DEBUG    Configure Bias DACs
+06-15 12:24 RxNode       DEBUG    Configure ADC mode
+06-15 12:24 RxNode       DEBUG    Configure receiver
+06-15 12:24 RxNode       DEBUG     **************Finished HW Init**************
+06-15 12:24 RxNode       INFO     **************Finished FIR-Filter Config**************
+06-15 12:24 RxNode       INFO      Init Frame Generator
+06-15 12:24 RxNode       DEBUG     Configure NCO
+06-15 12:24 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-15 12:24 RxNode       INFO     =============== Connected ==============
+06-15 12:24 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-15 12:24 RxNode       INFO     rx_fpga_version: 00.11
+06-15 12:24 RxNode       INFO     rx_board_type: RX
+06-15 12:24 RxNode       INFO     rx_serial_num: 01234
+06-15 12:24 RxNode       INFO     FPGA Temp:  37.0.
+Rx temp: [0.0, 68.0, 68.0, 66.5, 68.0, 66.5, 68.0, 68.0, 68.0, 69.5, 68.0, 69.5, 66.5, 69.5, 68.0, 71.0]
+
+06-15 12:24 RxNode       INFO     Board temp:  43.9 C. Board Humidity: 21.46 %
+
+06-15 12:24 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.03])
+06-15 12:24 RxNode       INFO      ************** Init HW **************
+06-15 12:24 RxNode       DEBUG    Configure Bias DACs
+06-15 12:24 RxNode       DEBUG    Configure ADC mode
+06-15 12:24 RxNode       DEBUG    Configure receiver
+06-15 12:24 RxNode       DEBUG     **************Finished HW Init**************
+06-15 12:24 RxNode       INFO     **************Finished FIR-Filter Config**************
+06-15 12:24 RxNode       INFO      Init Frame Generator
+06-15 12:24 RxNode       DEBUG     Configure NCO
+06-15 12:24 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-15 12:24 RxNode       INFO     =============== Connected ==============
+06-15 12:24 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-15 12:24 RxNode       INFO     rx_fpga_version: 00.11
+06-15 12:24 RxNode       INFO     rx_board_type: RX
+06-15 12:24 RxNode       INFO     rx_serial_num: 01234
+06-15 12:24 RxNode       INFO     FPGA Temp:  37.0.
+Rx temp: [0.0, 66.5, 68.0, 66.5, 66.5, 66.5, 68.0, 69.5, 68.0, 68.0, 68.0, 66.5, 68.0, 69.5, 68.0, 71.0]
+
+06-15 12:24 RxNode       INFO     Board temp:  43.9 C. Board Humidity: 21.46 %
+
+06-15 12:24 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.03])
+06-15 12:24 RxNode       INFO      ************** Init HW **************
+06-15 12:24 RxNode       DEBUG    Configure Bias DACs
+06-15 12:24 RxNode       DEBUG    Configure ADC mode
+06-15 12:24 RxNode       DEBUG    Configure receiver
+06-15 12:24 RxNode       DEBUG     **************Finished HW Init**************
+06-15 12:24 RxNode       INFO     **************Finished FIR-Filter Config**************
+06-15 12:24 RxNode       INFO      Init Frame Generator
+06-15 12:24 RxNode       DEBUG     Configure NCO
+06-15 12:24 RadarLogic   DEBUG    Start
+06-15 12:24 RadarLogic   DEBUG    Stop
+06-15 12:24 RadarManager DEBUG    propertyChanged
+06-15 12:24 RadarManager DEBUG    propertyChanged

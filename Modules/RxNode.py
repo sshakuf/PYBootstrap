@@ -2,7 +2,7 @@ from tools import EngineComponent
 import time
 from Modules.Helpers.Node import Node
 from Modules.Helpers.RxParams import *
-from Modules.Helpers.Constants import GlobalConstants
+from Modules.Helpers.Constants import GlobalConstants, RxConstants
 from Modules.RadarManager import *
 import logging
 from tools.DataStore import RxStatus
@@ -20,7 +20,8 @@ class RxNode(Node):
     def __init__(self):
         super().__init__()
         logger.debug("init")
-        self.rx_param = RxLocalParams()
+        self.local_params = RxLocalParams()
+        self.shared_params = get_rx_shared()  # singleton object
         self.status = RxStatus()
         self.version = NodeVersion()
         # Doron's part #
@@ -53,6 +54,11 @@ class RxNode(Node):
         self.connect(self.global_params.hw_interface_type, CanBusUnitID.RX1)
         self.get_version()
         self.get_board_status()
+        self.init_hw()
+        self.config_decimator()
+        self.config_fir()
+        self.config_frame()
+        self.config_nco()
         return True
 
     def onAfterStart(self):
@@ -205,7 +211,7 @@ class RxNode(Node):
     def set_run_mode(self, run_mode: RxTriggerMode):
         # super().set_run_mode(run_mode)
         self.radar_low_level.write_reg(RXBlock.FrameGen, RxFrameGenBlockAddr.ControlReg.value, run_mode.value)
-        self.rx_param.rx_TriggerMode = run_mode
+        self.local_params.rx_TriggerMode = run_mode
 
     def select_data_out(self, data_out: DataOutType, num_beams = 8):
         val = data_out.value
@@ -305,46 +311,29 @@ class RxNode(Node):
         logger.debug(" **************Finished HW Init**************")
 
     def config_fir(self, fir_index: int = None):
-        fir_index = fir_index if fir_index is not None else self.rx_param.rx_FIR_Index
-        # super().config_fir(fir_index)
-        filt_bank = [
-            [256, -228, 328, -455, 617, -823, 1090, -1443, 1934, -2674, 3949, -6818, 20815, 20815, -6818, 3949, -2674,
-             1934, -1443, 1090, -823, 617, -455, 328, -228, 256, 0, 0],
-            [29, 661, 1369, 1054, -427, -1184, 193, 1726, 306, -2745, -1691, 5807, 13644, 13644, 5807, -1691, -2745,
-             306, 1726, 193, -1184, -427, 1054, 1369, 661, 29, 0, 0],
-            [377, 407, 333, -40, -682, -1382, -1788, -1530, -393, 1540, 3865, 5959, 7200, 7200, 5959, 3865, 1540, -393,
-             -1530, -1788, -1382, -682, -40, 333, 407, 377, 0, 0],
-            [-1710, -455, -379, -194, 103, 507, 992, 1528, 2072, 2582, 3012, 3322, 3486, 3486, 3322, 3012, 2582, 2072,
-             1528, 992, 507, 103, -194, -379, -455, -1710, 0, 0],
-            [-408, 2256, 1069, 983, 1077, 1195, 1310, 1417, 1511, 1589, 1649, 1690, 1711, 1711, 1690, 1649, 1589, 1511,
-             1417, 1310, 1195, 1077, 983, 1069, 2256, -408, 0, 0],
-            [6112, 653, 681, 712, 735, 763, 783, 799, 820, 832, 839, 843, 845, 845, 843, 839, 832, 820, 799, 783, 763,
-             735, 712, 681, 653, 6112, 0, 0],
-            [1695, -532, 31, 452, -1495, 2155, -3084, 2807, -2538, -434, 3063, -15588, 22861, 22861, -15588, 3063, -434,
-             -2538, 2807, -3084, 2155, -1495, 452, 31, -532, 1695, 0, 0]
-        ]
-        fir_values = filt_bank[fir_index]
-        self.rx_param.rx_FIR_Index = fir_index
+        fir_index = fir_index if fir_index is not None else self.shared_params.rx_FIR_Index
+
+        fir_values = RxConstants.filt_bank[fir_index]
+        self.local_params.rx_FIR_Index = fir_index
 
         upload_data = np.array(fir_values, dtype=np.int16)
         rx = self.radar_low_level
         rx.write_block(RXBlock.Decimation, RxDecimationBlockAddr.DecimationFilterTaps.value, upload_data)
         logger.info("**************Finished FIR-Filter Config**************")
 
-    def config_decimator(self, decim_factor: int = None, num_samples_out: int = None):
-        decim_factor = decim_factor if decim_factor is not None else self.rx_param.rx_DecimationRatio
-        num_samples_out = num_samples_out if num_samples_out is not None else self.shared_params.rx_NumSamplesOut
-        # super().config_decimator(decim_factor)
+    def config_decimator(self, decim_ratio: int = None, num_samples_out: int = None):
+        decim_ratio = decim_ratio if decim_ratio is not None else self.global_params.decimation_ratio
+        num_samples_out = num_samples_out if num_samples_out is not None else self.global_params.num_samples_out
         rx = self.radar_low_level
-        val = decim_factor
-        self.rx_param.rx_DecimationRatio = decim_factor
+        val = int(np.log2(decim_ratio))
 
         rx.write_reg(RXBlock.Decimation, RxDecimationBlockAddr.Decimation.value, val)
         # Q-Multiplier is 1.26
         # rx.write_reg(RXBlock.Decimation, RxDecimationBlockAddr.QMultiplier.value, 20643)  # 20800 in Leon's script
-        rx.write_reg(RXBlock.Decimation, RxDecimationBlockAddr.QMultiplier.value, 19300)  # 20800 in Leon's script
+        val = int(RxConstants.hilbert_q_multiplier * 16384)
+        rx.write_reg(RXBlock.Decimation, RxDecimationBlockAddr.QMultiplier.value, val)  # 20800 in Leon's script
         # set latency (min. 1) to 80 samples
-        rx.write_reg(RXBlock.Decimation, RxDecimationBlockAddr.Latency.value, 140)  # 80
+        rx.write_reg(RXBlock.Decimation, RxDecimationBlockAddr.Latency.value, RxConstants.latency_fir1)  # 80
         # set data duration to 8192 samples
         rx.write_reg(RXBlock.Decimation, RxDecimationBlockAddr.DataDuration.value, num_samples_out)
 
@@ -371,10 +360,10 @@ class RxNode(Node):
                 logger.debug(" Sampling_Clk correct\r")
 
     def enable_test_signal(self, en: bool = None):
-        en = en if en is not None else self.rx_param.rx_test_signal_en
+        en = en if en is not None else self.local_params.rx_test_signal_en
         # super().enable_test_signal(en)
         rx = self.radar_low_level
-        self.rx_param.rx_test_signal_en = en
+        self.local_params.rx_test_signal_en = en
 
         rx.modify_cpu_control_reg(RxCpuControlReg.InitTestDAC.value)
         if en:
@@ -384,8 +373,8 @@ class RxNode(Node):
 
     def config_test_signal(self, amp: int = None, f_offset: float = None):
         # f_offset is in MHz
-        amp = amp if amp is not None else self.rx_param.rx_test_signal_amp
-        f_offset = f_offset*1e6 if f_offset is not None else self.rx_param.rx_test_signal_offset
+        amp = amp if amp is not None else self.local_params.rx_test_signal_amp
+        f_offset = f_offset*1e6 if f_offset is not None else self.local_params.rx_test_signal_offset
         # super().config_test_signal(amp, f_offset)
         rx = self.radar_low_level
 
@@ -400,9 +389,9 @@ class RxNode(Node):
         # multiple of fs/Len
         f_test = fs_divisor * GlobalConstants.fs / length
 
-        self.rx_param.rx_test_signal_amp = amp
-        self.rx_param.rx_test_signal_offset = f_offset
-        self.rx_param.f_test_divisor = fs_divisor
+        self.local_params.rx_test_signal_amp = amp
+        self.local_params.rx_test_signal_offset = f_offset
+        self.local_params.f_test_divisor = fs_divisor
 
         logger.info(f"Test signal frequency: {f_test / 1.0e6:3.3f} MHz\n")
         amp_val = amp
@@ -416,8 +405,8 @@ class RxNode(Node):
         rx.write_block(RXBlock.TestSignal, RxTestSignalBlockAddr.TestSignalData.value, upload_data)
 
     def config_ssb(self, amp: float = None, f_offset: float = None):
-        amp = amp if amp is not None else self.rx_param.rx_SSB_Amp
-        f_offset = f_offset if f_offset is not None else self.rx_param.rx_SSB_Freq
+        amp = amp if amp is not None else self.local_params.rx_SSB_Amp
+        f_offset = f_offset if f_offset is not None else self.local_params.rx_SSB_Freq
         # super().config_ssb(amp, f_offset)
         logger.info("Init MIXER memory")
         rx = self.radar_low_level
@@ -426,8 +415,8 @@ class RxNode(Node):
         tt = np.linspace(0, (sig_len - 1) / (GlobalConstants.fs / (2.0 ** self.global_params.rx_DecimationRatio)),
                          sig_len)
 
-        self.rx_param.rx_SSB_Amp = amp
-        self.rx_param.rx_SSB_Freq = f_offset
+        self.local_params.rx_SSB_Amp = amp
+        self.local_params.rx_SSB_Freq = f_offset
         rx_SSB_Amp = amp
 
         mix_vect = rx_SSB_Amp * np.exp(-1j * 2.0 * np.pi * f_offset * tt)
@@ -444,58 +433,49 @@ class RxNode(Node):
         rx.write_block(RXBlock.SSB, RxSsbBlockAddr.SsbData.value, upload_data)
 
     def config_ram(self, amp: int = None, freq: float = None, noise_std: int = None):
-        amp = amp if amp is not None else self.rx_param.RAM_SignalAmp
-        freq = freq if freq is not None else self.rx_param.rx_RAM_tone_freq
-        noise_std = noise_std if noise_std is not None else self.rx_param.rx_RAM_STD
+        amp = amp if amp is not None else self.local_params.RAM_SignalAmp
+        freq = freq if freq is not None else self.local_params.rx_RAM_tone_freq
+        noise_std = noise_std if noise_std is not None else self.local_params.rx_RAM_STD
         # super().config_ram(amp, freq, noise_std)
         logger.info("Configure emulation memory")
         rx = self.radar_low_level
 
-        self.rx_param.RAM_SignalAmp = amp
-        self.rx_param.rx_RAM_tone_freq = freq
-        self.rx_param.rx_RAM_STD = noise_std
+        self.local_params.RAM_SignalAmp = amp
+        self.local_params.rx_RAM_tone_freq = freq
+        self.local_params.rx_RAM_STD = noise_std
 
         length = self.shared_params.rx_RAM_SamplesNum
         t = np.linspace(0, (length - 1) / GlobalConstants.fs, length)
-        signal = self.shared_params.rx_RAM_Amp * np.cos(2 * np.pi * self.rx_param.rx_RAM_tone_freq * t)
-        noise = (self.rx_param.rx_RAM_STD * np.random.randn(length, 1))
+        signal = self.shared_params.rx_RAM_Amp * np.cos(2 * np.pi * self.local_params.rx_RAM_tone_freq * t)
+        noise = (self.local_params.rx_RAM_STD * np.random.randn(length, 1))
         combine_signal = np.round(signal + noise)
         upload_data = combine_signal.astype(dtype=np.int16)
         rx.write_block(RXBlock.AdcSampling, RxAdcBlockAddr.RamDataDataStart.value, upload_data)
 
     def config_nco(self, freq: float = None, amp: int = None, phase0: float = None):
-        freq = freq if freq is not None else self.rx_param.rx_NCO_Freq
-        amp = amp if amp is not None else self.rx_param.rx_NCO_Amp
-        phase0 = phase0 if phase0 is not None else self.rx_param.rx_NCO_Phase
-        # super().config_nco(freq, amp, phase0)
+        freq = freq if freq is not None else self.shared_params.rx_NCO_Freq
+        amp = amp if amp is not None else self.shared_params.rx_NCO_Amp
+        phase0 = phase0 if phase0 is not None else self.shared_params.rx_NCO_Phase
         rx = self.radar_low_level
 
         logger.debug(" Configure NCO\r")
-        Frequency = freq
-        self.rx_param.rx_NCO_Freq = freq
 
-        Phase = phase0
-        self.rx_param.rx_NCO_Phase = phase0
+        amp *= 2
+        amp = min(amp, 4096)
 
-        Amplitude = amp * 2
-        if Amplitude > 4096:  # clip values to 4096 (12bit) - same as ADC
-            Amplitude = 4096
-        self.rx_param.rx_NCO_Amp = Amplitude
-
-        dummy1 = round(Frequency * 68.719 * 62.5e6 / GlobalConstants.fs)
-        dummy2 = round(Phase * 182.044)
+        dummy1 = round(freq * 68.719 * 62.5e6 / GlobalConstants.fs)
+        dummy2 = round(phase0 * 182.044)
 
         rx.write_reg(RXBlock.AdcSampling, RxAdcBlockAddr.NCO_freq_H.value, dummy1 // 65536)  # Frequency NCO 'H'
         rx.write_reg(RXBlock.AdcSampling, RxAdcBlockAddr.NCO_freq_L.value, dummy1 % 65536)  # Frequency NCO 'L'
         rx.write_reg(RXBlock.AdcSampling, RxAdcBlockAddr.NCO_phase.value, dummy2)  # NCO phase
-        rx.write_reg(RXBlock.AdcSampling, RxAdcBlockAddr.NCO_amplitude.value, Amplitude)  # NCO amplitude
+        rx.write_reg(RXBlock.AdcSampling, RxAdcBlockAddr.NCO_amplitude.value, amp)  # NCO amplitude
 
-    def config_frame(self, num_samples: int = None, frame_len: int = None, sync_delay: int = None):
-        # todo: add arguments to function call (defaults to self.RxParam values)
-        num_samples = num_samples if num_samples is not None else self.rx_param.rx_FrameGen_N_Samples
-        frame_len = frame_len if frame_len is not None else self.rx_param.FrameLen
-        sync_delay = sync_delay if sync_delay is not None else self.rx_param.SyncDelay
-        # super().config_frame(num_samples, frame_len, sync_delay)
+    def config_frame(self, num_samples: int = None, frame_len_usec: int = None, sync_delay: int = None):
+        num_samples = num_samples if num_samples is not None else self.global_params.num_adc_samples
+        frame_len_usec = frame_len_usec if frame_len_usec is not None else self.global_params.frame_len
+        sync_delay = sync_delay if sync_delay is not None else self.local_params.SyncDelay
+        frame_len = frame_len_usec * 50 - 1
         logger.info(" Init Frame Generator")
         rx = self.radar_low_level
         # turn off frame generator
@@ -504,25 +484,23 @@ class RxNode(Node):
         # rx.write_reg(RXBlock.FrameGen, RxFrameGenBlockAddr.ControlReg.value, TriggerMode.Stop.value)
 
         # of samples
-        self.rx_param.rx_FrameGen_N_Samples = num_samples
         rx.write_reg(RXBlock.FrameGen, RxFrameGenBlockAddr.SamplesNumH.value,
                      num_samples // 65536)  # Upper 16bits
         rx.write_reg(RXBlock.FrameGen, RxFrameGenBlockAddr.SamplesNumL.value,
                      num_samples & 65535)  # Lower 16bits
 
         # Frame Rep
-        self.rx_param.FrameLen = frame_len
+        self.local_params.FrameLen = frame_len
         rx.write_reg(RXBlock.FrameGen, RxFrameGenBlockAddr.RepeatH.value,
-                     self.rx_param.FrameLen // 65536)  # Upper 16bits
+                     frame_len // 65536)  # Upper 16bits
         rx.write_reg(RXBlock.FrameGen, RxFrameGenBlockAddr.RepeatL.value,
-                     self.rx_param.FrameLen % 65535)  # Lower 16bits
+                     frame_len % 65535)  # Lower 16bits
 
         # Sync delay (cable length compensation)
-        self.rx_param.SyncDelay = sync_delay
         rx.write_reg(RXBlock.FrameGen, RxFrameGenBlockAddr.SyncDelayH.value,
-                     self.rx_param.SyncDelay // 65536)  # Upper 16bits
+                     sync_delay // 65536)  # Upper 16bits
         rx.write_reg(RXBlock.FrameGen, RxFrameGenBlockAddr.SyncDelayL.value,
-                     self.rx_param.SyncDelay % 65535)  # Lower 16bits
+                     sync_delay % 65535)  # Lower 16bits
 
         # restore run mode
         self.set_run_mode(run_mode_keep)
@@ -563,28 +541,28 @@ class RxNode(Node):
         # not a must
 
     def set_debug_data(self, debug_input: RxDebugInputSource = None, channel: int = None, bit_shift: int = None):
-        debug_input = debug_input if debug_input is not None else self.rx_param.rx_DebugInputSource
-        channel = channel if channel is not None else self.rx_param.channel
-        bit_shift = bit_shift if bit_shift is not None else self.rx_param.rx_Bit_Shift
+        debug_input = debug_input if debug_input is not None else self.local_params.rx_DebugInputSource
+        channel = channel if channel is not None else self.local_params.channel
+        bit_shift = bit_shift if bit_shift is not None else self.local_params.rx_Bit_Shift
         # super().set_debug_data(debug_input, channel, bit_shift)
         rx = self.radar_low_level
         debug_inp_val = debug_input
         channel = 0 if channel < 0 or channel > 47 else channel
         bit_shift = 5 if bit_shift < 0 or bit_shift > 6 else bit_shift
 
-        self.rx_param.rx_DebugInputSource = debug_inp_val
-        self.rx_param.channel = channel
-        self.rx_param.rx_Bit_Shift = bit_shift
+        self.local_params.rx_DebugInputSource = debug_inp_val
+        self.local_params.channel = channel
+        self.local_params.rx_Bit_Shift = bit_shift
 
         rx.write_reg(RXBlock.Decimation, RxDecimationBlockAddr.Decimation.value,
-                     8 * self.rx_param.channel + self.global_params.rx_DecimationRatio)
+                     8 * self.local_params.channel + self.global_params.rx_DecimationRatio)
         rx.write_reg(RXBlock.DebugMem, RxDbgMemBlockAddr.Multiplexer,
-                     16 * self.rx_param.rx_Bit_Shift + self.rx_param.rx_DebugInputSource.value)
+                     16 * self.local_params.rx_Bit_Shift + self.local_params.rx_DebugInputSource.value)
 
     def read_iq_data(self, do_capture: bool = True, num_samples: int = None, return_complex: bool = False,
                      return_db: bool = True, decim_ratio=4):
-        num_samples = num_samples if num_samples is not None else self.rx_param.rx_NumSamplesOut
-        self.rx_param.rx_NumSamplesOut = num_samples
+        num_samples = num_samples if num_samples is not None else self.local_params.rx_NumSamplesOut
+        self.local_params.rx_NumSamplesOut = num_samples
 
         # super().read_iq_data(do_capture, num_samples, return_complex, return_db)
         # length = 8192  # complex values (16bit + 16bit)
@@ -622,30 +600,34 @@ class RxNode(Node):
         return raw_adc_data
 
     def select_debug_input_source(self, input_src: RxDebugInputSource = None, channel: int = None):
-        input_src = input_src if input_src is not None else self.rx_param.rx_DebugInputSource
-        channel = channel if channel is not None else self.rx_param.channel
+        input_src = input_src if input_src is not None else self.local_params.rx_DebugInputSource
+        channel = channel if channel is not None else self.local_params.channel
         # super().select_debug_input_source(input_src, channel)
         # Set source
         logger.info("Configure input source")
         rx = self.radar_low_level
 
-        self.rx_param.rx_DebugInputSource = input_src
-        self.rx_param.channel = channel
+        self.local_params.rx_DebugInputSource = input_src
+        self.local_params.channel = channel
 
         rx.write_reg(RXBlock.AdcSampling, RxAdcBlockAddr.RamDataSelect.value,
-                     self.rx_param.rx_DebugInputSource.value + 4 * self.rx_param.channel)
+                     self.local_params.rx_DebugInputSource.value + 4 * self.local_params.channel)
 
     def set_rx_data_source(self, source: RxInputSource = None, channel: int = None):
-        source = source if source is not None else self.rx_param.rx_InputSource
-        channel = channel if channel is not None else self.rx_param.channel
+        source = source if source is not None else self.local_params.rx_InputSource
+        channel = channel if channel is not None else self.local_params.channel
         # super().set_rx_data_source(source, channel)
         logger.info(f"Set data source to {source}")
         # Configure source registers
         rx = self.radar_low_level
-        self.rx_param.rx_InputSource = source
-        self.rx_param.channel = channel
+        self.local_params.rx_InputSource = source
+        self.local_params.channel = channel
         rx.write_reg(RXBlock.AdcSampling, RxAdcBlockAddr.ChannelSelect.value,
-                     self.rx_param.rx_InputSource.value + 4 * self.rx_param.channel)
+                     self.local_params.rx_InputSource.value + 4 * self.local_params.channel)
+
+
+    def set_data_out_type(self, data_out_type: RxEnums.DataOutType):
+        source = data_out_type if data_out_type is not None else self.global_params.data_out_type
 
 
 

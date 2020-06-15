@@ -10,9 +10,6 @@ from enum import Enum
 # from Core.Enums import *
 
 
-class RxConstans(Enum):
-    TempBlockLen = 16  # temperatures block length
-
 
 class RxInputSource(Enum):
     ADC = 0  # 0 changed in V0004
