@@ -43,6 +43,7 @@ class RxNode(Node):
         # pass
 
     def onBeforeStart(self):
+        CanBusUnitID(int(self.id))
         self.connect(self.global_params.hw_interface_type, CanBusUnitID.RX1)
         self.get_version()
         self.get_board_status()
