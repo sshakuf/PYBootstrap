@@ -25,7 +25,7 @@ class NodeManager:
         logger.debug("Initialize")
         self.engine = Engine.GetEngine()
         if self.onBeforeInitialized():
-            for nodeId in range(0, int(self.numOfNodes)):
+            for nodeId in range(0, int(self.numOfNodes)):  # node id starts counting for each component
                 node = self.engine.objectRepository.CreateInstance(self._nodeTypeName)  # creates here mid-level object
                 node.id = nodeId
                 node.Initialize()
