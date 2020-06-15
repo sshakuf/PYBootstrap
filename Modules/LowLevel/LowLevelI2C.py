@@ -56,7 +56,7 @@ class LowLevelI2C(LowLevelBase):
         usb_port = 0
         if cls._hw_interface_i2c is None:
             cls._hw_interface_i2c = SMBus(2)
-            cls.logger.debug("Going on I2C bus\n\n")
+            logger.debug("Going on I2C bus\n\n")
             # cls._hw_interface_i2c.busOn()
             cls._using_count += 1
 
@@ -77,7 +77,7 @@ class LowLevelI2C(LowLevelBase):
     # @low_level_locked_i2c_call
     def connect(self, hw_interface_type: HWInterfaceType, i2c_unit_id: CanBusUnitID):
         super().connect(hw_interface_type, i2c_unit_id)
-        self.logger.debug(f"Opening I2C channel")
+        logger.debug(f"Opening I2C channel")
         self.connect_i2c()
         self.is_dev_i2c_open = True
 
