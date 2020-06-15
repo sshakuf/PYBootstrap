@@ -1,21 +1,19 @@
-from tools import EventBroker
 from tools import EngineComponent
 import time
 from Modules.Helpers.Node import Node
 from Modules.Helpers.RxParams import *
-from Modules.Helpers.eNums import *
+from Modules.Helpers.Constants import GlobalConstants
+from Modules.RadarManager import *
 import logging
 from tools.DataStore import RxStatus
-from Modules.LowLevel import LowLevelBase, LowLevelCanBus, LowLevelI2C, LowLevelSerial
+from Modules.LowLevel import LowLevelBase, LowLevelI2C, LowLevelSerial
+from Modules.LowLevel.LowLevelCanBus import LowLevelCanBus
 from tools.DataStore import NodeVersion
 from Modules.Helpers.Enums.RxEnums import *
 import numpy as np
 from tools.EventBroker import *
 
 logger = logging.getLogger(__name__)
-
-
-# RxNode now has functionality of Doron's RxMidLevelBase and RxMidLevel.
 
 
 class RxNode(Node):
@@ -26,7 +24,7 @@ class RxNode(Node):
         self.status = RxStatus()
         self.version = NodeVersion()
         # Doron's part #
-        self.radar_low_level: LowLevelBase = LowLevelCanBus.LowLevelCanBus()
+        self.radar_low_level: LowLevelBase = LowLevelCanBus()
         self.is_connected = False
         self.is_hw_initialized = False
         self.is_started = False
@@ -38,8 +36,9 @@ class RxNode(Node):
 
     def onBeforeInitialized(self):
         logger.info("RxNode initializing")
+        self.radar_low_level.init(self.is_verbose)
         # self.engine.eventBroker.subscribeEvent("changed_freq", self.frequency_change)
-        self.engine.eventBroker.subscribeEvent("PropertyBeforeChange", self.prop_changed)
+        # self.engine.eventBroker.subscribeEvent("PropertyBeforeChange", self.prop_changed)
         return True
 
     def prop_changed(self, prop):
@@ -51,6 +50,9 @@ class RxNode(Node):
         # pass
 
     def onBeforeStart(self):
+        self.connect(self.global_params.hw_interface_type, CanBusUnitID.RX1)
+        self.get_version()
+        self.get_board_status()
         return True
 
     def onAfterStart(self):
@@ -113,7 +115,7 @@ class RxNode(Node):
         self.is_connected = True
         logger.info("=============== Connected ==============")
         if hw_interface_type == HWInterfaceType.CanBus:
-            self.radar_low_level = LowLevelCanBus.LowLevelCanBus()
+            self.radar_low_level = LowLevelCanBus()
         elif hw_interface_type == HWInterfaceType.I2C:
             self.radar_low_level = LowLevelI2C.LowLevelI2C()
         elif hw_interface_type == HWInterfaceType.Serial:
@@ -391,12 +393,12 @@ class RxNode(Node):
         rx.write_reg(RXBlock.TestSignal, RxTestSignalBlockAddr.PhaseOffI.value, 0)  # -1400)
 
         length = 8192
-        fs_divisor = round(f_offset * length / SysConfig.fs / 2)  # calculated field from f_offset.
-        t = np.linspace(0.0, (length - 1) / SysConfig.fs, length)
+        fs_divisor = round(f_offset * length / GlobalConstants.fs / 2)  # calculated field from f_offset.
+        t = np.linspace(0.0, (length - 1) / GlobalConstants.fs, length)
 
         # in order to get in continuous mode and get a stable reading in the SA, the freq should be a
         # multiple of fs/Len
-        f_test = fs_divisor * SysConfig.fs / length
+        f_test = fs_divisor * GlobalConstants.fs / length
 
         self.rx_param.rx_test_signal_amp = amp
         self.rx_param.rx_test_signal_offset = f_offset
@@ -421,7 +423,7 @@ class RxNode(Node):
         rx = self.radar_low_level
 
         sig_len = 8192
-        tt = np.linspace(0, (sig_len - 1) / (SysConfig.fs / (2.0 ** self.global_params.rx_DecimationRatio)),
+        tt = np.linspace(0, (sig_len - 1) / (GlobalConstants.fs / (2.0 ** self.global_params.rx_DecimationRatio)),
                          sig_len)
 
         self.rx_param.rx_SSB_Amp = amp
@@ -454,7 +456,7 @@ class RxNode(Node):
         self.rx_param.rx_RAM_STD = noise_std
 
         length = self.shared_params.rx_RAM_SamplesNum
-        t = np.linspace(0, (length - 1) / self.rx_param.fs, length)
+        t = np.linspace(0, (length - 1) / GlobalConstants.fs, length)
         signal = self.shared_params.rx_RAM_Amp * np.cos(2 * np.pi * self.rx_param.rx_RAM_tone_freq * t)
         noise = (self.rx_param.rx_RAM_STD * np.random.randn(length, 1))
         combine_signal = np.round(signal + noise)
@@ -480,7 +482,7 @@ class RxNode(Node):
             Amplitude = 4096
         self.rx_param.rx_NCO_Amp = Amplitude
 
-        dummy1 = round(Frequency * 68.719 * 62.5e6 / SysConfig.fs)
+        dummy1 = round(Frequency * 68.719 * 62.5e6 / GlobalConstants.fs)
         dummy2 = round(Phase * 182.044)
 
         rx.write_reg(RXBlock.AdcSampling, RxAdcBlockAddr.NCO_freq_H.value, dummy1 // 65536)  # Frequency NCO 'H'

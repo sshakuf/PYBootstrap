@@ -120,6 +120,9 @@ class GlobalParams:
         self.debug_output_interface = DebugOutputInterface.MIPI.value
         self.output_format = MipiDataFormat.FMT_8192_32.value
         self.system_run_mode = 0
+        self.hw_interface_type = None
+        self.cal_vect_path = None
+        self.force_init: bool = False
 
 
 class DataStore:

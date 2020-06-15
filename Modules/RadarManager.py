@@ -5,6 +5,8 @@ import tools.Engine as Engine
 # import tools.DataStore as DataStore
 import tools.ObjectRepository
 from tools.DataStore import *
+import platform
+import sys
 
 logger = logging.getLogger(__name__)
 
@@ -25,6 +27,7 @@ class RadarManager(EngineComponent):
 
     def onBeforeInitialized(self):
         self.engine = Engine.GetEngine()
+        self.system_platform()
         self._txManager = self.engine.objectRepository.getInstancesById(
             "TxManager")
         self._rxManager = self.engine.objectRepository.getInstancesById(
@@ -86,3 +89,14 @@ class RadarManager(EngineComponent):
     # @EventBroker.RegisterListener("Test2")
     # def onEventTest2():
     #     logger.debug("onEventTest2")
+
+    def system_platform(self):
+        # RxNode now has functionality of Doron's RxMidLevelBase and RxMidLevel.
+        if platform.machine() == 'aarch64' and sys.platform == "linux":
+            self.global_params.cal_vect_path = "/ext_ssd/PrjGL/radar-control/SystemTests/Calibration/REF_files/"
+            self.global_params.hw_interface_type = HWInterfaceType.I2C
+            return True
+        else:
+            self.global_params.cal_vect_path = "c:/temp2/"
+            self.global_params.hw_interface_type = HWInterfaceType.CanBus
+            return False

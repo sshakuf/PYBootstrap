@@ -1,6 +1,7 @@
 import struct
 import time
 import numpy as np
+from canlib import canlib, Frame
 from Modules.LowLevel.LowLevelBase import *
 
 
@@ -50,9 +51,9 @@ class LowLevelCanBus(LowLevelBase):
         usb_port = 0
         if cls._hw_interface_can_bus is None:
             cls._hw_interface_can_bus = canlib.openChannel(usb_port, canlib.canOPEN_ACCEPT_VIRTUAL)
-            cls.logger.debug("Setting bit rate to 1000 kb/s")
+            logger.debug("Setting bit rate to 1000 kb/s")
             cls._hw_interface_can_bus.setBusParams(canlib.canBITRATE_1M)
-            cls.logger.debug("Going on bus\n\n")
+            logger.debug("Going on bus\n\n")
             cls._hw_interface_can_bus.busOn()
             cls._using_count += 1
 
@@ -71,7 +72,7 @@ class LowLevelCanBus(LowLevelBase):
     # @low_level_locked_can_bus_call
     def connect(self, hw_interface_type: HWInterfaceType, can_bus_unit_id: CanBusUnitID):
         super().connect(hw_interface_type, can_bus_unit_id)
-        self.logger.debug(f"Opening channel {self.can_bus_unit_id}")
+        logger.debug(f"Opening channel {self.can_bus_unit_id}")
         self.connect_can_bus()
         self.is_dev_can_bus_open = True
 

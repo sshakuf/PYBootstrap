@@ -23,9 +23,8 @@ if __name__ == "__main__":
     engine = GetEngine()
     engine.LoadConfiguration(imports.currentdir+"/configurations/conf1.xml")
 
-    # print(engine.objectRepository.instances.RadarLogic)
-    # print(engine.objectRepository.instances.RadarManager)
     # engine.eventBroker.subscribeEvent("PropertyBeforeChange", param_change)
+    # print(engine.objectRepository.getInstancesByType(EngineComponent))
     engine.Initialize()
     engine.Start()
     engine.Run()

@@ -4,7 +4,7 @@ C = 299792458  # speed of light
 PI = 3.141592653589793
 time2rng = C / 2
 rng2time = 2 / C
-dx = 4.2e-3  # Rx element spacing
+
 
 class RxVgaGain:
     db_2 = 0
@@ -15,7 +15,9 @@ class RxVgaGain:
 
 
 class GlobalConstants:
-    system_clk = 1.00E+08
+    BoardClock: int = 100e6
+    fs: float = BoardClock / 2
+    dx = 4.2e-3  # Rx element spacing
 
 
 class RxConstants:

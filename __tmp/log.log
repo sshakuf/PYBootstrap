@@ -7138,3 +7138,1089 @@
 06-14 17:40 Gil          DEBUG    TEST
 06-14 17:40 RadarManager DEBUG    propertyChanged
 06-14 17:40 RadarManager DEBUG    propertyChanged
+06-15 09:28 __main__     INFO     ________Start_________Main_________
+06-15 09:28 tools.Engine INFO     Engine Init
+06-15 09:28 tools.Engine INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-15 09:28 Modules.Helpers.Node DEBUG    init
+06-15 09:28 RxNode       DEBUG    init
+06-15 09:28 RadarLogic   DEBUG    RadarLogic init...
+06-15 09:28 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 09:28 tools.EngineComponent DEBUG    init
+06-15 09:28 RadarManager DEBUG    init
+06-15 09:28 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 09:28 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:28 tools.ObjectRepository INFO     Object Created TxManager
+06-15 09:28 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:28 tools.ObjectRepository INFO     Object Created RxManager
+06-15 09:28 Gil          DEBUG    I am small person
+06-15 09:28 tools.ObjectRepository INFO     Object Created Gil
+06-15 09:28 Engine       INFO     Engine Init
+06-15 09:28 RadarLogic   DEBUG    Initialize
+06-15 09:28 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:28 Modules.Helpers.Node DEBUG    init
+06-15 09:28 TxNode       DEBUG    init
+06-15 09:28 tools.ObjectRepository INFO     Object Created TxNode
+06-15 09:28 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:28 Modules.Helpers.Node DEBUG    init
+06-15 09:28 RxNode       DEBUG    init
+06-15 09:28 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:28 RxNode       INFO     RxNode initializing
+06-15 09:28 RxNode       INFO     RxNode initialized
+06-15 09:28 Modules.Helpers.Node DEBUG    init
+06-15 09:28 RxNode       DEBUG    init
+06-15 09:28 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:28 RxNode       INFO     RxNode initializing
+06-15 09:28 RxNode       INFO     RxNode initialized
+06-15 09:28 Modules.Helpers.Node DEBUG    init
+06-15 09:28 RxNode       DEBUG    init
+06-15 09:28 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:28 RxNode       INFO     RxNode initializing
+06-15 09:28 RxNode       INFO     RxNode initialized
+06-15 09:28 Modules.Helpers.Node DEBUG    init
+06-15 09:28 RxNode       DEBUG    init
+06-15 09:28 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:28 RxNode       INFO     RxNode initializing
+06-15 09:28 RxNode       INFO     RxNode initialized
+06-15 09:28 RadarLogic   DEBUG    Initialize
+06-15 09:28 RadarManager DEBUG    propertyChanged
+06-15 09:28 RadarManager DEBUG    propertyChanged
+06-15 09:28 RadarManager DEBUG    propertyChanged
+06-15 09:28 RadarManager DEBUG    propertyChanged
+06-15 09:28 RadarManager DEBUG    propertyChanged
+06-15 09:28 RadarManager DEBUG    propertyChanged
+06-15 09:28 RadarManager DEBUG    propertyChanged
+06-15 09:28 RadarManager DEBUG    propertyChanged
+06-15 09:28 RadarManager DEBUG    propertyChanged
+06-15 09:28 RadarManager DEBUG    propertyChanged
+06-15 09:28 RadarManager DEBUG    propertyChanged
+06-15 09:28 RadarManager DEBUG    propertyChanged
+06-15 09:28 RadarManager DEBUG    propertyChanged
+06-15 09:28 RadarManager DEBUG    propertyChanged
+06-15 09:28 RadarManager DEBUG    propertyChanged
+06-15 09:28 RadarLogic   DEBUG    Start
+06-15 09:28 RadarLogic   DEBUG    Start
+06-15 09:28 RadarLogic   DEBUG    Stop
+06-15 09:28 Gil          DEBUG    TEST
+06-15 09:28 RadarManager DEBUG    propertyChanged
+06-15 09:28 RadarManager DEBUG    propertyChanged
+06-15 09:30 __main__     INFO     ________Start_________Main_________
+06-15 09:30 tools.Engine INFO     Engine Init
+06-15 09:30 tools.Engine INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-15 09:30 Modules.Helpers.Node DEBUG    init
+06-15 09:30 RxNode       DEBUG    init
+06-15 09:30 RadarLogic   DEBUG    RadarLogic init...
+06-15 09:30 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 09:30 tools.EngineComponent DEBUG    init
+06-15 09:30 RadarManager DEBUG    init
+06-15 09:30 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 09:30 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:30 tools.ObjectRepository INFO     Object Created TxManager
+06-15 09:30 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:30 tools.ObjectRepository INFO     Object Created RxManager
+06-15 09:30 Gil          DEBUG    I am small person
+06-15 09:30 tools.ObjectRepository INFO     Object Created Gil
+06-15 09:30 Engine       INFO     Engine Init
+06-15 09:30 RadarLogic   DEBUG    Initialize
+06-15 09:30 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:30 Modules.Helpers.Node DEBUG    init
+06-15 09:30 TxNode       DEBUG    init
+06-15 09:30 tools.ObjectRepository INFO     Object Created TxNode
+06-15 09:30 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:30 Modules.Helpers.Node DEBUG    init
+06-15 09:30 RxNode       DEBUG    init
+06-15 09:30 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:30 RxNode       INFO     RxNode initializing
+06-15 09:30 RxNode       INFO     RxNode initialized
+06-15 09:30 Modules.Helpers.Node DEBUG    init
+06-15 09:30 RxNode       DEBUG    init
+06-15 09:30 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:30 RxNode       INFO     RxNode initializing
+06-15 09:30 RxNode       INFO     RxNode initialized
+06-15 09:30 Modules.Helpers.Node DEBUG    init
+06-15 09:30 RxNode       DEBUG    init
+06-15 09:30 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:30 RxNode       INFO     RxNode initializing
+06-15 09:30 RxNode       INFO     RxNode initialized
+06-15 09:30 Modules.Helpers.Node DEBUG    init
+06-15 09:30 RxNode       DEBUG    init
+06-15 09:30 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:30 RxNode       INFO     RxNode initializing
+06-15 09:30 RxNode       INFO     RxNode initialized
+06-15 09:30 RadarLogic   DEBUG    Initialize
+06-15 09:30 RadarManager DEBUG    propertyChanged
+06-15 09:30 RadarManager DEBUG    propertyChanged
+06-15 09:30 RadarManager DEBUG    propertyChanged
+06-15 09:30 RadarManager DEBUG    propertyChanged
+06-15 09:30 RadarManager DEBUG    propertyChanged
+06-15 09:30 RadarManager DEBUG    propertyChanged
+06-15 09:30 RadarManager DEBUG    propertyChanged
+06-15 09:30 RadarManager DEBUG    propertyChanged
+06-15 09:30 RadarManager DEBUG    propertyChanged
+06-15 09:30 RadarManager DEBUG    propertyChanged
+06-15 09:30 RadarManager DEBUG    propertyChanged
+06-15 09:30 RadarManager DEBUG    propertyChanged
+06-15 09:30 RadarManager DEBUG    propertyChanged
+06-15 09:30 RadarManager DEBUG    propertyChanged
+06-15 09:30 RadarManager DEBUG    propertyChanged
+06-15 09:30 RadarLogic   DEBUG    Start
+06-15 09:30 RadarLogic   DEBUG    Start
+06-15 09:30 RadarLogic   DEBUG    Stop
+06-15 09:30 Gil          DEBUG    TEST
+06-15 09:30 RadarManager DEBUG    propertyChanged
+06-15 09:30 RadarManager DEBUG    propertyChanged
+06-15 09:38 __main__     INFO     ________Start_________Main_________
+06-15 09:38 tools.Engine INFO     Engine Init
+06-15 09:38 tools.Engine INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-15 09:38 Modules.Helpers.Node DEBUG    init
+06-15 09:38 RxNode       DEBUG    init
+06-15 09:38 RadarLogic   DEBUG    RadarLogic init...
+06-15 09:38 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 09:38 tools.EngineComponent DEBUG    init
+06-15 09:38 RadarManager DEBUG    init
+06-15 09:38 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 09:38 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:38 tools.ObjectRepository INFO     Object Created TxManager
+06-15 09:38 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:38 tools.ObjectRepository INFO     Object Created RxManager
+06-15 09:38 Gil          DEBUG    I am small person
+06-15 09:38 tools.ObjectRepository INFO     Object Created Gil
+06-15 09:38 Engine       INFO     Engine Init
+06-15 09:38 RadarLogic   DEBUG    Initialize
+06-15 09:38 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:38 Modules.Helpers.Node DEBUG    init
+06-15 09:38 TxNode       DEBUG    init
+06-15 09:38 tools.ObjectRepository INFO     Object Created TxNode
+06-15 09:38 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:38 Modules.Helpers.Node DEBUG    init
+06-15 09:38 RxNode       DEBUG    init
+06-15 09:38 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:38 RxNode       INFO     RxNode initializing
+06-15 09:38 RxNode       INFO     RxNode initialized
+06-15 09:38 Modules.Helpers.Node DEBUG    init
+06-15 09:38 RxNode       DEBUG    init
+06-15 09:38 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:38 RxNode       INFO     RxNode initializing
+06-15 09:38 RxNode       INFO     RxNode initialized
+06-15 09:38 Modules.Helpers.Node DEBUG    init
+06-15 09:38 RxNode       DEBUG    init
+06-15 09:38 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:38 RxNode       INFO     RxNode initializing
+06-15 09:38 RxNode       INFO     RxNode initialized
+06-15 09:38 Modules.Helpers.Node DEBUG    init
+06-15 09:38 RxNode       DEBUG    init
+06-15 09:38 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:38 RxNode       INFO     RxNode initializing
+06-15 09:38 RxNode       INFO     RxNode initialized
+06-15 09:38 RadarLogic   DEBUG    Initialize
+06-15 09:38 RadarManager DEBUG    propertyChanged
+06-15 09:38 RadarManager DEBUG    propertyChanged
+06-15 09:38 RadarManager DEBUG    propertyChanged
+06-15 09:38 RadarManager DEBUG    propertyChanged
+06-15 09:38 RadarManager DEBUG    propertyChanged
+06-15 09:38 RadarManager DEBUG    propertyChanged
+06-15 09:38 RadarManager DEBUG    propertyChanged
+06-15 09:38 RadarManager DEBUG    propertyChanged
+06-15 09:38 RadarManager DEBUG    propertyChanged
+06-15 09:38 RadarManager DEBUG    propertyChanged
+06-15 09:38 RadarManager DEBUG    propertyChanged
+06-15 09:38 RadarManager DEBUG    propertyChanged
+06-15 09:38 RadarManager DEBUG    propertyChanged
+06-15 09:38 RadarManager DEBUG    propertyChanged
+06-15 09:38 RadarManager DEBUG    propertyChanged
+06-15 09:38 RadarLogic   DEBUG    Start
+06-15 09:44 __main__     INFO     ________Start_________Main_________
+06-15 09:44 tools.Engine INFO     Engine Init
+06-15 09:44 tools.Engine INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-15 09:44 Modules.Helpers.Node DEBUG    init
+06-15 09:44 RxNode       DEBUG    init
+06-15 09:44 RadarLogic   DEBUG    RadarLogic init...
+06-15 09:44 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 09:44 tools.EngineComponent DEBUG    init
+06-15 09:44 RadarManager DEBUG    init
+06-15 09:44 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 09:44 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:44 tools.ObjectRepository INFO     Object Created TxManager
+06-15 09:44 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:44 tools.ObjectRepository INFO     Object Created RxManager
+06-15 09:44 Gil          DEBUG    I am small person
+06-15 09:44 tools.ObjectRepository INFO     Object Created Gil
+06-15 09:44 Engine       INFO     Engine Init
+06-15 09:44 RadarLogic   DEBUG    Initialize
+06-15 09:44 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:44 Modules.Helpers.Node DEBUG    init
+06-15 09:44 TxNode       DEBUG    init
+06-15 09:44 tools.ObjectRepository INFO     Object Created TxNode
+06-15 09:44 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:44 Modules.Helpers.Node DEBUG    init
+06-15 09:44 RxNode       DEBUG    init
+06-15 09:44 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:44 RxNode       INFO     RxNode initializing
+06-15 09:44 RxNode       INFO     RxNode initialized
+06-15 09:44 Modules.Helpers.Node DEBUG    init
+06-15 09:44 RxNode       DEBUG    init
+06-15 09:44 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:44 RxNode       INFO     RxNode initializing
+06-15 09:44 RxNode       INFO     RxNode initialized
+06-15 09:44 Modules.Helpers.Node DEBUG    init
+06-15 09:44 RxNode       DEBUG    init
+06-15 09:44 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:44 RxNode       INFO     RxNode initializing
+06-15 09:44 RxNode       INFO     RxNode initialized
+06-15 09:44 Modules.Helpers.Node DEBUG    init
+06-15 09:44 RxNode       DEBUG    init
+06-15 09:44 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:44 RxNode       INFO     RxNode initializing
+06-15 09:44 RxNode       INFO     RxNode initialized
+06-15 09:44 RadarLogic   DEBUG    Initialize
+06-15 09:44 RadarManager DEBUG    propertyChanged
+06-15 09:44 RadarManager DEBUG    propertyChanged
+06-15 09:44 RadarManager DEBUG    propertyChanged
+06-15 09:44 RadarManager DEBUG    propertyChanged
+06-15 09:44 RadarManager DEBUG    propertyChanged
+06-15 09:44 RadarManager DEBUG    propertyChanged
+06-15 09:44 RadarManager DEBUG    propertyChanged
+06-15 09:44 RadarManager DEBUG    propertyChanged
+06-15 09:44 RadarManager DEBUG    propertyChanged
+06-15 09:44 RadarManager DEBUG    propertyChanged
+06-15 09:44 RadarManager DEBUG    propertyChanged
+06-15 09:44 RadarManager DEBUG    propertyChanged
+06-15 09:44 RadarManager DEBUG    propertyChanged
+06-15 09:44 RadarManager DEBUG    propertyChanged
+06-15 09:44 RadarManager DEBUG    propertyChanged
+06-15 09:44 RadarLogic   DEBUG    Start
+06-15 09:50 __main__     INFO     ________Start_________Main_________
+06-15 09:50 tools.Engine INFO     Engine Init
+06-15 09:50 tools.Engine INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-15 09:50 Modules.Helpers.Node DEBUG    init
+06-15 09:50 RxNode       DEBUG    init
+06-15 09:50 RadarLogic   DEBUG    RadarLogic init...
+06-15 09:50 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 09:50 tools.EngineComponent DEBUG    init
+06-15 09:50 RadarManager DEBUG    init
+06-15 09:50 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 09:50 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:50 tools.ObjectRepository INFO     Object Created TxManager
+06-15 09:50 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:50 tools.ObjectRepository INFO     Object Created RxManager
+06-15 09:50 Gil          DEBUG    I am small person
+06-15 09:50 tools.ObjectRepository INFO     Object Created Gil
+06-15 09:50 Engine       INFO     Engine Init
+06-15 09:50 RadarLogic   DEBUG    Initialize
+06-15 09:50 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:50 Modules.Helpers.Node DEBUG    init
+06-15 09:50 TxNode       DEBUG    init
+06-15 09:50 tools.ObjectRepository INFO     Object Created TxNode
+06-15 09:50 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:50 Modules.Helpers.Node DEBUG    init
+06-15 09:50 RxNode       DEBUG    init
+06-15 09:50 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:50 RxNode       INFO     RxNode initializing
+06-15 09:50 RxNode       INFO     RxNode initialized
+06-15 09:50 Modules.Helpers.Node DEBUG    init
+06-15 09:50 RxNode       DEBUG    init
+06-15 09:50 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:50 RxNode       INFO     RxNode initializing
+06-15 09:50 RxNode       INFO     RxNode initialized
+06-15 09:50 Modules.Helpers.Node DEBUG    init
+06-15 09:50 RxNode       DEBUG    init
+06-15 09:50 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:50 RxNode       INFO     RxNode initializing
+06-15 09:50 RxNode       INFO     RxNode initialized
+06-15 09:50 Modules.Helpers.Node DEBUG    init
+06-15 09:50 RxNode       DEBUG    init
+06-15 09:50 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:50 RxNode       INFO     RxNode initializing
+06-15 09:50 RxNode       INFO     RxNode initialized
+06-15 09:50 RadarLogic   DEBUG    Initialize
+06-15 09:50 RadarManager DEBUG    propertyChanged
+06-15 09:50 RadarManager DEBUG    propertyChanged
+06-15 09:50 RadarManager DEBUG    propertyChanged
+06-15 09:50 RadarManager DEBUG    propertyChanged
+06-15 09:50 RadarManager DEBUG    propertyChanged
+06-15 09:50 RadarManager DEBUG    propertyChanged
+06-15 09:50 RadarManager DEBUG    propertyChanged
+06-15 09:50 RadarManager DEBUG    propertyChanged
+06-15 09:50 RadarManager DEBUG    propertyChanged
+06-15 09:50 RadarManager DEBUG    propertyChanged
+06-15 09:50 RadarManager DEBUG    propertyChanged
+06-15 09:50 RadarManager DEBUG    propertyChanged
+06-15 09:50 RadarManager DEBUG    propertyChanged
+06-15 09:50 RadarManager DEBUG    propertyChanged
+06-15 09:50 RadarManager DEBUG    propertyChanged
+06-15 09:50 RadarLogic   DEBUG    Start
+06-15 09:56 __main__     INFO     ________Start_________Main_________
+06-15 09:56 tools.Engine INFO     Engine Init
+06-15 09:56 tools.Engine INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-15 09:56 Modules.Helpers.Node DEBUG    init
+06-15 09:56 RxNode       DEBUG    init
+06-15 09:56 RadarLogic   DEBUG    RadarLogic init...
+06-15 09:56 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 09:56 tools.EngineComponent DEBUG    init
+06-15 09:56 RadarManager DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 09:56 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created TxManager
+06-15 09:56 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created RxManager
+06-15 09:56 Gil          DEBUG    I am small person
+06-15 09:56 tools.ObjectRepository INFO     Object Created Gil
+06-15 09:56 Engine       INFO     Engine Init
+06-15 09:56 RadarLogic   DEBUG    Initialize
+06-15 09:56 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:56 Modules.Helpers.Node DEBUG    init
+06-15 09:56 TxNode       DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created TxNode
+06-15 09:56 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:56 Modules.Helpers.Node DEBUG    init
+06-15 09:56 RxNode       DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:56 RxNode       INFO     RxNode initializing
+06-15 09:56 RxNode       INFO     RxNode initialized
+06-15 09:56 Modules.Helpers.Node DEBUG    init
+06-15 09:56 RxNode       DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:56 RxNode       INFO     RxNode initializing
+06-15 09:56 RxNode       INFO     RxNode initialized
+06-15 09:56 Modules.Helpers.Node DEBUG    init
+06-15 09:56 RxNode       DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:56 RxNode       INFO     RxNode initializing
+06-15 09:56 RxNode       INFO     RxNode initialized
+06-15 09:56 Modules.Helpers.Node DEBUG    init
+06-15 09:56 RxNode       DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:56 RxNode       INFO     RxNode initializing
+06-15 09:56 RxNode       INFO     RxNode initialized
+06-15 09:56 RadarLogic   DEBUG    Initialize
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarLogic   DEBUG    Start
+06-15 09:56 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.CanBus
+06-15 09:56 RxNode       INFO     =============== Connected ==============
+06-15 09:56 __main__     INFO     ________Start_________Main_________
+06-15 09:56 tools.Engine INFO     Engine Init
+06-15 09:56 tools.Engine INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-15 09:56 Modules.Helpers.Node DEBUG    init
+06-15 09:56 RxNode       DEBUG    init
+06-15 09:56 RadarLogic   DEBUG    RadarLogic init...
+06-15 09:56 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 09:56 tools.EngineComponent DEBUG    init
+06-15 09:56 RadarManager DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 09:56 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created TxManager
+06-15 09:56 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created RxManager
+06-15 09:56 Gil          DEBUG    I am small person
+06-15 09:56 tools.ObjectRepository INFO     Object Created Gil
+06-15 09:56 Engine       INFO     Engine Init
+06-15 09:56 RadarLogic   DEBUG    Initialize
+06-15 09:56 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:56 Modules.Helpers.Node DEBUG    init
+06-15 09:56 TxNode       DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created TxNode
+06-15 09:56 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:56 Modules.Helpers.Node DEBUG    init
+06-15 09:56 RxNode       DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:56 RxNode       INFO     RxNode initializing
+06-15 09:56 RxNode       INFO     RxNode initialized
+06-15 09:56 Modules.Helpers.Node DEBUG    init
+06-15 09:56 RxNode       DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:56 RxNode       INFO     RxNode initializing
+06-15 09:56 RxNode       INFO     RxNode initialized
+06-15 09:56 Modules.Helpers.Node DEBUG    init
+06-15 09:56 RxNode       DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:56 RxNode       INFO     RxNode initializing
+06-15 09:56 RxNode       INFO     RxNode initialized
+06-15 09:56 Modules.Helpers.Node DEBUG    init
+06-15 09:56 RxNode       DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:56 RxNode       INFO     RxNode initializing
+06-15 09:56 RxNode       INFO     RxNode initialized
+06-15 09:56 RadarLogic   DEBUG    Initialize
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarLogic   DEBUG    Start
+06-15 09:56 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.CanBus
+06-15 09:56 RxNode       INFO     =============== Connected ==============
+06-15 09:56 __main__     INFO     ________Start_________Main_________
+06-15 09:56 tools.Engine INFO     Engine Init
+06-15 09:56 tools.Engine INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-15 09:56 Modules.Helpers.Node DEBUG    init
+06-15 09:56 RxNode       DEBUG    init
+06-15 09:56 RadarLogic   DEBUG    RadarLogic init...
+06-15 09:56 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 09:56 tools.EngineComponent DEBUG    init
+06-15 09:56 RadarManager DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 09:56 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created TxManager
+06-15 09:56 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created RxManager
+06-15 09:56 Gil          DEBUG    I am small person
+06-15 09:56 tools.ObjectRepository INFO     Object Created Gil
+06-15 09:56 Engine       INFO     Engine Init
+06-15 09:56 RadarLogic   DEBUG    Initialize
+06-15 09:56 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:56 Modules.Helpers.Node DEBUG    init
+06-15 09:56 TxNode       DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created TxNode
+06-15 09:56 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:56 Modules.Helpers.Node DEBUG    init
+06-15 09:56 RxNode       DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:56 RxNode       INFO     RxNode initializing
+06-15 09:56 RxNode       INFO     RxNode initialized
+06-15 09:56 Modules.Helpers.Node DEBUG    init
+06-15 09:56 RxNode       DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:56 RxNode       INFO     RxNode initializing
+06-15 09:56 RxNode       INFO     RxNode initialized
+06-15 09:56 Modules.Helpers.Node DEBUG    init
+06-15 09:56 RxNode       DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:56 RxNode       INFO     RxNode initializing
+06-15 09:56 RxNode       INFO     RxNode initialized
+06-15 09:56 Modules.Helpers.Node DEBUG    init
+06-15 09:56 RxNode       DEBUG    init
+06-15 09:56 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:56 RxNode       INFO     RxNode initializing
+06-15 09:56 RxNode       INFO     RxNode initialized
+06-15 09:56 RadarLogic   DEBUG    Initialize
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarManager DEBUG    propertyChanged
+06-15 09:56 RadarLogic   DEBUG    Start
+06-15 09:56 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.CanBus
+06-15 09:56 RxNode       INFO     =============== Connected ==============
+06-15 09:56 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 09:57 __main__     INFO     ________Start_________Main_________
+06-15 09:57 tools.Engine INFO     Engine Init
+06-15 09:57 tools.Engine INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-15 09:57 Modules.Helpers.Node DEBUG    init
+06-15 09:57 RxNode       DEBUG    init
+06-15 09:57 RadarLogic   DEBUG    RadarLogic init...
+06-15 09:57 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 09:57 tools.EngineComponent DEBUG    init
+06-15 09:57 RadarManager DEBUG    init
+06-15 09:57 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 09:57 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:57 tools.ObjectRepository INFO     Object Created TxManager
+06-15 09:57 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:57 tools.ObjectRepository INFO     Object Created RxManager
+06-15 09:57 Gil          DEBUG    I am small person
+06-15 09:57 tools.ObjectRepository INFO     Object Created Gil
+06-15 09:57 Engine       INFO     Engine Init
+06-15 09:57 RadarLogic   DEBUG    Initialize
+06-15 09:57 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:57 Modules.Helpers.Node DEBUG    init
+06-15 09:57 TxNode       DEBUG    init
+06-15 09:57 tools.ObjectRepository INFO     Object Created TxNode
+06-15 09:57 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:57 Modules.Helpers.Node DEBUG    init
+06-15 09:57 RxNode       DEBUG    init
+06-15 09:57 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:57 RxNode       INFO     RxNode initializing
+06-15 09:57 RxNode       INFO     RxNode initialized
+06-15 09:57 Modules.Helpers.Node DEBUG    init
+06-15 09:57 RxNode       DEBUG    init
+06-15 09:57 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:57 RxNode       INFO     RxNode initializing
+06-15 09:57 RxNode       INFO     RxNode initialized
+06-15 09:57 Modules.Helpers.Node DEBUG    init
+06-15 09:57 RxNode       DEBUG    init
+06-15 09:57 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:57 RxNode       INFO     RxNode initializing
+06-15 09:57 RxNode       INFO     RxNode initialized
+06-15 09:57 Modules.Helpers.Node DEBUG    init
+06-15 09:57 RxNode       DEBUG    init
+06-15 09:57 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:57 RxNode       INFO     RxNode initializing
+06-15 09:57 RxNode       INFO     RxNode initialized
+06-15 09:57 RadarLogic   DEBUG    Initialize
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarLogic   DEBUG    Start
+06-15 09:57 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.CanBus
+06-15 09:57 RxNode       INFO     =============== Connected ==============
+06-15 09:57 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 09:57 __main__     INFO     ________Start_________Main_________
+06-15 09:57 tools.Engine INFO     Engine Init
+06-15 09:57 tools.Engine INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-15 09:57 Modules.Helpers.Node DEBUG    init
+06-15 09:57 RxNode       DEBUG    init
+06-15 09:57 RadarLogic   DEBUG    RadarLogic init...
+06-15 09:57 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 09:57 tools.EngineComponent DEBUG    init
+06-15 09:57 RadarManager DEBUG    init
+06-15 09:57 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 09:57 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:57 tools.ObjectRepository INFO     Object Created TxManager
+06-15 09:57 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:57 tools.ObjectRepository INFO     Object Created RxManager
+06-15 09:57 Gil          DEBUG    I am small person
+06-15 09:57 tools.ObjectRepository INFO     Object Created Gil
+06-15 09:57 Engine       INFO     Engine Init
+06-15 09:57 RadarLogic   DEBUG    Initialize
+06-15 09:57 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:57 Modules.Helpers.Node DEBUG    init
+06-15 09:57 TxNode       DEBUG    init
+06-15 09:57 tools.ObjectRepository INFO     Object Created TxNode
+06-15 09:57 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:57 Modules.Helpers.Node DEBUG    init
+06-15 09:57 RxNode       DEBUG    init
+06-15 09:57 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:57 RxNode       INFO     RxNode initializing
+06-15 09:57 RxNode       INFO     RxNode initialized
+06-15 09:57 Modules.Helpers.Node DEBUG    init
+06-15 09:57 RxNode       DEBUG    init
+06-15 09:57 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:57 RxNode       INFO     RxNode initializing
+06-15 09:57 RxNode       INFO     RxNode initialized
+06-15 09:57 Modules.Helpers.Node DEBUG    init
+06-15 09:57 RxNode       DEBUG    init
+06-15 09:57 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:57 RxNode       INFO     RxNode initializing
+06-15 09:57 RxNode       INFO     RxNode initialized
+06-15 09:57 Modules.Helpers.Node DEBUG    init
+06-15 09:57 RxNode       DEBUG    init
+06-15 09:57 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:57 RxNode       INFO     RxNode initializing
+06-15 09:57 RxNode       INFO     RxNode initialized
+06-15 09:57 RadarLogic   DEBUG    Initialize
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarManager DEBUG    propertyChanged
+06-15 09:57 RadarLogic   DEBUG    Start
+06-15 09:57 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.CanBus
+06-15 09:57 RxNode       INFO     =============== Connected ==============
+06-15 09:57 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 09:58 __main__     INFO     ________Start_________Main_________
+06-15 09:58 tools.Engine INFO     Engine Init
+06-15 09:58 tools.Engine INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-15 09:58 Modules.Helpers.Node DEBUG    init
+06-15 09:58 RxNode       DEBUG    init
+06-15 09:58 RadarLogic   DEBUG    RadarLogic init...
+06-15 09:58 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 09:58 tools.EngineComponent DEBUG    init
+06-15 09:58 RadarManager DEBUG    init
+06-15 09:58 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 09:58 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:58 tools.ObjectRepository INFO     Object Created TxManager
+06-15 09:58 Modules.Helpers.NodeManager DEBUG    init
+06-15 09:58 tools.ObjectRepository INFO     Object Created RxManager
+06-15 09:58 Gil          DEBUG    I am small person
+06-15 09:58 tools.ObjectRepository INFO     Object Created Gil
+06-15 09:58 Engine       INFO     Engine Init
+06-15 09:58 RadarLogic   DEBUG    Initialize
+06-15 09:58 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:58 Modules.Helpers.Node DEBUG    init
+06-15 09:58 TxNode       DEBUG    init
+06-15 09:58 tools.ObjectRepository INFO     Object Created TxNode
+06-15 09:58 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 09:58 Modules.Helpers.Node DEBUG    init
+06-15 09:58 RxNode       DEBUG    init
+06-15 09:58 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:58 RxNode       INFO     RxNode initializing
+06-15 09:58 RxNode       INFO     RxNode initialized
+06-15 09:58 Modules.Helpers.Node DEBUG    init
+06-15 09:58 RxNode       DEBUG    init
+06-15 09:58 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:58 RxNode       INFO     RxNode initializing
+06-15 09:58 RxNode       INFO     RxNode initialized
+06-15 09:58 Modules.Helpers.Node DEBUG    init
+06-15 09:58 RxNode       DEBUG    init
+06-15 09:58 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:58 RxNode       INFO     RxNode initializing
+06-15 09:58 RxNode       INFO     RxNode initialized
+06-15 09:58 Modules.Helpers.Node DEBUG    init
+06-15 09:58 RxNode       DEBUG    init
+06-15 09:58 tools.ObjectRepository INFO     Object Created RxNode
+06-15 09:58 RxNode       INFO     RxNode initializing
+06-15 09:58 RxNode       INFO     RxNode initialized
+06-15 09:58 RadarLogic   DEBUG    Initialize
+06-15 09:58 RadarManager DEBUG    propertyChanged
+06-15 09:58 RadarManager DEBUG    propertyChanged
+06-15 09:58 RadarManager DEBUG    propertyChanged
+06-15 09:58 RadarManager DEBUG    propertyChanged
+06-15 09:58 RadarManager DEBUG    propertyChanged
+06-15 09:58 RadarManager DEBUG    propertyChanged
+06-15 09:58 RadarManager DEBUG    propertyChanged
+06-15 09:58 RadarManager DEBUG    propertyChanged
+06-15 09:58 RadarManager DEBUG    propertyChanged
+06-15 09:58 RadarManager DEBUG    propertyChanged
+06-15 09:58 RadarManager DEBUG    propertyChanged
+06-15 09:58 RadarManager DEBUG    propertyChanged
+06-15 09:58 RadarManager DEBUG    propertyChanged
+06-15 09:58 RadarManager DEBUG    propertyChanged
+06-15 09:58 RadarManager DEBUG    propertyChanged
+06-15 09:58 RadarLogic   DEBUG    Start
+06-15 09:58 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.CanBus
+06-15 09:58 RxNode       INFO     =============== Connected ==============
+06-15 09:58 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 09:58 Modules.LowLevel.LowLevelBase DEBUG    Setting bit rate to 1000 kb/s
+06-15 09:58 Modules.LowLevel.LowLevelBase DEBUG    Going on bus
+
+
+06-15 09:58 RxNode       INFO     rx_fpga_version: -1.ff
+06-15 09:58 RxNode       INFO     rx_board_type: Undef
+06-15 09:58 RxNode       INFO     rx_serial_num: -0001
+06-15 09:58 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.CanBus
+06-15 09:58 RxNode       INFO     =============== Connected ==============
+06-15 09:58 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 09:58 RxNode       INFO     rx_fpga_version: -1.ff
+06-15 09:58 RxNode       INFO     rx_board_type: Undef
+06-15 09:58 RxNode       INFO     rx_serial_num: -0001
+06-15 09:58 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.CanBus
+06-15 09:58 RxNode       INFO     =============== Connected ==============
+06-15 09:58 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 09:58 RxNode       INFO     rx_fpga_version: -1.ff
+06-15 09:58 RxNode       INFO     rx_board_type: Undef
+06-15 09:58 RxNode       INFO     rx_serial_num: -0001
+06-15 09:58 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.CanBus
+06-15 09:58 RxNode       INFO     =============== Connected ==============
+06-15 09:58 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 09:58 RxNode       INFO     rx_fpga_version: -1.ff
+06-15 09:58 RxNode       INFO     rx_board_type: Undef
+06-15 09:58 RxNode       INFO     rx_serial_num: -0001
+06-15 09:58 RadarLogic   DEBUG    Start
+06-15 09:58 RadarLogic   DEBUG    Stop
+06-15 09:58 Gil          DEBUG    TEST
+06-15 09:58 RadarManager DEBUG    propertyChanged
+06-15 09:58 RadarManager DEBUG    propertyChanged
+06-15 10:15 __main__     INFO     ________Start_________Main_________
+06-15 10:15 tools.Engine INFO     Engine Init
+06-15 10:15 tools.Engine INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-15 10:15 Modules.Helpers.Node DEBUG    init
+06-15 10:15 RxNode       DEBUG    init
+06-15 10:15 RadarLogic   DEBUG    RadarLogic init...
+06-15 10:15 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 10:15 tools.EngineComponent DEBUG    init
+06-15 10:15 Modules.RadarManager DEBUG    init
+06-15 10:15 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 10:15 Modules.Helpers.NodeManager DEBUG    init
+06-15 10:15 tools.ObjectRepository INFO     Object Created TxManager
+06-15 10:15 Modules.Helpers.NodeManager DEBUG    init
+06-15 10:15 tools.ObjectRepository INFO     Object Created RxManager
+06-15 10:15 Gil          DEBUG    I am small person
+06-15 10:15 tools.ObjectRepository INFO     Object Created Gil
+06-15 10:15 Engine       INFO     Engine Init
+06-15 10:15 RadarLogic   DEBUG    Initialize
+06-15 10:15 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 10:15 Modules.Helpers.Node DEBUG    init
+06-15 10:15 TxNode       DEBUG    init
+06-15 10:15 tools.ObjectRepository INFO     Object Created TxNode
+06-15 10:15 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 10:15 Modules.Helpers.Node DEBUG    init
+06-15 10:15 RxNode       DEBUG    init
+06-15 10:15 tools.ObjectRepository INFO     Object Created RxNode
+06-15 10:15 RxNode       INFO     RxNode initializing
+06-15 10:15 RxNode       INFO     RxNode initialized
+06-15 10:15 Modules.Helpers.Node DEBUG    init
+06-15 10:15 RxNode       DEBUG    init
+06-15 10:15 tools.ObjectRepository INFO     Object Created RxNode
+06-15 10:15 RxNode       INFO     RxNode initializing
+06-15 10:15 RxNode       INFO     RxNode initialized
+06-15 10:15 Modules.Helpers.Node DEBUG    init
+06-15 10:15 RxNode       DEBUG    init
+06-15 10:15 tools.ObjectRepository INFO     Object Created RxNode
+06-15 10:15 RxNode       INFO     RxNode initializing
+06-15 10:15 RxNode       INFO     RxNode initialized
+06-15 10:15 Modules.Helpers.Node DEBUG    init
+06-15 10:15 RxNode       DEBUG    init
+06-15 10:15 tools.ObjectRepository INFO     Object Created RxNode
+06-15 10:15 RxNode       INFO     RxNode initializing
+06-15 10:15 RxNode       INFO     RxNode initialized
+06-15 10:15 RadarLogic   DEBUG    Initialize
+06-15 10:15 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:15 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:15 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:15 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:15 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:15 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:15 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:15 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:15 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:15 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:15 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:15 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:15 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:15 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:15 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:15 RadarLogic   DEBUG    Start
+06-15 10:18 __main__     INFO     ________Start_________Main_________
+06-15 10:18 tools.Engine INFO     Engine Init
+06-15 10:18 tools.Engine INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-15 10:18 Modules.Helpers.Node DEBUG    init
+06-15 10:18 RxNode       DEBUG    init
+06-15 10:18 RadarLogic   DEBUG    RadarLogic init...
+06-15 10:18 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 10:18 tools.EngineComponent DEBUG    init
+06-15 10:18 Modules.RadarManager DEBUG    init
+06-15 10:18 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 10:18 Modules.Helpers.NodeManager DEBUG    init
+06-15 10:18 tools.ObjectRepository INFO     Object Created TxManager
+06-15 10:18 Modules.Helpers.NodeManager DEBUG    init
+06-15 10:18 tools.ObjectRepository INFO     Object Created RxManager
+06-15 10:18 Gil          DEBUG    I am small person
+06-15 10:18 tools.ObjectRepository INFO     Object Created Gil
+06-15 10:18 Engine       INFO     Engine Init
+06-15 10:18 RadarLogic   DEBUG    Initialize
+06-15 10:18 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 10:18 Modules.Helpers.Node DEBUG    init
+06-15 10:18 TxNode       DEBUG    init
+06-15 10:18 tools.ObjectRepository INFO     Object Created TxNode
+06-15 10:18 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 10:18 Modules.Helpers.Node DEBUG    init
+06-15 10:18 RxNode       DEBUG    init
+06-15 10:18 tools.ObjectRepository INFO     Object Created RxNode
+06-15 10:18 RxNode       INFO     RxNode initializing
+06-15 10:18 RxNode       INFO     RxNode initialized
+06-15 10:18 Modules.Helpers.Node DEBUG    init
+06-15 10:18 RxNode       DEBUG    init
+06-15 10:18 tools.ObjectRepository INFO     Object Created RxNode
+06-15 10:18 RxNode       INFO     RxNode initializing
+06-15 10:18 RxNode       INFO     RxNode initialized
+06-15 10:18 Modules.Helpers.Node DEBUG    init
+06-15 10:18 RxNode       DEBUG    init
+06-15 10:18 tools.ObjectRepository INFO     Object Created RxNode
+06-15 10:18 RxNode       INFO     RxNode initializing
+06-15 10:18 RxNode       INFO     RxNode initialized
+06-15 10:18 Modules.Helpers.Node DEBUG    init
+06-15 10:18 RxNode       DEBUG    init
+06-15 10:18 tools.ObjectRepository INFO     Object Created RxNode
+06-15 10:18 RxNode       INFO     RxNode initializing
+06-15 10:18 RxNode       INFO     RxNode initialized
+06-15 10:18 RadarLogic   DEBUG    Initialize
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:18 RadarLogic   DEBUG    Start
+06-15 10:18 RxNode       INFO     RxBase.init port: interface: None
+06-15 10:18 RxNode       INFO     =============== Connected ==============
+06-15 10:18 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 10:18 Modules.LowLevel.LowLevelBase DEBUG    Setting bit rate to 1000 kb/s
+06-15 10:18 Modules.LowLevel.LowLevelBase DEBUG    Going on bus
+
+
+06-15 10:18 RxNode       INFO     rx_fpga_version: -1.ff
+06-15 10:18 RxNode       INFO     rx_board_type: Undef
+06-15 10:18 RxNode       INFO     rx_serial_num: -0001
+06-15 10:18 RxNode       INFO     RxBase.init port: interface: None
+06-15 10:18 RxNode       INFO     =============== Connected ==============
+06-15 10:18 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 10:18 RxNode       INFO     rx_fpga_version: -1.ff
+06-15 10:18 RxNode       INFO     rx_board_type: Undef
+06-15 10:18 RxNode       INFO     rx_serial_num: -0001
+06-15 10:18 RxNode       INFO     RxBase.init port: interface: None
+06-15 10:18 RxNode       INFO     =============== Connected ==============
+06-15 10:18 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 10:18 RxNode       INFO     rx_fpga_version: -1.ff
+06-15 10:18 RxNode       INFO     rx_board_type: Undef
+06-15 10:18 RxNode       INFO     rx_serial_num: -0001
+06-15 10:18 RxNode       INFO     RxBase.init port: interface: None
+06-15 10:18 RxNode       INFO     =============== Connected ==============
+06-15 10:18 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 10:18 RxNode       INFO     rx_fpga_version: -1.ff
+06-15 10:18 RxNode       INFO     rx_board_type: Undef
+06-15 10:18 RxNode       INFO     rx_serial_num: -0001
+06-15 10:18 RadarLogic   DEBUG    Start
+06-15 10:18 RadarLogic   DEBUG    Stop
+06-15 10:18 Gil          DEBUG    TEST
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:18 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 __main__     INFO     ________Start_________Main_________
+06-15 10:33 tools.Engine INFO     Engine Init
+06-15 10:33 tools.Engine INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-15 10:33 Modules.Helpers.Node DEBUG    init
+06-15 10:33 RxNode       DEBUG    init
+06-15 10:33 RadarLogic   DEBUG    RadarLogic init...
+06-15 10:33 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 10:33 tools.EngineComponent DEBUG    init
+06-15 10:33 Modules.RadarManager DEBUG    init
+06-15 10:33 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 10:33 Modules.Helpers.NodeManager DEBUG    init
+06-15 10:33 tools.ObjectRepository INFO     Object Created TxManager
+06-15 10:33 Modules.Helpers.NodeManager DEBUG    init
+06-15 10:33 tools.ObjectRepository INFO     Object Created RxManager
+06-15 10:33 Gil          DEBUG    I am small person
+06-15 10:33 tools.ObjectRepository INFO     Object Created Gil
+06-15 10:33 Engine       INFO     Engine Init
+06-15 10:33 RadarLogic   DEBUG    Initialize
+06-15 10:33 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 10:33 Modules.Helpers.Node DEBUG    init
+06-15 10:33 TxNode       DEBUG    init
+06-15 10:33 tools.ObjectRepository INFO     Object Created TxNode
+06-15 10:33 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 10:33 Modules.Helpers.Node DEBUG    init
+06-15 10:33 RxNode       DEBUG    init
+06-15 10:33 tools.ObjectRepository INFO     Object Created RxNode
+06-15 10:33 RxNode       INFO     RxNode initializing
+06-15 10:33 RxNode       INFO     RxNode initialized
+06-15 10:33 Modules.Helpers.Node DEBUG    init
+06-15 10:33 RxNode       DEBUG    init
+06-15 10:33 tools.ObjectRepository INFO     Object Created RxNode
+06-15 10:33 RxNode       INFO     RxNode initializing
+06-15 10:33 RxNode       INFO     RxNode initialized
+06-15 10:33 Modules.Helpers.Node DEBUG    init
+06-15 10:33 RxNode       DEBUG    init
+06-15 10:33 tools.ObjectRepository INFO     Object Created RxNode
+06-15 10:33 RxNode       INFO     RxNode initializing
+06-15 10:33 RxNode       INFO     RxNode initialized
+06-15 10:33 Modules.Helpers.Node DEBUG    init
+06-15 10:33 RxNode       DEBUG    init
+06-15 10:33 tools.ObjectRepository INFO     Object Created RxNode
+06-15 10:33 RxNode       INFO     RxNode initializing
+06-15 10:33 RxNode       INFO     RxNode initialized
+06-15 10:33 RadarLogic   DEBUG    Initialize
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 RadarLogic   DEBUG    Start
+06-15 10:33 RxNode       INFO     RxBase.init port: interface: None
+06-15 10:33 RxNode       INFO     =============== Connected ==============
+06-15 10:33 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 10:33 Modules.LowLevel.LowLevelBase DEBUG    Setting bit rate to 1000 kb/s
+06-15 10:33 Modules.LowLevel.LowLevelBase DEBUG    Going on bus
+
+
+06-15 10:33 RxNode       INFO     rx_fpga_version: -1.ff
+06-15 10:33 RxNode       INFO     rx_board_type: Undef
+06-15 10:33 RxNode       INFO     rx_serial_num: -0001
+06-15 10:33 RxNode       INFO     RxBase.init port: interface: None
+06-15 10:33 RxNode       INFO     =============== Connected ==============
+06-15 10:33 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 10:33 RxNode       INFO     rx_fpga_version: -1.ff
+06-15 10:33 RxNode       INFO     rx_board_type: Undef
+06-15 10:33 RxNode       INFO     rx_serial_num: -0001
+06-15 10:33 RxNode       INFO     RxBase.init port: interface: None
+06-15 10:33 RxNode       INFO     =============== Connected ==============
+06-15 10:33 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 10:33 RxNode       INFO     rx_fpga_version: -1.ff
+06-15 10:33 RxNode       INFO     rx_board_type: Undef
+06-15 10:33 RxNode       INFO     rx_serial_num: -0001
+06-15 10:33 RxNode       INFO     RxBase.init port: interface: None
+06-15 10:33 RxNode       INFO     =============== Connected ==============
+06-15 10:33 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 10:33 RxNode       INFO     rx_fpga_version: -1.ff
+06-15 10:33 RxNode       INFO     rx_board_type: Undef
+06-15 10:33 RxNode       INFO     rx_serial_num: -0001
+06-15 10:33 RadarLogic   DEBUG    Start
+06-15 10:33 RadarLogic   DEBUG    Stop
+06-15 10:33 Gil          DEBUG    TEST
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:33 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 __main__     INFO     ________Start_________Main_________
+06-15 10:43 tools.Engine INFO     Engine Init
+06-15 10:43 tools.Engine INFO     Loading Configuration C:\Users\nadav\PycharmProjects\radar-control-v2/configurations/conf1.xml
+06-15 10:43 Modules.Helpers.Node DEBUG    init
+06-15 10:43 RxNode       DEBUG    init
+06-15 10:43 RadarLogic   DEBUG    RadarLogic init...
+06-15 10:43 tools.ObjectRepository INFO     Object Created RadarLogic
+06-15 10:43 tools.EngineComponent DEBUG    init
+06-15 10:43 Modules.RadarManager DEBUG    init
+06-15 10:43 tools.ObjectRepository INFO     Object Created RadarManager
+06-15 10:43 Modules.Helpers.NodeManager DEBUG    init
+06-15 10:43 tools.ObjectRepository INFO     Object Created TxManager
+06-15 10:43 Modules.Helpers.NodeManager DEBUG    init
+06-15 10:43 tools.ObjectRepository INFO     Object Created RxManager
+06-15 10:43 Gil          DEBUG    I am small person
+06-15 10:43 tools.ObjectRepository INFO     Object Created Gil
+06-15 10:43 Engine       INFO     Engine Init
+06-15 10:43 RadarLogic   DEBUG    Initialize
+06-15 10:43 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 10:43 Modules.Helpers.Node DEBUG    init
+06-15 10:43 TxNode       DEBUG    init
+06-15 10:43 tools.ObjectRepository INFO     Object Created TxNode
+06-15 10:43 Modules.Helpers.NodeManager DEBUG    Initialize
+06-15 10:43 Modules.Helpers.Node DEBUG    init
+06-15 10:43 RxNode       DEBUG    init
+06-15 10:43 tools.ObjectRepository INFO     Object Created RxNode
+06-15 10:43 RxNode       INFO     RxNode initializing
+06-15 10:43 RxNode       INFO     RxNode initialized
+06-15 10:43 Modules.Helpers.Node DEBUG    init
+06-15 10:43 RxNode       DEBUG    init
+06-15 10:43 tools.ObjectRepository INFO     Object Created RxNode
+06-15 10:43 RxNode       INFO     RxNode initializing
+06-15 10:43 RxNode       INFO     RxNode initialized
+06-15 10:43 Modules.Helpers.Node DEBUG    init
+06-15 10:43 RxNode       DEBUG    init
+06-15 10:43 tools.ObjectRepository INFO     Object Created RxNode
+06-15 10:43 RxNode       INFO     RxNode initializing
+06-15 10:43 RxNode       INFO     RxNode initialized
+06-15 10:43 Modules.Helpers.Node DEBUG    init
+06-15 10:43 RxNode       DEBUG    init
+06-15 10:43 tools.ObjectRepository INFO     Object Created RxNode
+06-15 10:43 RxNode       INFO     RxNode initializing
+06-15 10:43 RxNode       INFO     RxNode initialized
+06-15 10:43 RadarLogic   DEBUG    Initialize
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 RadarLogic   DEBUG    Start
+06-15 10:43 RxNode       INFO     RxBase.init port: interface: None
+06-15 10:43 RxNode       INFO     =============== Connected ==============
+06-15 10:43 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 10:43 Modules.LowLevel.LowLevelBase DEBUG    Setting bit rate to 1000 kb/s
+06-15 10:43 Modules.LowLevel.LowLevelBase DEBUG    Going on bus
+
+
+06-15 10:43 RxNode       INFO     rx_fpga_version: -1.ff
+06-15 10:43 RxNode       INFO     rx_board_type: Undef
+06-15 10:43 RxNode       INFO     rx_serial_num: -0001
+06-15 10:43 RxNode       INFO     FPGA Temp:  -1.0.
+Rx temp: [-0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1]
+
+06-15 10:43 RxNode       INFO     Board temp:  -0.0 C. Board Humidity: -0.01 %
+
+06-15 10:43 RxNode       INFO     Rx Accelerometer: ([-0.01, -0.01, -0.01])
+06-15 10:43 RxNode       INFO     RxBase.init port: interface: None
+06-15 10:43 RxNode       INFO     =============== Connected ==============
+06-15 10:43 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 10:43 RxNode       INFO     rx_fpga_version: -1.ff
+06-15 10:43 RxNode       INFO     rx_board_type: Undef
+06-15 10:43 RxNode       INFO     rx_serial_num: -0001
+06-15 10:43 RxNode       INFO     FPGA Temp:  -1.0.
+Rx temp: [-0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1]
+
+06-15 10:43 RxNode       INFO     Board temp:  -0.0 C. Board Humidity: -0.01 %
+
+06-15 10:43 RxNode       INFO     Rx Accelerometer: ([-0.01, -0.01, -0.01])
+06-15 10:43 RxNode       INFO     RxBase.init port: interface: None
+06-15 10:43 RxNode       INFO     =============== Connected ==============
+06-15 10:43 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 10:43 RxNode       INFO     rx_fpga_version: -1.ff
+06-15 10:43 RxNode       INFO     rx_board_type: Undef
+06-15 10:43 RxNode       INFO     rx_serial_num: -0001
+06-15 10:43 RxNode       INFO     FPGA Temp:  -1.0.
+Rx temp: [-0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1]
+
+06-15 10:43 RxNode       INFO     Board temp:  -0.0 C. Board Humidity: -0.01 %
+
+06-15 10:43 RxNode       INFO     Rx Accelerometer: ([-0.01, -0.01, -0.01])
+06-15 10:43 RxNode       INFO     RxBase.init port: interface: None
+06-15 10:43 RxNode       INFO     =============== Connected ==============
+06-15 10:43 Modules.LowLevel.LowLevelBase DEBUG    Opening channel CanBusUnitID.RX1
+06-15 10:43 RxNode       INFO     rx_fpga_version: -1.ff
+06-15 10:43 RxNode       INFO     rx_board_type: Undef
+06-15 10:43 RxNode       INFO     rx_serial_num: -0001
+06-15 10:43 RxNode       INFO     FPGA Temp:  -1.0.
+Rx temp: [-0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1]
+
+06-15 10:43 RxNode       INFO     Board temp:  -0.0 C. Board Humidity: -0.01 %
+
+06-15 10:43 RxNode       INFO     Rx Accelerometer: ([-0.01, -0.01, -0.01])
+06-15 10:43 RadarLogic   DEBUG    Start
+06-15 10:43 RadarLogic   DEBUG    Stop
+06-15 10:43 Gil          DEBUG    TEST
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
+06-15 10:43 Modules.RadarManager DEBUG    propertyChanged
