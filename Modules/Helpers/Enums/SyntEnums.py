@@ -6,18 +6,27 @@ aligned with register map V00.13 (31/05/2020)
 from enum import Enum
 
 
+class RampType(Enum):
+    Sawtooth = 0
+    Triangle = 1
+
+
+class SyntRunMode(Enum):
+    Stop = 0
+    Manual = 1
+    FreeRun = 2
+
+
+# is it supposed to be synt param???
 class SyntConfig:
-    def __init__(self):
-        # self.force_init = 1
+        FrameGen_N_Samples = 17000  # Number of samples
+        FrameLen = 20000  # Length of frame (in fs_clk units). calculated from 'FrameGen_Repitition'
+        RunMode = SyntRunMode.FreeRun  # 0- manual trigger, 1- free run, 2- external trigger
 
-        self.FrameGen_N_Samples = 17000  # Number of samples
-        self.FrameLen = 20000  # Length of frame (in fs_clk units). calculated from 'FrameGen_Repitition'
-        self.RunMode = SyntRunMode.FreeRun  # 0- manual trigger, 1- free run, 2- external trigger
-
-        # self.fc = 77.5e9        # center frequency (77GHz) ui id: 'CenterFreq'
-        self.Bandwidth: float = 120.0  # [MHz] in E-band domain
-        self.SweepTime: float = 500.0  # [usec]
-        self.RampConfiguration = RampType.Sawtooth
+        fc = 77.5e9        # center frequency (77GHz) ui id: 'CenterFreq'
+        Bandwidth: float = 120.0  # [MHz] in E-band domain
+        SweepTime: float = 500.0  # [usec]
+        RampConfiguration = RampType.Sawtooth
 
 
 class SyntBlock(Enum):
@@ -89,16 +98,10 @@ class SyntMipiRamBlockAddr(Enum):  # new in ver 00.10
 #     R8192_A256 = 3  # 48bit per pixel, 6.479ms
 
 
-# MOVED TO GLOBAL TRIGGER MODE
 class SyntRunMode(Enum):
     Stop = 0
     Manual = 1
     FreeRun = 2
-
-
-class RampType(Enum):
-    Sawtooth = 0
-    Triangle = 1
 
 
 class LedFunction(Enum):

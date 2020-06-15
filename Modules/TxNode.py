@@ -17,7 +17,7 @@ class TxNode(Node):
     def __init__(self):
         super().__init__()
         logger.debug("init")
-        self.rx_param = TxLocalParams()
+        self.tx_param = TxLocalParams()
         self.status = TxStatus()
         self.version = NodeVersion()
         # Doron's part #

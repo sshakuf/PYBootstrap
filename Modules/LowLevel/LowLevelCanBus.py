@@ -32,7 +32,7 @@ def low_level_can_bus_call(function):
                 res = function(self, *args, **kwargs)
             except Exception as e:
                 line = f"LowLevel hw_interface exception: {str(e)}"
-                self.logger.error(line)
+                logger.error(line)
                 raise NiArtException(line)
             return res
 

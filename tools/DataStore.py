@@ -92,6 +92,11 @@ class RxStatus:
         self.stage_3_pg = None
 
 
+class SyntStatus:
+    def __init__(self):
+        print("Tx status")
+
+
 class TxStatus:
     def __init__(self):
         print("Tx status")

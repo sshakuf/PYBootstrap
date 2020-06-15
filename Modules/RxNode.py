@@ -26,23 +26,15 @@ class RxNode(Node):
         self.version = NodeVersion()
         # Doron's part #
         self.radar_low_level: LowLevelBase = LowLevelCanBus()
-        self.is_connected = False
-        self.is_hw_initialized = False
-        self.is_started = False
-
-    def frequency_change(self):
-        print("do something")
-        print("call other function")
-        print("call other function2")
 
     def onBeforeInitialized(self):
         logger.info("RxNode initializing")
         self.radar_low_level.init(self.is_verbose)
         # self.engine.eventBroker.subscribeEvent("changed_freq", self.frequency_change)
-        # self.engine.eventBroker.subscribeEvent("PropertyBeforeChange", self.prop_changed)
+        # self.engine.eventBroker.subscribeEvent("PropertyBeforeChange", self.property_changed)
         return True
 
-    def prop_changed(self, prop):
+    def property_changed(self, prop):
         if prop["Name"] == "freq":
             print("Freq changed, doing something from rx" + str(self.id))
 

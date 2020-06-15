@@ -23,6 +23,9 @@ class Node:
         self.is_verbose = True
         self.engine = None
         self.global_params = get_global_params()  # singleton object (should be on engine?)
+        self.is_connected = False
+        self.is_hw_initialized = False
+        self.is_started = False
 
     def getState(self):
         return self._state
