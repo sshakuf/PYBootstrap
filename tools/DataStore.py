@@ -139,6 +139,8 @@ class GlobalParams(Singleton):
         self.data_out_type = RxEnums.DataOutType.BeamFormerData
         self.run_mode = TriggerMode.FreeRun  # 0- manual trigger, 1- free run, 2- external trigger
         self.ramp_type = SyntEnums.RampType.Sawtooth
+        self.beam_spacing = 1
+        self.beam_stack_center = 0.0
 
 
 class DataStore:
