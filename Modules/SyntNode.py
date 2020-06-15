@@ -21,14 +21,11 @@ class SyntNode(Node):
 
         # Doron's part #
         self.radar_low_level: LowLevelBase = LowLevelCanBus()
-        self.port: str = 'COM6' if sys.platform == 'win32' else '/dev/ttyUSB0'
-        self.baud_rate: int = 1042000
-        self.hw_interface_type = HWInterfaceType.NoInterface  # ?
-        self.can_bus_unit_id = CanBusUnitID.NotUsed  # check if used at synt
 
     def onBeforeInitialized(self):
         logger.info("SyntNode initializing")
         self.radar_low_level.init(self.is_verbose)
+        self.can_bus_id = BoardType.Synt.value << 4 + int(self.id)
         # self.engine.eventBroker.subscribeEvent("PropertyBeforeChange", self.property_changed)
         return True
 

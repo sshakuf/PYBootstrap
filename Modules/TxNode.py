@@ -26,6 +26,7 @@ class TxNode(Node):
         self.is_started = False
 
     def onBeforeInitialized(self):
+        self.can_bus_id = BoardType.TX.value << 4 + int(self.id)
         return True
 
     def onAfterInitialized(self):

@@ -26,6 +26,7 @@ class Node:
         self.is_connected = False
         self.is_hw_initialized = False
         self.is_started = False
+        self.can_bus_id = None
 
     def getState(self):
         return self._state

@@ -95,7 +95,7 @@ class LowLevelI2C(LowLevelBase):
     def read_reg(self, block: Enum, address: int, expected_res: ExpResType):
         super().read_reg(block, address, expected_res)
         payload = struct.pack(">bi", block.value, address)
-        unit_id = 0x0200 + self.can_bus_unit_id.value  # i2c_unit_id is identical to can_bus_unit_id
+        unit_id = 0x0200 + self.can_bus_unit_id  # .value  # i2c_unit_id is identical to can_bus_unit_id
         unit_id_h = (unit_id & 0xff00) >> 8
         unit_id_l = (unit_id & 0xff)
         dlc = 5
@@ -129,7 +129,7 @@ class LowLevelI2C(LowLevelBase):
         else:
             payload = struct.pack(">bih", block.value, address, value)
 
-        unit_id = 0x0100 + self.can_bus_unit_id.value  # i2c_unit_id is identical to can_bus_unit_id
+        unit_id = 0x0100 + self.can_bus_unit_id  # i2c_unit_id is identical to can_bus_unit_id
         unit_id_h = (unit_id & 0xff00) >> 8
         unit_id_l = (unit_id & 0xff)
         dlc = 7
@@ -146,7 +146,7 @@ class LowLevelI2C(LowLevelBase):
 
         packet_len = 256
         out = np.zeros([length, ], dtype=np.int16)
-        unit_id = 0x0400 + self.can_bus_unit_id.value  # i2c_unit_id is identical to can_bus_unit_id
+        unit_id = 0x0400 + self.can_bus_unit_id  # i2c_unit_id is identical to can_bus_unit_id
         unit_id_h = (unit_id & 0xff00) >> 8
         unit_id_l = (unit_id & 0xff)
         dlc = 7
@@ -179,7 +179,7 @@ class LowLevelI2C(LowLevelBase):
     def write_block(self, block: Enum, address: int, block_data: np.ndarray):
         super().write_block(block, address, block_data)
         length = len(block_data)
-        unit_id = 0x0300 + self.can_bus_unit_id.value  # i2c_unit_id is identical to can_bus_unit_id
+        unit_id = 0x0300 + self.can_bus_unit_id  # i2c_unit_id is identical to can_bus_unit_id
         unit_id_h = (unit_id & 0xff00) >> 8
         unit_id_l = (unit_id & 0xff)
         dlc = 7

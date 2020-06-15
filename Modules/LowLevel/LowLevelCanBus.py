@@ -88,14 +88,14 @@ class LowLevelCanBus(LowLevelBase):
     def read_reg(self, block: Enum, address: int, expected_res: ExpResType):
         super().read_reg(block, address, expected_res)
         payload = struct.pack(">bi", block.value, address)
-        send_frame = Frame(id_=0x0200 + self.can_bus_unit_id.value, data=payload, dlc=len(payload), flags=0)
+        send_frame = Frame(id_=0x0200 + self.can_bus_unit_id, data=payload, dlc=len(payload), flags=0)
         self._hw_interface_can_bus.write(send_frame)
         time.sleep(0.1)  # time.sleep(0.01)  # this delay (0.1) is necessary when using long cable (?)
         res = -1
         for retry in range(5):
             try:
                 response = self._hw_interface_can_bus.read()
-                if response.id == 0x0280 + self.can_bus_unit_id.value and response.dlc == 2:
+                if response.id == 0x0280 + self.can_bus_unit_id and response.dlc == 2:
                     res = int(response.data[0]) << 8 | int(response.data[1])
                     break
                 else:
@@ -114,7 +114,7 @@ class LowLevelCanBus(LowLevelBase):
         else:
             payload = struct.pack(">bih", block.value, address, value)
 
-        send_frame = Frame(id_=0x0100 + self.can_bus_unit_id.value, data=payload, dlc=len(payload), flags=0)
+        send_frame = Frame(id_=0x0100 + self.can_bus_unit_id, data=payload, dlc=len(payload), flags=0)
         self._hw_interface_can_bus.write(send_frame)
 
     # @low_level_locked_can_bus_call
@@ -126,7 +126,7 @@ class LowLevelCanBus(LowLevelBase):
             length = (length // 4 + 1) * 4
         # payload = block.to_bytes(1, 'big') + address.to_bytes(4, 'big') + length.to_bytes(2, 'big')
         payload = struct.pack(">biH", block.value, address, length)
-        send_frame = Frame(id_=0x0400 + self.can_bus_unit_id.value, data=payload, dlc=len(payload), flags=0)
+        send_frame = Frame(id_=0x0400 + self.can_bus_unit_id, data=payload, dlc=len(payload), flags=0)
         self._hw_interface_can_bus.write(send_frame)
 
         sleep_time = length * 8 * 10 / 1e6
@@ -135,7 +135,7 @@ class LowLevelCanBus(LowLevelBase):
         read_count = 0
         while read_count < length*2:
             message = self._hw_interface_can_bus.read()
-            if message.id == 0x0480 + self.can_bus_unit_id.value and message.dlc == 8:
+            if message.id == 0x0480 + self.can_bus_unit_id and message.dlc == 8:
                 result[read_count:read_count+8] = message.data
                 read_count += 8
             else:
@@ -148,7 +148,7 @@ class LowLevelCanBus(LowLevelBase):
         super().write_block(block, address, block_data)
         length = len(block_data)
         payload = struct.pack(">biH", block.value, address, length)
-        send_frame = Frame(id_=0x0300 + self.can_bus_unit_id.value, data=payload, dlc=len(payload), flags=0)
+        send_frame = Frame(id_=0x0300 + self.can_bus_unit_id, data=payload, dlc=len(payload), flags=0)
         self._hw_interface_can_bus.write(send_frame)
         time.sleep(0.01)
 
@@ -158,7 +158,7 @@ class LowLevelCanBus(LowLevelBase):
             wr_data = np.array(data, '>i2')
             wr_data_bytes = wr_data.tobytes()
             # offsets for command are in int indexes
-            send_frame = Frame(id_=0x0300 + self.can_bus_unit_id.value, data=wr_data_bytes, dlc=8, flags=0)
+            send_frame = Frame(id_=0x0300 + self.can_bus_unit_id, data=wr_data_bytes, dlc=8, flags=0)
             self._hw_interface_can_bus.write(send_frame)
             start_offset += len(data)
             if start_offset % (64 * 8) == 0:
@@ -182,7 +182,7 @@ class LowLevelCanBus(LowLevelBase):
     #         # send request:
     #         len2read = min(length - int(read_count / 2), packetsize)  # in 16bit words
     #         payload = struct.pack(">biH", block.value, address + offset, len2read)
-    #         send_frame = Frame(id_=0x0400 + self.can_bus_unit_id.value, data=payload, dlc=len(payload), flags=0)
+    #         send_frame = Frame(id_=0x0400 + self.can_bus_unit_id, data=payload, dlc=len(payload), flags=0)
     #         self._hw_interface_can_bus.write(send_frame)
     #
     #         # wait for buffer to fill
@@ -192,7 +192,7 @@ class LowLevelCanBus(LowLevelBase):
     #         read_count_inner = 0
     #         while read_count_inner < len2read * 2:
     #             message = self._hw_interface_can_bus.read()
-    #             if message.id == 0x0480 + self.can_bus_unit_id.value and message.dlc == 8:
+    #             if message.id == 0x0480 + self.can_bus_unit_id and message.dlc == 8:
     #                 result[read_count:read_count + 8] = message.data
     #                 read_count_inner += 8
     #                 read_count += 8

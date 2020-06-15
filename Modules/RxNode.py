@@ -30,6 +30,7 @@ class RxNode(Node):
     def onBeforeInitialized(self):
         logger.info("RxNode initializing")
         self.radar_low_level.init(self.is_verbose)
+        self.can_bus_id = BoardType.RX.value * 16 + int(self.id)
         # self.engine.eventBroker.subscribeEvent("changed_freq", self.frequency_change)
         # self.engine.eventBroker.subscribeEvent("PropertyBeforeChange", self.property_changed)
         return True
@@ -43,8 +44,7 @@ class RxNode(Node):
         # pass
 
     def onBeforeStart(self):
-        CanBusUnitID(int(self.id))
-        self.connect(self.global_params.hw_interface_type, CanBusUnitID.RX1)
+        self.connect(self.global_params.hw_interface_type, self.can_bus_id)
         self.get_version()
         self.get_board_status()
         self.init_hw()
