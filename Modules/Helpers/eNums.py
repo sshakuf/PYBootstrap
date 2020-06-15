@@ -85,3 +85,4 @@ class TriggerMode(Enum):
     FreeRun = 2
     External = 4
     ExternalDebug = 8
+

@@ -25,7 +25,7 @@ class SyntNode(Node):
     def onBeforeInitialized(self):
         logger.info("SyntNode initializing")
         self.radar_low_level.init(self.is_verbose)
-        self.can_bus_id = BoardType.Synt.value << 4 + int(self.id)
+        self.can_bus_id = BoardType.Synt.value * 16 + 0
         # self.engine.eventBroker.subscribeEvent("PropertyBeforeChange", self.property_changed)
         return True
 
@@ -37,6 +37,15 @@ class SyntNode(Node):
         pass
 
     def onBeforeStart(self):
+        self.connect(self.global_params.hw_interface_type, self.can_bus_id)
+        self.get_version()
+        self.get_board_status()
+        self.init_hw()
+        self.config_frame()
+        self.config_chirp()
+        self.set_mipi_num_beams()
+        self.set_run_mode()
+        self.set_init_flag()
         return True
 
     def onAfterStart(self):
@@ -53,6 +62,21 @@ class SyntNode(Node):
 
     def onAfterStop(self):
         pass
+
+    def before_connect(self, hw_interface_type: HWInterfaceType, can_bus_unit_id: CanBusUnitID):
+        self.hw_interface_type = hw_interface_type
+        self.can_bus_unit_id = can_bus_unit_id
+        logger.info(f"RxBase.init port: interface: {hw_interface_type}")
+        self.is_connected = True
+        logger.info("=============== Connected ==============")
+        if hw_interface_type == HWInterfaceType.CanBus:
+            self.radar_low_level = LowLevelCanBus()
+        elif hw_interface_type == HWInterfaceType.I2C:
+            self.radar_low_level = LowLevelI2C.LowLevelI2C()
+        elif hw_interface_type == HWInterfaceType.Serial:
+            self.radar_low_level = LowLevelSerial.LowLevelSerial()
+        self.radar_low_level.connect(self.hw_interface_type, self.can_bus_unit_id)
+
 
     def get_version(self):
         synt = self.radar_low_level
@@ -108,17 +132,18 @@ class SyntNode(Node):
 
     def config_chirp(self, start_freq: float = None, bandwidth: float = None,
                      sweep_time: float = None, ramp_type: RampType = None):
+        # Start frequency is in MHz
+        start_freq = start_freq if start_freq is not None else self.global_params.frequency
+        sweep_time = sweep_time if sweep_time is not None else self.global_params.chirp_duration  # sweep time is in usec
+        bandwidth = bandwidth if bandwidth is not None else self.global_params.bandwidth  # bandwidth is in MHz (in E-band)
+        ramp_type = ramp_type if ramp_type is not None else self.global_params.ramp_type
+
         if start_freq < 76000 or start_freq > 78000:
             start_freq = None
             print("Invalid start frequency!")
         if bandwidth < 0 or bandwidth > 1000:
             bandwidth = None
             print("Invalid bandwidth!")
-        # Start frequency is in MHz
-        start_freq = start_freq if start_freq is not None else self.global_params.frequency / 1000
-        sweep_time = sweep_time if sweep_time is not None else SyntConfig.SweepTime  # sweep time is in usec
-        bandwidth = bandwidth if bandwidth is not None else SyntConfig.Bandwidth  # bandwidth is in MHz (in E-band)
-        ramp_type = ramp_type if ramp_type is not None else SyntConfig.RampConfiguration
 
         # super().config_chirp(start_freq, bandwidth, sweep_time)
         logger.info(" Init PLL")
@@ -147,10 +172,9 @@ class SyntNode(Node):
         synt.write_reg(SyntBlock.CpuRegisters, SyntCpuBlockAddr.ControlReg.value, 1)   # init PLL cmd
 
     def config_frame(self, num_samples: int = None, frame_len_usec: int = None, sync_delay: int = None):
-        num_samples = num_samples if num_samples is not None else SyntConfig.FrameGen_N_Samples
-        frame_len_usec = frame_len_usec if frame_len_usec is not None else SyntConfig.FrameLen
+        num_samples = num_samples if num_samples is not None else self.global_params.num_adc_samples
+        frame_len_usec = frame_len_usec if frame_len_usec is not None else self.global_params.frame_len_usec
         frame_len = frame_len_usec * 50 - 1
-        super().config_frame(num_samples, frame_len)
         logger.info(" Init Frame Generator")
 
         synt = self.radar_low_level
@@ -159,26 +183,22 @@ class SyntNode(Node):
         synt.write_reg(SyntBlock.FrameGen, SyntFrameGenBlockAddr.ControlReg.value, 0)
 
         # Number of samples
-        SyntConfig.FrameGen_N_Samples = num_samples
         synt.write_reg(SyntBlock.FrameGen, SyntFrameGenBlockAddr.SampleNumH.value, num_samples // 65536)  # Upper 16b
         synt.write_reg(SyntBlock.FrameGen, SyntFrameGenBlockAddr.SampleNumL.value, num_samples & 65535)  # Lower 16b
 
         # Frame Rep
-        SyntConfig.FrameLen = frame_len
         synt.write_reg(SyntBlock.FrameGen, SyntFrameGenBlockAddr.FrameLenH.value, frame_len // 65536)  # Upper 16bits
         synt.write_reg(SyntBlock.FrameGen, SyntFrameGenBlockAddr.FrameLenL.value, frame_len % 65535)  # Lower 16bits
 
         # set run mode
-        synt.write_reg(SyntBlock.FrameGen, SyntFrameGenBlockAddr.ControlReg.value, SyntConfig.RunMode.value)
+        synt.write_reg(SyntBlock.FrameGen, SyntFrameGenBlockAddr.ControlReg.value, self.global_params.run_mode.value)
 
-    def set_init_flag(self, flag_val: bool):
-        super().set_init_flag(flag_val)
+    def set_init_flag(self, flag_val: bool = True):
         logger.info(f"Set INIT flag to {flag_val}")
         synt = self.radar_low_level
         synt.write_reg(SyntBlock.CpuRegisters, SyntCpuBlockAddr.ControlReg.value, 128 if flag_val else 0)
 
     def get_init_flag(self):
-        super().get_init_flag()
         synt = self.radar_low_level
         flag_val = synt.read_reg(SyntBlock.CpuRegisters, SyntCpuBlockAddr.ControlReg.value, ExpResType.Int)
         logger.info(f"INIT flag is {flag_val}")
@@ -207,9 +227,9 @@ class SyntNode(Node):
         data_complex = test_data_I + 1j*test_data_Q
         return data_complex
 
-    def set_run_mode(self, run_mode: SyntRunMode):
+    def set_run_mode(self, run_mode: SyntRunMode = None):
+        run_mode = run_mode if run_mode is not None else self.global_params.run_mode
         self.radar_low_level.write_reg(SyntBlock.FrameGen, SyntFrameGenBlockAddr.ControlReg.value, run_mode.value)
-        SyntConfig.RunMode = run_mode
 
     def trigger_single_frame(self):
         synt = self.radar_low_level
@@ -224,7 +244,8 @@ class SyntNode(Node):
         synt = self.radar_low_level
         synt.write_reg(SyntBlock.MIPI_RAM, SyntMipiRamBlockAddr.ControlReg.value, frame_format.value)
 
-    def set_mipi_num_beams(self, num_beams=8):
+    def set_mipi_num_beams(self, num_beams=None):
+        num_beams = num_beams if num_beams is not None else self.global_params.number_of_beams
         if num_beams == 8:
             self.set_mipi_frame_format(MipiDataFormat.FMT_8192_32)
         elif num_beams == 16:

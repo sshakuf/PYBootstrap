@@ -467,7 +467,7 @@ class RxNode(Node):
 
     def config_frame(self, num_samples: int = None, frame_len_usec: int = None, sync_delay: int = None):
         num_samples = num_samples if num_samples is not None else self.global_params.num_adc_samples
-        frame_len_usec = frame_len_usec if frame_len_usec is not None else self.global_params.frame_len
+        frame_len_usec = frame_len_usec if frame_len_usec is not None else self.global_params.frame_len_usec
         sync_delay = sync_delay if sync_delay is not None else self.local_params.SyncDelay
         frame_len = frame_len_usec * 50 - 1
         logger.info(" Init Frame Generator")

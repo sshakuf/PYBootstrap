@@ -18,16 +18,6 @@ class SyntRunMode(Enum):
 
 
 # is it supposed to be synt param???
-class SyntConfig:
-        FrameGen_N_Samples = 17000  # Number of samples
-        FrameLen = 20000  # Length of frame (in fs_clk units). calculated from 'FrameGen_Repitition'
-        RunMode = SyntRunMode.FreeRun  # 0- manual trigger, 1- free run, 2- external trigger
-
-        fc = 77.5e9        # center frequency (77GHz) ui id: 'CenterFreq'
-        Bandwidth: float = 120.0  # [MHz] in E-band domain
-        SweepTime: float = 500.0  # [usec]
-        RampConfiguration = RampType.Sawtooth
-
 
 class SyntBlock(Enum):
     CpuRegisters = 0

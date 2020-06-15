@@ -5,7 +5,7 @@ import os.path
 import traceback
 import logging
 from dotmap import DotMap
-from Modules.Helpers.Enums import RxEnums
+from Modules.Helpers.Enums import RxEnums,SyntEnums
 
 logger = logging.getLogger(__name__)
 
@@ -120,7 +120,7 @@ class Singleton(object):
 class GlobalParams(Singleton):
     def __init__(self):
         self.frequency = 76000
-        self.frame_len = 20000  # Length of frame (in fs_clk units). calculated from 'FrameGen_Repetition'
+        self.frame_len_usec = 20000  # Length of frame (in fs_clk units). calculated from 'FrameGen_Repetition'
         self.dbf_steering = 5
         # self.dbf_Selected = 5
         self.number_of_beams = 8
@@ -135,8 +135,11 @@ class GlobalParams(Singleton):
         self.cal_vect_path = None
         self.force_init: bool = False
         self.num_samples_out = 8192
-        self.num_adc_samples = 32768
+        self.num_adc_samples = 17000
         self.data_out_type = RxEnums.DataOutType.BeamFormerData
+        self.run_mode = TriggerMode.FreeRun  # 0- manual trigger, 1- free run, 2- external trigger
+        self.ramp_type = SyntEnums.RampType.Sawtooth
+
 
 class DataStore:
     def __init__(self):

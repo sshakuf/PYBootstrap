@@ -32,9 +32,12 @@ class RadarManager(EngineComponent):
             "TxManager")
         self._rxManager = self.engine.objectRepository.getInstancesById(
             "RxManager")
+        self._synt = self.engine.objectRepository.getInstancesById(
+            "SyntNode")
         self._radarLogic = self.engine.objectRepository.getInstancesById(
             "TheOneAndOnly_RadarLogic")
 
+        self._synt.Initialize()
         self._txManager.Initialize()
         self._rxManager.Initialize()
         self._radarLogic.Initialize()
@@ -57,6 +60,7 @@ class RadarManager(EngineComponent):
     def onBeforeStart(self):
         self._txManager.Start()
         self._rxManager.Start()
+        self._synt.Start()
         return True
 
     def onAfterStart(self):
@@ -65,6 +69,7 @@ class RadarManager(EngineComponent):
     def onBeforeRun(self):
         self._txManager.Run()
         self._rxManager.Run()
+        self._synt.Run()
         return True
 
     def onAfterRun(self):
@@ -73,6 +78,7 @@ class RadarManager(EngineComponent):
     def onBeforeStop(self):
         self._txManager.Stop()
         self._rxManager.Stop()
+        self._synt.Stop()
         return True
 
     def onAfterStop(self):
