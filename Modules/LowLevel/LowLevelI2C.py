@@ -1,12 +1,14 @@
 import struct
 import sys
 import time
+import logging
 
 if sys.platform == 'linux':
     from smbus2 import SMBus, i2c_msg
 from Modules.Helpers.eNums import *
 from Modules.LowLevel.LowLevelBase import *
 
+logger = logging.getLogger(__name__)
 
 def low_level_locked_i2c_call(function):
     def wrapper(self, *args, **kwargs):
@@ -35,7 +37,7 @@ def low_level_i2c_call(function):
                 res = function(self, *args, **kwargs)
             except Exception as e:
                 line = f"LowLevel hw_interface exception: {str(e)}"
-                self.logger.error(line)
+                logger.error(line)
                 raise NiArtException(line)
             return res
 

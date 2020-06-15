@@ -30,8 +30,8 @@ if __name__ == "__main__":
     engine.Run()
     engine.Stop()
 
-    engine.objectRepository.instances.eventBroker.fireEvent('Test')
-    engine.objectRepository.instances.eventBroker.fireEvent('Test2')
+    # engine.objectRepository.instances.eventBroker.fireEvent('Test')
+    # engine.objectRepository.instances.eventBroker.fireEvent('Test2')
 
     # test the usage
     print(engine.props.frequency)
