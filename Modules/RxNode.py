@@ -59,6 +59,14 @@ class RxNode(Node):
         self.config_fir()
         self.config_frame()
         self.config_nco()
+        self.set_data_out_type()
+        self.set_beams()
+        self.config_test_signal()
+        self.enable_test_signal()
+        self.set_rx_data_source()
+        self.set_debug_data()
+        self.select_beam_for_debug()
+        self.set_init_flag(True)
         return True
 
     def onAfterStart(self):
@@ -179,7 +187,8 @@ class RxNode(Node):
 
     # This func needs to be subscribed to eventBroker to beam event.
     # @RegisterListener("beam_for_debug")
-    def select_beam_for_debug(self, beam: int = 0):
+    def select_beam_for_debug(self, beam: int = None):
+        beam = beam if beam is not None else self.local_params.debug_beam
         rx = self.radar_low_level
         beam = 0 if beam < 0 or beam >= 64 else beam
         rx.write_reg(RXBlock.BeamFormer, RxBeamFormerBlockAddr.BeamSelector.value, beam)
@@ -230,7 +239,6 @@ class RxNode(Node):
             self.set_run_mode(RxTriggerMode.ExternalDebug)
 
     def set_init_flag(self, flag_val: bool):
-        # super().set_init_flag(flag_val)
         logger.info(f"Set INIT flag to {flag_val}")
         rx = self.radar_low_level
         rx.modify_cpu_control_reg(RxCpuControlReg.SetGetConfigDone.value if flag_val else RxCpuControlReg.Nothing.value)
@@ -360,10 +368,8 @@ class RxNode(Node):
                 logger.debug(" Sampling_Clk correct\r")
 
     def enable_test_signal(self, en: bool = None):
-        en = en if en is not None else self.local_params.rx_test_signal_en
-        # super().enable_test_signal(en)
+        en = en if en is not None else self.local_params.test_signal_enable
         rx = self.radar_low_level
-        self.local_params.rx_test_signal_en = en
 
         rx.modify_cpu_control_reg(RxCpuControlReg.InitTestDAC.value)
         if en:
@@ -375,7 +381,6 @@ class RxNode(Node):
         # f_offset is in MHz
         amp = amp if amp is not None else self.local_params.rx_test_signal_amp
         f_offset = f_offset*1e6 if f_offset is not None else self.local_params.rx_test_signal_offset
-        # super().config_test_signal(amp, f_offset)
         rx = self.radar_low_level
 
         rx.write_reg(RXBlock.TestSignal, RxTestSignalBlockAddr.PhaseOffQ.value, 0)
@@ -388,10 +393,6 @@ class RxNode(Node):
         # in order to get in continuous mode and get a stable reading in the SA, the freq should be a
         # multiple of fs/Len
         f_test = fs_divisor * GlobalConstants.fs / length
-
-        self.local_params.rx_test_signal_amp = amp
-        self.local_params.rx_test_signal_offset = f_offset
-        self.local_params.f_test_divisor = fs_divisor
 
         logger.info(f"Test signal frequency: {f_test / 1.0e6:3.3f} MHz\n")
         amp_val = amp
@@ -541,23 +542,18 @@ class RxNode(Node):
         # not a must
 
     def set_debug_data(self, debug_input: RxDebugInputSource = None, channel: int = None, bit_shift: int = None):
-        debug_input = debug_input if debug_input is not None else self.local_params.rx_DebugInputSource
-        channel = channel if channel is not None else self.local_params.channel
-        bit_shift = bit_shift if bit_shift is not None else self.local_params.rx_Bit_Shift
-        # super().set_debug_data(debug_input, channel, bit_shift)
+        debug_input = debug_input if debug_input is not None else self.shared_params.rx_DebugInputSource
+        channel = channel if channel is not None else self.local_params.debug_channel
+        bit_shift = bit_shift if bit_shift is not None else self.shared_params.rx_Bit_Shift
         rx = self.radar_low_level
-        debug_inp_val = debug_input
         channel = 0 if channel < 0 or channel > 47 else channel
         bit_shift = 5 if bit_shift < 0 or bit_shift > 6 else bit_shift
-
-        self.local_params.rx_DebugInputSource = debug_inp_val
-        self.local_params.channel = channel
-        self.local_params.rx_Bit_Shift = bit_shift
+        val = int(np.log2(self.global_params.decimation_ratio))
 
         rx.write_reg(RXBlock.Decimation, RxDecimationBlockAddr.Decimation.value,
-                     8 * self.local_params.channel + self.global_params.rx_DecimationRatio)
+                     8 * channel + val)
         rx.write_reg(RXBlock.DebugMem, RxDbgMemBlockAddr.Multiplexer,
-                     16 * self.local_params.rx_Bit_Shift + self.local_params.rx_DebugInputSource.value)
+                     16 * bit_shift + debug_input.value)
 
     def read_iq_data(self, do_capture: bool = True, num_samples: int = None, return_complex: bool = False,
                      return_db: bool = True, decim_ratio=4):
@@ -601,7 +597,7 @@ class RxNode(Node):
 
     def select_debug_input_source(self, input_src: RxDebugInputSource = None, channel: int = None):
         input_src = input_src if input_src is not None else self.local_params.rx_DebugInputSource
-        channel = channel if channel is not None else self.local_params.channel
+        channel = channel if channel is not None else self.local_params.debug_channel
         # super().select_debug_input_source(input_src, channel)
         # Set source
         logger.info("Configure input source")
@@ -614,22 +610,23 @@ class RxNode(Node):
                      self.local_params.rx_DebugInputSource.value + 4 * self.local_params.channel)
 
     def set_rx_data_source(self, source: RxInputSource = None, channel: int = None):
-        source = source if source is not None else self.local_params.rx_InputSource
-        channel = channel if channel is not None else self.local_params.channel
-        # super().set_rx_data_source(source, channel)
+        source = source if source is not None else self.shared_params.rx_InputSource
+        channel = channel if channel is not None else self.local_params.debug_channel
         logger.info(f"Set data source to {source}")
         # Configure source registers
         rx = self.radar_low_level
-        self.local_params.rx_InputSource = source
-        self.local_params.channel = channel
-        rx.write_reg(RXBlock.AdcSampling, RxAdcBlockAddr.ChannelSelect.value,
-                     self.local_params.rx_InputSource.value + 4 * self.local_params.channel)
+        rx.write_reg(RXBlock.AdcSampling, RxAdcBlockAddr.ChannelSelect.value, source.value + 4 * channel)
 
+    def set_data_out_type(self, data_out_type: RxEnums.DataOutType = None):
+        data_out_type = data_out_type if data_out_type is not None else self.global_params.data_out_type
+        if data_out_type == RxEnums.DataOutType.DebugMemData:
+            self.set_run_mode(run_mode=RxEnums.RxTriggerMode.ExternalDebug)
+        elif data_out_type == RxEnums.DataOutType.MipiTestData or RxEnums.DataOutType.BeamFormerData:
+            self.set_run_mode(run_mode=RxEnums.RxTriggerMode.External)
+        self.select_data_out(data_out_type, self.global_params.number_of_beams)
 
-    def set_data_out_type(self, data_out_type: RxEnums.DataOutType):
-        source = data_out_type if data_out_type is not None else self.global_params.data_out_type
-
-
+    def set_beams(self):
+        pass
 
 rx_test = RxNode()
 

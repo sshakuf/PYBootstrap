@@ -8,7 +8,6 @@ rx_shared_params = None
 class RxLocalParams:
     def __init__(self):
         self.SyncDelay = 9  # cable length delay (clks)
-        self.rx_test_signal_en = 0  # Enable the amplifier for calibration network injection
         self.rx_test_signal_offset = 0  # test (Calibration) signal frequency offset from carrier
         self.rx_test_signal_amp = 0  # test signal amplitude
         self.debug_channel = 3  # Chan to debug 0..47. calculated
