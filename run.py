@@ -4,7 +4,7 @@ import logging
 import Logger
 from Modules.RadarLogic import RadarLogic
 from tools.EngineComponent import EngineComponent
-#
+##
 Logger.SetupLogger()
 
 logger = logging.getLogger(__name__)
