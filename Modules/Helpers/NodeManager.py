@@ -62,6 +62,9 @@ class NodeManager:
             return True
         return False
 
+    def get_num_of_nodes(self):
+        return int(self.numOfNodes)
+
     def onBeforeInitialized(self):
         return True
     def onAfterInitialized(self):

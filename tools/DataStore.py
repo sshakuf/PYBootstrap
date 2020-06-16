@@ -6,6 +6,8 @@ import traceback
 import logging
 from dotmap import DotMap
 from Modules.Helpers.Enums import RxEnums,SyntEnums
+import numpy as np
+
 
 logger = logging.getLogger(__name__)
 
@@ -18,7 +20,6 @@ settings = ''
 
 global global_params
 global_params = None
-
 
 
 def getDefaultSettings():
@@ -139,8 +140,11 @@ class GlobalParams(Singleton):
         self.data_out_type = RxEnums.DataOutType.BeamFormerData
         self.run_mode = TriggerMode.FreeRun  # 0- manual trigger, 1- free run, 2- external trigger
         self.ramp_type = SyntEnums.RampType.Sawtooth
-        self.beam_spacing = 1
+        self.beam_spacing = 1.0
         self.beam_stack_center = 0.0
+        self.dbf = np.zeros([192, 64], dtype='complex')
+        self.side_lobe_lvl = -35
+        self.record_on = False
 
 
 class DataStore:

@@ -35,6 +35,9 @@ class MathHelper:
 
     # this can be calculated only once upon loading
     taylor_48_5_35 = taylor_win(L=48, nbar=5, SLL=-35)
+    taylor_96_5_35 = taylor_win(L=96, nbar=5, SLL=-35)
+    taylor_144_5_35 = taylor_win(L=144, nbar=5, SLL=-35)
+    taylor_192_5_35 = taylor_win(L=192, nbar=5, SLL=-35)
 
     @staticmethod
     def normalize_vector(vector: np.ndarray):
@@ -66,15 +69,26 @@ class MathHelper:
         return 20 * np.log10(np.abs(data) + 1e-16)
 
     @staticmethod
-    def CalcSteerVect(num_channels: int = 48, beam_center: float = 0.0, sll: float = None, fc: float = 76.5e9):
-        dx = 4.2e-3  # element spacing
+    def CalcSteerVect(num_channels: int = 48, beam_center: float = 0.0, sll: float = None, fc: float = 76.5e9,
+                      dx: float = None):
+        dx = 4.2e-3 if dx is None else GlobalConstants.dx  # element spacing
         wavelength = C / fc
         steer_vect = np.ones([num_channels, 1], dtype='complex')
         if sll is None:
             win = windows.boxcar(48)
         else:
-            # win = windows.chebwin(48, sll)
-            win = MathHelper.taylor_48_5_35
+            if num_channels == 48:
+                win = MathHelper.taylor_48_5_35
+            elif num_channels == 96:
+                win = MathHelper.taylor_96_5_35
+            elif num_channels == 144:
+                win = MathHelper.taylor_144_5_35
+            elif num_channels == 192:
+                win = MathHelper.taylor_192_5_35
+            else:
+                print("Invalid number of channels")
+                win = MathHelper.taylor_48_5_35
+
         if beam_center != 0:  # steer_vect is already initialized to complex-zeros, so no need to handle that
             dphi = 2 * np.pi * dx * np.sin(beam_center * np.pi / 180) / wavelength
             phi_vect = np.linspace(0, dphi * (num_channels - 1), num_channels)
@@ -87,15 +101,15 @@ class MathHelper:
 
     @staticmethod
     def CalculateDBF(num_channels: int = 48, num_beams: int = 16, stack_center: float = 0.0, spacing: float = 1.0,
-                     sll: int = -35, fc: float = 76.5e9):
+                     sll: int = -35, fc: float = 76000):
 
         bfm = np.zeros([num_channels, 64], dtype='complex')
 
         angle_start = -(num_beams - 1) * spacing / 2
         angle_end = (num_beams - 1) * spacing / 2
-        beam_centers = np.linspace(angle_start, angle_end, num_beams)
-
-        for i, bc in beam_centers:
+        beam_centers = np.linspace(angle_start, angle_end, num_beams) + stack_center
+        fc = fc * 1E6
+        for i, bc in enumerate(beam_centers):
             bfm[:, i] = MathHelper.CalcSteerVect(num_channels, bc, sll, fc) * 16384.0
 
         return bfm

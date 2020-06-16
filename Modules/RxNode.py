@@ -32,12 +32,27 @@ class RxNode(Node):
         self.radar_low_level.init(self.is_verbose)
         self.can_bus_id = BoardType.RX.value * 16 + int(self.id)
         # self.engine.eventBroker.subscribeEvent("changed_freq", self.frequency_change)
-        # self.engine.eventBroker.subscribeEvent("PropertyBeforeChange", self.property_changed)
+        self.engine.eventBroker.subscribeEvent("PropertyChanged", self.property_changed)
+        self.engine.eventBroker.subscribeEvent("PropertyBeforeChange", self.property_before_changed)
         return True
+
+    def act_on_dbf(self):
+        channel_index = self.id * 48
+        local_dbf = self.global_params.dbf[channel_index:channel_index+48, :]
+        self.config_dbf(local_dbf, self.global_params.number_of_beams)
+
+    def property_before_changed(self, prop):
+        pass
 
     def property_changed(self, prop):
         if prop["Name"] == "frequency":
             print("Freq changed, doing something from rx" + str(self.id))
+
+
+        if prop["Name"] == "dbf":
+            # self.get_board_status()
+            self.act_on_dbf()
+            print("Dbf event is working")
 
     def onAfterInitialized(self):
         logger.info("RxNode initialized")
@@ -67,7 +82,7 @@ class RxNode(Node):
 
     def onBeforeRun(self):
         # self.get_board_status()
-        print("Im Rx and I am getting the board status.")
+        pass
         # if self.id == 1:
         #     print("AHHHH LOOK AT ME IM MISTER MISIX!")
         # if self.id == 2:

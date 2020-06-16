@@ -37,12 +37,12 @@ class RadarManager(EngineComponent):
         self._radarLogic = self.engine.objectRepository.getInstancesById(
             "TheOneAndOnly_RadarLogic")
 
+        self.setDefaultProps()
         self._synt.Initialize()
         self._txManager.Initialize()
         self._rxManager.Initialize()
-        self._radarLogic.Initialize()
+        # self._radarLogic.Initialize() radar logic is initialized from engine
 
-        self.setDefaultProps()
         # self.engine.eventBroker.subscribeEvent("PropertyBeforeChange", self.onPropertyChanged)
         return True
 
@@ -61,13 +61,14 @@ class RadarManager(EngineComponent):
         self._txManager.Start()
         self._rxManager.Start()
         self._synt.Start()
+        self._radarLogic.calc_dbf()
         return True
 
     def onAfterStart(self):
         pass
 
     def onBeforeRun(self):
-        self._radarLogic.calc_something()  # calculating and changes props
+        # self._radarLogic.calc_something()  # calculating and changes props
         self._txManager.Run()  # has shared properties which rise event when one changes
         self._rxManager.Run()  # has shared properties which rise event when one changes
         self._synt.Run()  # has shared properties which rise event when one changes
@@ -108,3 +109,6 @@ class RadarManager(EngineComponent):
             self.global_params.cal_vect_path = "c:/temp2/"
             self.global_params.hw_interface_type = HWInterfaceType.CanBus
             return False
+
+    def get_num_of_rx(self):
+        return self._rxManager.get_num_of_nodes
