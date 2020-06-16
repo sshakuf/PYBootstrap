@@ -11,9 +11,14 @@ class RadarLogic(EngineComponent):
         logger.debug("RadarLogic init...")
         self.engine = Engine.GetEngine()
 
+    def calc_something(self):
+        print("Im calculating some things...")
+        self.engine.props.freq = 75000
+        print("After calculations i changed number of properties")
+
     # change frequency should be on radarLogic
-    def param_change(self, param):
-        self.engine.eventBroker.fireEvent("changed_freq", freq)
+    # def param_change(self, param):
+        # self.engine.eventBroker.fireEvent("changed_freq", freq)
 
     def Initialize(self):
         logger.debug("Initialize")

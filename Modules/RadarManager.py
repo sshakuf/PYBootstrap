@@ -67,9 +67,11 @@ class RadarManager(EngineComponent):
         pass
 
     def onBeforeRun(self):
-        self._txManager.Run()
-        self._rxManager.Run()
-        self._synt.Run()
+        self._radarLogic.calc_something()  # calculating and changes props
+        self._txManager.Run()  # has shared properties which rise event when one changes
+        self._rxManager.Run()  # has shared properties which rise event when one changes
+        self._synt.Run()  # has shared properties which rise event when one changes
+
         return True
 
     def onAfterRun(self):

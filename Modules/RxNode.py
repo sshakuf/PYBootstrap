@@ -36,7 +36,7 @@ class RxNode(Node):
         return True
 
     def property_changed(self, prop):
-        if prop["Name"] == "freq":
+        if prop["Name"] == "frequency":
             print("Freq changed, doing something from rx" + str(self.id))
 
     def onAfterInitialized(self):
@@ -66,6 +66,8 @@ class RxNode(Node):
         pass
 
     def onBeforeRun(self):
+        # self.get_board_status()
+        print("Im Rx and I am getting the board status.")
         # if self.id == 1:
         #     print("AHHHH LOOK AT ME IM MISTER MISIX!")
         # if self.id == 2:
