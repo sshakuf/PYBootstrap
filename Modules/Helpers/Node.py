@@ -23,6 +23,7 @@ class Node:
         self.is_verbose = True
         self.engine = None
         self.global_params = None # get_global_params()  # singleton object (should be on engine?)
+        self.global_props = None
         self.is_connected = False
         self.is_hw_initialized = False
         self.is_started = False
@@ -33,9 +34,8 @@ class Node:
 
     def Initialize(self):
         self.engine = Engine.GetEngine()
-        self.global_params = self.engine.props
-        print("GLOBAL PARAMS:")
-        print(self.global_params)
+        self.global_props = self.engine.props
+        self.global_params = get_global_params()
         if self.onBeforeInitialized():
             self._state = eNums.RuningState.INITIALIZED
             self.onAfterInitialized()

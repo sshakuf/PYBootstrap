@@ -24,6 +24,7 @@ class RxNode(Node):
         self.shared_params = get_rx_shared()  # singleton object
         self.status = RxStatus()
         self.version = NodeVersion()
+        self.prop_handler = None
         # Doron's part #
         self.radar_low_level: LowLevelBase = LowLevelCanBus()
 
@@ -37,25 +38,58 @@ class RxNode(Node):
         return True
 
     def act_on_dbf(self):
-        channel_index = self.id * 48
-        local_dbf = self.global_params.dbf[channel_index:channel_index+48, :]
-        self.config_dbf(local_dbf, self.global_params.number_of_beams)
+        if self.global_props.new_dbf_ready:
+            channel_index = self.id * 48
+            local_dbf = self.global_params.dbf[channel_index:channel_index+48, :]
+            self.config_dbf(local_dbf, self.global_props.number_of_beams)
+
+    def act_on_num_beams(self):
+        print("acting on beams")
+
+    def act_on_decimation_ratio(self):
+        self.config_decimator()
+        self.shared_params.rx_FIR_Index = int(np.log2(self.global_props.decimation_ratio) - 1)
+        self.config_fir()
+
+    def act_on_adc_samples(self):
+        self.config_frame()
+        self.global_props.num_samples_out = int(self.global_props.num_adc_samples / self.global_props.decimation_ratio)
+
+    def act_on_data_out(self):
+        # TODO: DEAL WITH ENUMS .
+        self.global_props.data_out_type = DataOutType(self.global_props.data_out_type)
+        self.select_data_out()
 
     def property_before_changed(self, prop):
         pass
 
     def property_changed(self, prop):
-        if prop["Name"] == "frequency":
-            print("Freq changed, doing something from rx" + str(self.id))
-
-
-        if prop["Name"] == "dbf":
-            # self.get_board_status()
-            self.act_on_dbf()
-            print("Dbf event is working")
+        try:
+            func = self.prop_handler[prop["Name"]]
+            # print(func)
+            func()
+        except:
+            logger.error("Rx: Property is not supported or failed to set.")
 
     def onAfterInitialized(self):
         logger.info("RxNode initialized")
+        self.prop_handler = {
+            # "frequency": self.,
+            "new_dbf_ready": self.act_on_dbf,
+            "frame_len_usec": self.config_frame,
+            "number_of_beams:": self.act_on_num_beams,
+            # "bandwidth": ,
+            # "chirp_duration": self.func,
+            "decimation_ratio": self.act_on_decimation_ratio,
+            # "debug_output_interface": self.,
+            "num_samples_out": self.config_decimator,
+            "num_adc_samples": self.act_on_adc_samples,
+            "data_out_type": self.act_on_data_out,
+            # "run_mode": self.act_on_run_mode,
+            # "beam_spacing": self.func,
+            # "beam_stack_center": self.func,
+            # "record_on":self.func,
+        }
         # pass
 
     def onBeforeStart(self):
@@ -74,6 +108,7 @@ class RxNode(Node):
         self.set_rx_data_source()
         self.set_debug_data()
         self.select_beam_for_debug()
+        self.select_data_out()
         self.set_init_flag(True)
         return True
 
@@ -228,11 +263,13 @@ class RxNode(Node):
         return data_complex
 
     def set_run_mode(self, run_mode: RxTriggerMode):
-        # super().set_run_mode(run_mode)
         self.radar_low_level.write_reg(RXBlock.FrameGen, RxFrameGenBlockAddr.ControlReg.value, run_mode.value)
         self.local_params.rx_TriggerMode = run_mode
 
-    def select_data_out(self, data_out: DataOutType, num_beams = 8):
+    def select_data_out(self, data_out: DataOutType = None, num_beams = None):
+        data_out = data_out if data_out is not None else self.global_props.data_out_type
+        num_beams = num_beams if num_beams is not None else self.global_props.number_of_beams
+        logger.info(f"data_out: {data_out}, num_beams: {num_beams}")
         val = data_out.value
         if num_beams == 16:
             val += (MipiDataFormat.FMT_8192_64.value << RxMipiControlRegBits.MipiDataFormat)
@@ -242,7 +279,7 @@ class RxNode(Node):
             val += (MipiDataFormat.FMT_8192_256.value << RxMipiControlRegBits.MipiDataFormat)
         else:
             val += (MipiDataFormat.FMT_8192_32.value << RxMipiControlRegBits.MipiDataFormat)
-
+        # TODO: Number of beams is only relevant for beam form data
         # self.radar_low_level.write_reg(RXBlock.MipiDebugMem, RxMipiDebugMemBlockAddr.ControlReg.value, data_out.value)
         self.radar_low_level.write_reg(RXBlock.MipiDebugMem, RxMipiDebugMemBlockAddr.ControlReg.value, val)
         if data_out == DataOutType.DebugMemData:
@@ -330,7 +367,7 @@ class RxNode(Node):
 
     def config_fir(self, fir_index: int = None):
         fir_index = fir_index if fir_index is not None else self.shared_params.rx_FIR_Index
-
+        logger.info(f"Fir index: {fir_index}")
         fir_values = RxConstants.filt_bank[fir_index]
         self.local_params.rx_FIR_Index = fir_index
 
@@ -340,8 +377,9 @@ class RxNode(Node):
         logger.info("**************Finished FIR-Filter Config**************")
 
     def config_decimator(self, decim_ratio: int = None, num_samples_out: int = None):
-        decim_ratio = decim_ratio if decim_ratio is not None else self.global_params.decimation_ratio
-        num_samples_out = num_samples_out if num_samples_out is not None else self.global_params.num_samples_out
+        decim_ratio = decim_ratio if decim_ratio is not None else self.global_props.decimation_ratio
+        num_samples_out = num_samples_out if num_samples_out is not None else self.global_props.num_samples_out
+        logger.info(f"Decim ratio: {decim_ratio}, num_samples_out: {num_samples_out}")
         rx = self.radar_low_level
         val = int(np.log2(decim_ratio))
 
@@ -423,7 +461,7 @@ class RxNode(Node):
         rx = self.radar_low_level
 
         sig_len = 8192
-        tt = np.linspace(0, (sig_len - 1) / (GlobalConstants.fs / (2.0 ** self.global_params.rx_DecimationRatio)),
+        tt = np.linspace(0, (sig_len - 1) / (GlobalConstants.fs / (2.0 ** self.global_props.rx_DecimationRatio)),
                          sig_len)
 
         self.local_params.rx_SSB_Amp = amp
@@ -483,8 +521,8 @@ class RxNode(Node):
         rx.write_reg(RXBlock.AdcSampling, RxAdcBlockAddr.NCO_amplitude.value, amp)  # NCO amplitude
 
     def config_frame(self, num_samples: int = None, frame_len_usec: int = None, sync_delay: int = None):
-        num_samples = num_samples if num_samples is not None else self.global_params.num_adc_samples
-        frame_len_usec = frame_len_usec if frame_len_usec is not None else self.global_params.frame_len_usec
+        num_samples = num_samples if num_samples is not None else self.global_props.num_adc_samples
+        frame_len_usec = frame_len_usec if frame_len_usec is not None else self.global_props.frame_len_usec
         sync_delay = sync_delay if sync_delay is not None else self.local_params.SyncDelay
         frame_len = frame_len_usec * 50 - 1
         logger.info(" Init Frame Generator")
@@ -558,7 +596,7 @@ class RxNode(Node):
         rx = self.radar_low_level
         channel = 0 if channel < 0 or channel > 47 else channel
         bit_shift = 5 if bit_shift < 0 or bit_shift > 6 else bit_shift
-        val = int(np.log2(self.global_params.decimation_ratio))
+        val = int(np.log2(self.global_props.decimation_ratio))
 
         rx.write_reg(RXBlock.Decimation, RxDecimationBlockAddr.Decimation.value,
                      8 * channel + val)
@@ -628,12 +666,12 @@ class RxNode(Node):
         rx.write_reg(RXBlock.AdcSampling, RxAdcBlockAddr.ChannelSelect.value, source.value + 4 * channel)
 
     def set_data_out_type(self, data_out_type: RxEnums.DataOutType = None):
-        data_out_type = data_out_type if data_out_type is not None else self.global_params.data_out_type
+        data_out_type = data_out_type if data_out_type is not None else self.global_props.data_out_type
         if data_out_type == RxEnums.DataOutType.DebugMemData:
             self.set_run_mode(run_mode=RxEnums.RxTriggerMode.ExternalDebug)
         elif data_out_type == RxEnums.DataOutType.MipiTestData or RxEnums.DataOutType.BeamFormerData:
             self.set_run_mode(run_mode=RxEnums.RxTriggerMode.External)
-        self.select_data_out(data_out_type, self.global_params.number_of_beams)
+        self.select_data_out(data_out_type, self.global_props.number_of_beams)
 
     def set_beams(self):
         pass

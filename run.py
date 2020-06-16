@@ -118,9 +118,15 @@ if __name__ == "__main__":
             break
         if "=" in val:
             key = val.split("=")[0].strip()
+
             value = val.split("=")[1].strip()
             if key in engine.props:
-                engine.props[key] = value
+                engine.props[key] = int(value)  # TODO: PLEASE NOT! we must cast the right type before assignment!
+        if "?" in val:
+            key = val.split("?")[0].strip()
+            if key in engine.props:
+                print(key + ": " + str(engine.props[key]))
+
         val = None
         engine.Run()
 

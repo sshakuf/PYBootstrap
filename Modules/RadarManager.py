@@ -23,7 +23,8 @@ class RadarManager(EngineComponent):
         self._rxManager = None
         self._radarLogic = None
         self.engine = None
-        self.global_params = GlobalParams()
+        self.global_params = get_global_params()
+        self.global_props = get_global_properties()
 
     def onBeforeInitialized(self):
         self.engine = Engine.GetEngine()
@@ -48,9 +49,9 @@ class RadarManager(EngineComponent):
 
     def setDefaultProps(self):
         # assign all global parameters to their engine properties
-        global_param_dict = vars(self.global_params)
-        for key in global_param_dict:
-            self.engine.props[str(key)] = global_param_dict[key]
+        global_prop_dict = vars(self.global_props)
+        for key in global_prop_dict:
+            self.engine.props[str(key)] = global_prop_dict[key]
         pass
 
     def onAfterInitialized(self):

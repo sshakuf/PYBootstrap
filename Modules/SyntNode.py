@@ -26,14 +26,36 @@ class SyntNode(Node):
         logger.info("SyntNode initializing")
         self.radar_low_level.init(self.is_verbose)
         self.can_bus_id = BoardType.Synt.value * 16 + 0
-        # self.engine.eventBroker.subscribeEvent("PropertyBeforeChange", self.property_changed)
+        self.engine.eventBroker.subscribeEvent("PropertyChanged", self.property_changed)
+        # self.engine.eventBroker.subscribeEvent("PropertyBeforeChange", self.property_before_changed)
         return True
 
     def property_changed(self, prop):
-        if prop["Name"] == "freq":
-            print("Freq changed, doing something from rx" + str(self.id))
+        try:
+            func = self.prop_handler[prop["Name"]]
+            # print(func)
+            func()
+        except:
+            logger.error("Synt: Property is not supported or failed to set.")
 
     def onAfterInitialized(self):
+        self.prop_handler = {
+            "frequency": self.config_chirp,
+            # "new_dbf_ready": self.act_on_dbf,
+            "frame_len_usec": self.config_frame,
+            "number_of_beams:": self.set_mipi_num_beams,
+            "bandwidth": self.config_chirp,
+            "chirp_duration": self.config_chirp,
+            # "decimation_ratio": self.act_on_decimation_ratio,
+            # "debug_output_interface": self.,
+            # "num_samples_out": self.config_decimator,
+            "num_adc_samples": self.config_frame,
+            # "data_out_type": self.act_on_data_out,
+            # "run_mode": self.act_on_run_mode,
+            # "beam_spacing": self.func,
+            # "beam_stack_center": self.func,
+            # "record_on":self.func,
+        }
         pass
 
     def onBeforeStart(self):
@@ -133,11 +155,10 @@ class SyntNode(Node):
     def config_chirp(self, start_freq: float = None, bandwidth: float = None,
                      sweep_time: float = None, ramp_type: RampType = None):
         # Start frequency is in MHz
-        start_freq = start_freq if start_freq is not None else self.global_params.frequency
-        sweep_time = sweep_time if sweep_time is not None else self.global_params.chirp_duration  # sweep time is in usec
-        bandwidth = bandwidth if bandwidth is not None else self.global_params.bandwidth  # bandwidth is in MHz (in E-band)
+        start_freq = start_freq if start_freq is not None else self.global_props.frequency
+        sweep_time = sweep_time if sweep_time is not None else self.global_props.chirp_duration  # sweep time is in usec
+        bandwidth = bandwidth if bandwidth is not None else self.global_props.bandwidth  # bandwidth is in MHz (in E-band)
         ramp_type = ramp_type if ramp_type is not None else self.global_params.ramp_type
-
         if start_freq < 76000 or start_freq > 78000:
             start_freq = None
             print("Invalid start frequency!")
@@ -148,7 +169,6 @@ class SyntNode(Node):
         # super().config_chirp(start_freq, bandwidth, sweep_time)
         logger.info(" Init PLL")
         synt = self.radar_low_level
-
         f_start_H = np.int16(start_freq // 65536)
         f_start_L = np.int16(start_freq % 65536)
 
@@ -172,8 +192,8 @@ class SyntNode(Node):
         synt.write_reg(SyntBlock.CpuRegisters, SyntCpuBlockAddr.ControlReg.value, 1)   # init PLL cmd
 
     def config_frame(self, num_samples: int = None, frame_len_usec: int = None, sync_delay: int = None):
-        num_samples = num_samples if num_samples is not None else self.global_params.num_adc_samples
-        frame_len_usec = frame_len_usec if frame_len_usec is not None else self.global_params.frame_len_usec
+        num_samples = num_samples if num_samples is not None else self.global_props.num_adc_samples
+        frame_len_usec = frame_len_usec if frame_len_usec is not None else self.global_props.frame_len_usec
         frame_len = frame_len_usec * 50 - 1
         logger.info(" Init Frame Generator")
 
@@ -191,7 +211,7 @@ class SyntNode(Node):
         synt.write_reg(SyntBlock.FrameGen, SyntFrameGenBlockAddr.FrameLenL.value, frame_len % 65535)  # Lower 16bits
 
         # set run mode
-        synt.write_reg(SyntBlock.FrameGen, SyntFrameGenBlockAddr.ControlReg.value, self.global_params.run_mode.value)
+        synt.write_reg(SyntBlock.FrameGen, SyntFrameGenBlockAddr.ControlReg.value, self.global_props.run_mode.value)
 
     def set_init_flag(self, flag_val: bool = True):
         logger.info(f"Set INIT flag to {flag_val}")
@@ -228,7 +248,7 @@ class SyntNode(Node):
         return data_complex
 
     def set_run_mode(self, run_mode: SyntRunMode = None):
-        run_mode = run_mode if run_mode is not None else self.global_params.run_mode
+        run_mode = run_mode if run_mode is not None else self.global_props.run_mode
         self.radar_low_level.write_reg(SyntBlock.FrameGen, SyntFrameGenBlockAddr.ControlReg.value, run_mode.value)
 
     def trigger_single_frame(self):
@@ -245,7 +265,7 @@ class SyntNode(Node):
         synt.write_reg(SyntBlock.MIPI_RAM, SyntMipiRamBlockAddr.ControlReg.value, frame_format.value)
 
     def set_mipi_num_beams(self, num_beams=None):
-        num_beams = num_beams if num_beams is not None else self.global_params.number_of_beams
+        num_beams = num_beams if num_beams is not None else self.global_props.number_of_beams
         if num_beams == 8:
             self.set_mipi_frame_format(MipiDataFormat.FMT_8192_32)
         elif num_beams == 16:
