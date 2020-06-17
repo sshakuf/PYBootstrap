@@ -12,62 +12,21 @@ logger = logging.getLogger(__name__)
 class DataCollector(EngineComponent):
     def __init__(self):
         super().__init__()
-        logger.debug("init")
-        self._v4l2_collector = None
-        self._v4l2_collector_thread = None
-        self.engine = None
-        self.global_params = get_global_params()
-        self.global_props = get_global_properties()
-
-    def onBeforeInitialized(self):
-        self.engine = GetEngine()
-
-        self._v4l2_collector = self.engine.objectRepository.getInstancesById("V4L2Collector")
-        self._v4l2_collector.Initialize()
-        self._v4l2_collector_thread = threading.Thread(target=self._v4l2_collector.Start)
-        return True
-
-    def onAfterInitialized(self):
-        pass
-
-    def onBeforeStart(self):
-        self._v4l2_collector_thread.start()  # starting the thread, not the Function!
-        return True
-
-    def onAfterStart(self):
-        pass
-
-    def onBeforeRun(self):
-        logger.info(f"Data collector: Number of active threads - {threading.active_count()}")
-        return True
-
-    def onAfterRun(self):
-        pass
-
-    def onBeforeStop(self):
-        self.global_props.record_on = False  # this will make the readers threads stop recording to files
-        # self._v4l2_collector_thread.Stop()
-        return True
-
-    def onAfterStop(self):
-        pass
-
-
-class V4l2Collector:
-    def __init__(self):
         self.v4l_mid = None
         self.engine = None
         self.file = None
-        self.data_reader_lock = None
         self.prop_handler = None
         self.global_props = None
         self.global_params = None
         self.record = False
+        self._v4l2_collector_thread = False
+        self.stopped = False
 
-    def Initialize(self):
+    def onBeforeInitialized(self):
         self.engine = GetEngine()
         self.global_props = self.engine.props
         self.global_params = get_global_params()
+        self._v4l2_collector_thread = threading.Thread(target=self.read_data)
 
         # ### V4L2 related init ### #
         self.v4l_mid = V4L2MidLevel()
@@ -126,7 +85,10 @@ class V4l2Collector:
         except:
             logger.error("Rx: Property is not supported or failed to set.")
 
-    def Start(self):
+    def onBeforeStart(self):
+        self._v4l2_collector_thread.start()  # starting the thread, not the Function!
+
+    def read_data(self):
         if self.record:
             self.file = open_file()
             comment = entry_box()  # "test0"  # build_file_meta will complete the comment with 0 to the desired size.
@@ -163,6 +125,12 @@ class V4l2Collector:
                 timer_start = time.time()
             run_file_manager(self.file)
 
+            if self.stopped:
+                break
+
+    def onBeforeStop(self):
+        self.global_props.record_on = False  # this will make the readers threads stop recording to files
+        self.stopped = True
 
 
 
