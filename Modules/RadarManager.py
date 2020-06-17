@@ -73,7 +73,6 @@ class RadarManager(EngineComponent):
         self._txManager.Run()  # has shared properties which rise event when one changes
         self._rxManager.Run()  # has shared properties which rise event when one changes
         self._synt.Run()  # has shared properties which rise event when one changes
-
         return True
 
     def onAfterRun(self):

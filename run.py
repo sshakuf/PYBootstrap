@@ -2,6 +2,7 @@ import imports
 from tools.Engine import *
 import logging
 import Logger
+import threading
 from Modules.RadarLogic import RadarLogic
 from tools.EngineComponent import EngineComponent
 ##
@@ -95,7 +96,7 @@ def show_menu(menu_item, param):
 #     print(f"\t chirp length: {chirp_len_usec} usec")
 #     print(f"\t sampling window: {adc_win_usec} usec")
 
-
+# TODO: Change frame size, file save yes/no, data output mode change.
 
 if __name__ == "__main__":
     logger.info("________Start_________Main_________")
@@ -117,11 +118,12 @@ if __name__ == "__main__":
         if val == 'q':
             break
         if "=" in val:
+            engine.reader_writer_lock.acquire_write()
             key = val.split("=")[0].strip()
-
             value = val.split("=")[1].strip()
             if key in engine.props:
-                engine.props[key] = int(value)  # TODO: PLEASE NOT! we must cast the right type before assignment!
+                engine.props[key] = int(value)  # TODO: PLEASE NOTE! we must cast the right type before assignment!
+            engine.reader_writer_lock.release_write()
         if "?" in val:
             key = val.split("?")[0].strip()
             if key in engine.props:

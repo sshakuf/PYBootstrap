@@ -3,6 +3,7 @@ import DataStore
 import tools.DataStore
 from tools.EngineComponent import EngineComponent
 import tools.ObjectRepository as ObjectRepository
+from Modules.Helpers.ReadWriteLock import *
 
 import logging
 
@@ -37,6 +38,8 @@ class Engine(Singleton):
             "objectRepository", self.objectRepository)
         self.objectRepository.AddInstance(
             "eventBroker", self.eventBroker)
+
+        self.reader_writer_lock = get_read_write_lock()
 
     def LoadConfiguration(self, infile):
         logger.info("Loading Configuration %s" % infile)
