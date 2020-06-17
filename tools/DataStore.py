@@ -137,6 +137,7 @@ class GlobalProperties(Singleton):
         self.beam_stack_center = 0.0
         self.record_on = False
         self.new_dbf_ready = False
+        self.draw_on = False
 
 
 class GlobalParams(Singleton):
