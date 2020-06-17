@@ -1,5 +1,5 @@
 from enum import Enum
-
+import numpy as np
 
 global rx_shared_params
 rx_shared_params = None
@@ -17,6 +17,7 @@ class RxLocalParams:
         self.modulator_freq = 0
         self.modulator_amp = 0
         self.test_signal_enable = False
+        self.calc_vect = np.ndarray([48, 1], dtype='complex')
 
 
 class Singleton(object):
@@ -48,6 +49,7 @@ class RxSharedParams(Singleton):
         self.adc_test_module = 0
         self.test_signal_freq = 2.4
         self.test_signal_amp = 400
+        self.cal_vect_path = "/ext_ssd/PrjGL/radar-control/SystemTests/Calibration/REF_files/"
 
 
 class RXChanSelectMode(Enum):

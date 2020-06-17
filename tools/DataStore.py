@@ -149,6 +149,7 @@ class GlobalParams(Singleton):
         self.ramp_type = SyntEnums.RampType.Sawtooth
         self.dbf = np.zeros([192, 64], dtype='complex')
         self.side_lobe_lvl = -35
+        self.frame = None
 
 
 class DataStore:

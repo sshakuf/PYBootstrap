@@ -5,12 +5,14 @@ from Modules.Helpers.RxParams import *
 from Modules.Helpers.Constants import GlobalConstants, RxConstants
 from Modules.RadarManager import *
 import logging
+from Modules.Helpers.MathHelpers import MathHelper as mh
 from tools.DataStore import RxStatus
 from Modules.LowLevel import LowLevelBase, LowLevelI2C, LowLevelSerial
 from Modules.LowLevel.LowLevelCanBus import LowLevelCanBus
 from tools.DataStore import NodeVersion
 from Modules.Helpers.Enums.RxEnums import *
 import numpy as np
+from Modules.Helpers.FileHandling import *
 from tools.EventBroker import *
 
 logger = logging.getLogger(__name__)
@@ -41,7 +43,8 @@ class RxNode(Node):
         if self.global_props.new_dbf_ready:
             channel_index = self.id * 48
             local_dbf = self.global_params.dbf[channel_index:channel_index+48, :]
-            self.config_dbf(local_dbf, self.global_props.number_of_beams)
+            calibrated_dbf = mh.ApplyCalibration(local_dbf, self.local_params.calc_vect)
+            self.config_dbf(calibrated_dbf, self.global_props.number_of_beams)
 
     def act_on_num_beams(self):
         print("acting on beams")
@@ -95,6 +98,7 @@ class RxNode(Node):
     def onBeforeStart(self):
         self.connect(self.global_params.hw_interface_type, self.can_bus_id)
         self.get_version()
+        self.local_params.cal_vect = import_ref_2(self.shared_params.cal_vect_path, self.version.serial_num)
         self.get_board_status()
         self.init_hw()
         self.config_decimator()
@@ -111,6 +115,7 @@ class RxNode(Node):
         self.select_data_out()
         self.set_init_flag(True)
         return True
+
 
     def onAfterStart(self):
         pass

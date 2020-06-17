@@ -115,9 +115,12 @@ class MathHelper:
         return bfm
 
     @staticmethod
-    def ApplyCalibration(steer_vect: np.ndarray([48, 1], dtype='complex'),
+    def ApplyCalibration(steer_matrix: np.ndarray([48, 64], dtype='complex'),
                          cal_vect: np.ndarray([48, 1], dtype='complex')):
-        return np.multiply(steer_vect, cal_vect)
+        result = np.ndarray([48, 64], dtype='complex')
+        for kk in range(64):
+            result[:, kk] = np.multiply(steer_matrix[:, kk], cal_vect)
+        return result
 
     @staticmethod
     def FindSpectralPeak(data: np.ndarray, threshold: float = 90):

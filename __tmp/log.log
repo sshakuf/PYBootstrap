@@ -27257,3 +27257,797 @@ Rx temp: [0.0, 66.5, 66.5, 65.0, 65.0, 65.0, 66.5, 68.0, 66.5, 65.0, 65.0, 65.0,
 06-17 16:03 RxNode       ERROR    Rx: Property record_on is not supported or failed to set.
 06-17 16:03 DataCollector ERROR    Data collector: Property is not supported or failed to set.
 06-17 16:03 RadarLogic   DEBUG    Start
+06-17 16:41 __main__     INFO     ________Start_________Main_________
+06-17 16:41 tools.Engine INFO     Engine Init
+06-17 16:41 tools.Engine INFO     Loading Configuration /ext_ssd/PrjGL/radar-control-v2/configurations/conf1.xml
+06-17 16:41 Modules.Helpers.Node DEBUG    init
+06-17 16:41 RxNode       DEBUG    init
+06-17 16:41 tools.EngineComponent DEBUG    init
+06-17 16:41 RadarLogic   DEBUG    RadarLogic init...
+06-17 16:41 tools.ObjectRepository INFO     Object Created RadarLogic
+06-17 16:41 tools.EngineComponent DEBUG    init
+06-17 16:41 RadarManager DEBUG    init
+06-17 16:41 tools.ObjectRepository INFO     Object Created RadarManager
+06-17 16:41 tools.EngineComponent DEBUG    init
+06-17 16:41 tools.ObjectRepository INFO     Object Created DataCollector
+06-17 16:41 Modules.Helpers.NodeManager DEBUG    init
+06-17 16:41 tools.ObjectRepository INFO     Object Created TxManager
+06-17 16:41 Modules.Helpers.NodeManager DEBUG    init
+06-17 16:41 tools.ObjectRepository INFO     Object Created RxManager
+06-17 16:41 Modules.Helpers.Node DEBUG    init
+06-17 16:41 SyntNode     DEBUG    init
+06-17 16:41 tools.ObjectRepository INFO     Object Created SyntNode
+06-17 16:41 Gil          DEBUG    I am small person
+06-17 16:41 tools.ObjectRepository INFO     Object Created Gil
+06-17 16:41 Engine       INFO     Engine Init
+06-17 16:41 RadarLogic   DEBUG    Initialize
+06-17 16:41 RadarLogic   INFO     Calculate beam forming matrix
+06-17 16:41 RadarManager DEBUG    propertyChanged
+06-17 16:41 RadarManager DEBUG    propertyChanged
+06-17 16:41 RadarManager DEBUG    propertyChanged
+06-17 16:41 RadarManager DEBUG    propertyChanged
+06-17 16:41 RadarManager DEBUG    propertyChanged
+06-17 16:41 RadarManager DEBUG    propertyChanged
+06-17 16:41 RadarManager DEBUG    propertyChanged
+06-17 16:41 RadarManager DEBUG    propertyChanged
+06-17 16:41 RadarManager DEBUG    propertyChanged
+06-17 16:41 RadarManager DEBUG    propertyChanged
+06-17 16:41 RadarManager DEBUG    propertyChanged
+06-17 16:41 RadarManager DEBUG    propertyChanged
+06-17 16:41 RadarManager DEBUG    propertyChanged
+06-17 16:41 RadarManager DEBUG    propertyChanged
+06-17 16:41 RadarManager DEBUG    propertyChanged
+06-17 16:41 SyntNode     INFO     SyntNode initializing
+06-17 16:41 Modules.Helpers.NodeManager DEBUG    Initialize
+06-17 16:41 Modules.Helpers.Node DEBUG    init
+06-17 16:41 TxNode       DEBUG    init
+06-17 16:41 tools.ObjectRepository INFO     Object Created TxNode
+06-17 16:41 Modules.Helpers.NodeManager DEBUG    Initialize
+06-17 16:41 Modules.Helpers.Node DEBUG    init
+06-17 16:41 RxNode       DEBUG    init
+06-17 16:41 tools.ObjectRepository INFO     Object Created RxNode
+06-17 16:41 RxNode       INFO     RxNode initializing
+06-17 16:41 RxNode       INFO     RxNode initialized
+06-17 16:41 RadarLogic   DEBUG    Start
+06-17 16:41 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-17 16:41 RxNode       INFO     =============== Connected ==============
+06-17 16:41 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-17 16:41 Modules.LowLevel.LowLevelI2C DEBUG    Going on I2C bus
+
+
+06-17 16:41 RxNode       INFO     rx_fpga_version: 00.11
+06-17 16:41 RxNode       INFO     rx_board_type: RX
+06-17 16:41 RxNode       INFO     rx_serial_num: 01234
+06-17 16:58 __main__     INFO     ________Start_________Main_________
+06-17 16:58 tools.Engine INFO     Engine Init
+06-17 16:58 tools.Engine INFO     Loading Configuration /ext_ssd/PrjGL/radar-control-v2/configurations/conf1.xml
+06-17 16:58 Modules.Helpers.Node DEBUG    init
+06-17 16:58 RxNode       DEBUG    init
+06-17 16:58 tools.EngineComponent DEBUG    init
+06-17 16:58 RadarLogic   DEBUG    RadarLogic init...
+06-17 16:58 tools.ObjectRepository INFO     Object Created RadarLogic
+06-17 16:58 tools.EngineComponent DEBUG    init
+06-17 16:58 RadarManager DEBUG    init
+06-17 16:58 tools.ObjectRepository INFO     Object Created RadarManager
+06-17 16:58 tools.EngineComponent DEBUG    init
+06-17 16:58 tools.ObjectRepository INFO     Object Created DataCollector
+06-17 16:58 Modules.Helpers.NodeManager DEBUG    init
+06-17 16:58 tools.ObjectRepository INFO     Object Created TxManager
+06-17 16:58 Modules.Helpers.NodeManager DEBUG    init
+06-17 16:58 tools.ObjectRepository INFO     Object Created RxManager
+06-17 16:58 Modules.Helpers.Node DEBUG    init
+06-17 16:58 SyntNode     DEBUG    init
+06-17 16:58 tools.ObjectRepository INFO     Object Created SyntNode
+06-17 16:58 Gil          DEBUG    I am small person
+06-17 16:58 tools.ObjectRepository INFO     Object Created Gil
+06-17 16:58 Engine       INFO     Engine Init
+06-17 16:58 RadarLogic   DEBUG    Initialize
+06-17 16:58 RadarLogic   INFO     Calculate beam forming matrix
+06-17 16:58 RadarManager DEBUG    propertyChanged
+06-17 16:58 RadarManager DEBUG    propertyChanged
+06-17 16:58 RadarManager DEBUG    propertyChanged
+06-17 16:58 RadarManager DEBUG    propertyChanged
+06-17 16:58 RadarManager DEBUG    propertyChanged
+06-17 16:58 RadarManager DEBUG    propertyChanged
+06-17 16:58 RadarManager DEBUG    propertyChanged
+06-17 16:58 RadarManager DEBUG    propertyChanged
+06-17 16:58 RadarManager DEBUG    propertyChanged
+06-17 16:58 RadarManager DEBUG    propertyChanged
+06-17 16:58 RadarManager DEBUG    propertyChanged
+06-17 16:58 RadarManager DEBUG    propertyChanged
+06-17 16:58 RadarManager DEBUG    propertyChanged
+06-17 16:58 RadarManager DEBUG    propertyChanged
+06-17 16:58 RadarManager DEBUG    propertyChanged
+06-17 16:58 SyntNode     INFO     SyntNode initializing
+06-17 16:58 Modules.Helpers.NodeManager DEBUG    Initialize
+06-17 16:58 Modules.Helpers.Node DEBUG    init
+06-17 16:58 TxNode       DEBUG    init
+06-17 16:58 tools.ObjectRepository INFO     Object Created TxNode
+06-17 16:58 Modules.Helpers.NodeManager DEBUG    Initialize
+06-17 16:58 Modules.Helpers.Node DEBUG    init
+06-17 16:58 RxNode       DEBUG    init
+06-17 16:58 tools.ObjectRepository INFO     Object Created RxNode
+06-17 16:58 RxNode       INFO     RxNode initializing
+06-17 16:58 RxNode       INFO     RxNode initialized
+06-17 16:58 RadarLogic   DEBUG    Start
+06-17 16:58 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-17 16:58 RxNode       INFO     =============== Connected ==============
+06-17 16:58 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-17 16:58 Modules.LowLevel.LowLevelI2C DEBUG    Going on I2C bus
+
+
+06-17 16:58 RxNode       INFO     rx_fpga_version: 00.11
+06-17 16:58 RxNode       INFO     rx_board_type: RX
+06-17 16:58 RxNode       INFO     rx_serial_num: 01234
+06-17 16:58 RxNode       INFO     FPGA Temp:  28.0.
+Rx temp: [0.0, 66.5, 66.5, 65.0, 66.5, 66.5, 66.5, 68.0, 68.0, 66.5, 66.5, 68.0, 66.5, 68.0, 66.5, 69.5]
+
+06-17 16:58 RxNode       INFO     Board temp:  43.0 C. Board Humidity: 19.57 %
+
+06-17 16:58 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.03])
+06-17 16:58 RxNode       INFO      ************** Init HW **************
+06-17 16:58 RxNode       DEBUG     ************** HW already Initialized**************
+06-17 16:58 RxNode       INFO     Decim ratio: 4, num_samples_out: 8192
+06-17 16:58 RxNode       INFO     Fir index: 1
+06-17 16:58 RxNode       INFO     **************Finished FIR-Filter Config**************
+06-17 16:58 RxNode       INFO      Init Frame Generator
+06-17 16:58 RxNode       DEBUG     Configure NCO
+06-17 16:58 RxNode       INFO     data_out: DataOutType.BeamFormerData, num_beams: 8
+06-17 16:58 RxNode       INFO     Test signal frequency: 0.000 MHz
+
+06-17 16:58 RxNode       INFO     Set data source to RxInputSource.ADC
+06-17 16:58 RxNode       INFO     data_out: DataOutType.BeamFormerData, num_beams: 8
+06-17 16:58 RxNode       INFO     Set INIT flag to True
+06-17 16:58 SyntNode     INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-17 16:58 SyntNode     INFO     =============== Connected ==============
+06-17 16:58 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-17 16:58 SyntNode     DEBUG    synt_fpga_version: 00.13
+06-17 16:58 SyntNode     DEBUG    synt_board_type: Synt
+06-17 16:58 SyntNode     DEBUG    synt_serial_num: 02612
+06-17 16:58 SyntNode     DEBUG    Get board status
+06-17 16:58 SyntNode     DEBUG    synt_fpga_temp: 36
+06-17 16:58 SyntNode     DEBUG    synt_board_temp: 31.53
+06-17 16:58 SyntNode     DEBUG    synt_humidity: 35.25
+06-17 16:58 SyntNode     DEBUG    synt_AccelerometerX: 0.01
+06-17 16:58 SyntNode     DEBUG    synt_AccelerometerY: -0.01
+06-17 16:58 SyntNode     DEBUG    synt_AccelerometerZ: 1.01
+06-17 16:58 SyntNode     INFO      Init Frame Generator
+06-17 16:58 SyntNode     INFO      Init PLL
+06-17 16:58 SyntNode     INFO     Set INIT flag to True
+06-17 16:58 RadarManager DEBUG    propertyChanged
+06-17 16:58 SyntNode     ERROR    Synt: Property new_dbf_ready is not supported or failed to set.
+06-17 16:58 RxNode       ERROR    Rx: Property new_dbf_ready is not supported or failed to set.
+06-17 16:58 DataCollector ERROR    Data collector: Property is not supported or failed to set.
+06-17 16:58 RadarManager DEBUG    propertyChanged
+06-17 16:58 SyntNode     ERROR    Synt: Property new_dbf_ready is not supported or failed to set.
+06-17 16:58 DataCollector ERROR    Data collector: Property is not supported or failed to set.
+06-17 16:59 __main__     INFO     ________Start_________Main_________
+06-17 16:59 tools.Engine INFO     Engine Init
+06-17 16:59 tools.Engine INFO     Loading Configuration /ext_ssd/PrjGL/radar-control-v2/configurations/conf1.xml
+06-17 16:59 Modules.Helpers.Node DEBUG    init
+06-17 16:59 RxNode       DEBUG    init
+06-17 16:59 tools.EngineComponent DEBUG    init
+06-17 16:59 RadarLogic   DEBUG    RadarLogic init...
+06-17 16:59 tools.ObjectRepository INFO     Object Created RadarLogic
+06-17 16:59 tools.EngineComponent DEBUG    init
+06-17 16:59 RadarManager DEBUG    init
+06-17 16:59 tools.ObjectRepository INFO     Object Created RadarManager
+06-17 16:59 tools.EngineComponent DEBUG    init
+06-17 16:59 tools.ObjectRepository INFO     Object Created DataCollector
+06-17 16:59 Modules.Helpers.NodeManager DEBUG    init
+06-17 16:59 tools.ObjectRepository INFO     Object Created TxManager
+06-17 16:59 Modules.Helpers.NodeManager DEBUG    init
+06-17 16:59 tools.ObjectRepository INFO     Object Created RxManager
+06-17 16:59 Modules.Helpers.Node DEBUG    init
+06-17 16:59 SyntNode     DEBUG    init
+06-17 16:59 tools.ObjectRepository INFO     Object Created SyntNode
+06-17 16:59 Gil          DEBUG    I am small person
+06-17 16:59 tools.ObjectRepository INFO     Object Created Gil
+06-17 16:59 Engine       INFO     Engine Init
+06-17 16:59 RadarLogic   DEBUG    Initialize
+06-17 16:59 RadarLogic   INFO     Calculate beam forming matrix
+06-17 16:59 RadarManager DEBUG    propertyChanged
+06-17 16:59 RadarManager DEBUG    propertyChanged
+06-17 16:59 RadarManager DEBUG    propertyChanged
+06-17 16:59 RadarManager DEBUG    propertyChanged
+06-17 16:59 RadarManager DEBUG    propertyChanged
+06-17 16:59 RadarManager DEBUG    propertyChanged
+06-17 16:59 RadarManager DEBUG    propertyChanged
+06-17 16:59 RadarManager DEBUG    propertyChanged
+06-17 16:59 RadarManager DEBUG    propertyChanged
+06-17 16:59 RadarManager DEBUG    propertyChanged
+06-17 16:59 RadarManager DEBUG    propertyChanged
+06-17 16:59 RadarManager DEBUG    propertyChanged
+06-17 16:59 RadarManager DEBUG    propertyChanged
+06-17 16:59 RadarManager DEBUG    propertyChanged
+06-17 16:59 RadarManager DEBUG    propertyChanged
+06-17 16:59 SyntNode     INFO     SyntNode initializing
+06-17 16:59 Modules.Helpers.NodeManager DEBUG    Initialize
+06-17 16:59 Modules.Helpers.Node DEBUG    init
+06-17 16:59 TxNode       DEBUG    init
+06-17 16:59 tools.ObjectRepository INFO     Object Created TxNode
+06-17 16:59 Modules.Helpers.NodeManager DEBUG    Initialize
+06-17 16:59 Modules.Helpers.Node DEBUG    init
+06-17 16:59 RxNode       DEBUG    init
+06-17 16:59 tools.ObjectRepository INFO     Object Created RxNode
+06-17 16:59 RxNode       INFO     RxNode initializing
+06-17 16:59 RxNode       INFO     RxNode initialized
+06-17 16:59 RadarLogic   DEBUG    Start
+06-17 16:59 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-17 16:59 RxNode       INFO     =============== Connected ==============
+06-17 16:59 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-17 16:59 Modules.LowLevel.LowLevelI2C DEBUG    Going on I2C bus
+
+
+06-17 16:59 RxNode       INFO     rx_fpga_version: 00.11
+06-17 16:59 RxNode       INFO     rx_board_type: RX
+06-17 16:59 RxNode       INFO     rx_serial_num: 01234
+06-17 16:59 RxNode       INFO     FPGA Temp:  28.0.
+Rx temp: [0.0, 68.0, 66.5, 65.0, 66.5, 66.5, 66.5, 68.0, 68.0, 68.0, 66.5, 68.0, 66.5, 68.0, 68.0, 69.5]
+
+06-17 16:59 RxNode       INFO     Board temp:  43.1 C. Board Humidity: 19.57 %
+
+06-17 16:59 RxNode       INFO     Rx Accelerometer: ([0.01, -1.0, 0.03])
+06-17 16:59 RxNode       INFO      ************** Init HW **************
+06-17 16:59 RxNode       DEBUG     ************** HW already Initialized**************
+06-17 16:59 RxNode       INFO     Decim ratio: 4, num_samples_out: 8192
+06-17 16:59 RxNode       INFO     Fir index: 1
+06-17 16:59 RxNode       INFO     **************Finished FIR-Filter Config**************
+06-17 16:59 RxNode       INFO      Init Frame Generator
+06-17 16:59 RxNode       DEBUG     Configure NCO
+06-17 16:59 RxNode       INFO     data_out: DataOutType.BeamFormerData, num_beams: 8
+06-17 16:59 RxNode       INFO     Test signal frequency: 0.000 MHz
+
+06-17 16:59 RxNode       INFO     Set data source to RxInputSource.ADC
+06-17 16:59 RxNode       INFO     data_out: DataOutType.BeamFormerData, num_beams: 8
+06-17 16:59 RxNode       INFO     Set INIT flag to True
+06-17 16:59 SyntNode     INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-17 16:59 SyntNode     INFO     =============== Connected ==============
+06-17 16:59 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-17 16:59 SyntNode     DEBUG    synt_fpga_version: 00.13
+06-17 16:59 SyntNode     DEBUG    synt_board_type: Synt
+06-17 16:59 SyntNode     DEBUG    synt_serial_num: 02612
+06-17 16:59 SyntNode     DEBUG    Get board status
+06-17 16:59 SyntNode     DEBUG    synt_fpga_temp: 36
+06-17 16:59 SyntNode     DEBUG    synt_board_temp: 31.64
+06-17 16:59 SyntNode     DEBUG    synt_humidity: 34.61
+06-17 16:59 SyntNode     DEBUG    synt_AccelerometerX: 0.02
+06-17 16:59 SyntNode     DEBUG    synt_AccelerometerY: -0.01
+06-17 16:59 SyntNode     DEBUG    synt_AccelerometerZ: 1.0
+06-17 16:59 SyntNode     INFO      Init Frame Generator
+06-17 16:59 SyntNode     INFO      Init PLL
+06-17 16:59 SyntNode     INFO     Set INIT flag to True
+06-17 16:59 RadarManager DEBUG    propertyChanged
+06-17 16:59 SyntNode     ERROR    Synt: Property new_dbf_ready is not supported or failed to set.
+06-17 16:59 RxNode       ERROR    Rx: Property new_dbf_ready is not supported or failed to set.
+06-17 16:59 DataCollector ERROR    Data collector: Property is not supported or failed to set.
+06-17 16:59 RadarManager DEBUG    propertyChanged
+06-17 16:59 SyntNode     ERROR    Synt: Property new_dbf_ready is not supported or failed to set.
+06-17 16:59 DataCollector ERROR    Data collector: Property is not supported or failed to set.
+06-17 17:00 __main__     INFO     ________Start_________Main_________
+06-17 17:00 tools.Engine INFO     Engine Init
+06-17 17:00 tools.Engine INFO     Loading Configuration /ext_ssd/PrjGL/radar-control-v2/configurations/conf1.xml
+06-17 17:00 Modules.Helpers.Node DEBUG    init
+06-17 17:00 RxNode       DEBUG    init
+06-17 17:00 tools.EngineComponent DEBUG    init
+06-17 17:00 RadarLogic   DEBUG    RadarLogic init...
+06-17 17:00 tools.ObjectRepository INFO     Object Created RadarLogic
+06-17 17:00 tools.EngineComponent DEBUG    init
+06-17 17:00 RadarManager DEBUG    init
+06-17 17:00 tools.ObjectRepository INFO     Object Created RadarManager
+06-17 17:00 tools.EngineComponent DEBUG    init
+06-17 17:00 tools.ObjectRepository INFO     Object Created DataCollector
+06-17 17:00 Modules.Helpers.NodeManager DEBUG    init
+06-17 17:00 tools.ObjectRepository INFO     Object Created TxManager
+06-17 17:00 Modules.Helpers.NodeManager DEBUG    init
+06-17 17:00 tools.ObjectRepository INFO     Object Created RxManager
+06-17 17:00 Modules.Helpers.Node DEBUG    init
+06-17 17:00 SyntNode     DEBUG    init
+06-17 17:00 tools.ObjectRepository INFO     Object Created SyntNode
+06-17 17:00 Gil          DEBUG    I am small person
+06-17 17:00 tools.ObjectRepository INFO     Object Created Gil
+06-17 17:00 Engine       INFO     Engine Init
+06-17 17:00 RadarLogic   DEBUG    Initialize
+06-17 17:00 RadarLogic   INFO     Calculate beam forming matrix
+06-17 17:00 RadarManager DEBUG    propertyChanged
+06-17 17:00 RadarManager DEBUG    propertyChanged
+06-17 17:00 RadarManager DEBUG    propertyChanged
+06-17 17:00 RadarManager DEBUG    propertyChanged
+06-17 17:00 RadarManager DEBUG    propertyChanged
+06-17 17:00 RadarManager DEBUG    propertyChanged
+06-17 17:00 RadarManager DEBUG    propertyChanged
+06-17 17:00 RadarManager DEBUG    propertyChanged
+06-17 17:00 RadarManager DEBUG    propertyChanged
+06-17 17:00 RadarManager DEBUG    propertyChanged
+06-17 17:00 RadarManager DEBUG    propertyChanged
+06-17 17:00 RadarManager DEBUG    propertyChanged
+06-17 17:00 RadarManager DEBUG    propertyChanged
+06-17 17:00 RadarManager DEBUG    propertyChanged
+06-17 17:00 RadarManager DEBUG    propertyChanged
+06-17 17:00 SyntNode     INFO     SyntNode initializing
+06-17 17:00 Modules.Helpers.NodeManager DEBUG    Initialize
+06-17 17:00 Modules.Helpers.Node DEBUG    init
+06-17 17:00 TxNode       DEBUG    init
+06-17 17:00 tools.ObjectRepository INFO     Object Created TxNode
+06-17 17:00 Modules.Helpers.NodeManager DEBUG    Initialize
+06-17 17:00 Modules.Helpers.Node DEBUG    init
+06-17 17:00 RxNode       DEBUG    init
+06-17 17:00 tools.ObjectRepository INFO     Object Created RxNode
+06-17 17:00 RxNode       INFO     RxNode initializing
+06-17 17:00 RxNode       INFO     RxNode initialized
+06-17 17:00 RadarLogic   DEBUG    Start
+06-17 17:00 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-17 17:00 RxNode       INFO     =============== Connected ==============
+06-17 17:00 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-17 17:00 Modules.LowLevel.LowLevelI2C DEBUG    Going on I2C bus
+
+
+06-17 17:00 RxNode       INFO     rx_fpga_version: 00.11
+06-17 17:00 RxNode       INFO     rx_board_type: RX
+06-17 17:00 RxNode       INFO     rx_serial_num: 01234
+06-17 17:00 RxNode       INFO     FPGA Temp:  28.0.
+Rx temp: [0.0, 66.5, 66.5, 66.5, 66.5, 66.5, 68.0, 69.5, 68.0, 66.5, 66.5, 66.5, 66.5, 68.0, 68.0, 68.0]
+
+06-17 17:00 RxNode       INFO     Board temp:  43.1 C. Board Humidity: 19.57 %
+
+06-17 17:00 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.03])
+06-17 17:00 RxNode       INFO      ************** Init HW **************
+06-17 17:00 RxNode       DEBUG     ************** HW already Initialized**************
+06-17 17:00 RxNode       INFO     Decim ratio: 4, num_samples_out: 8192
+06-17 17:00 RxNode       INFO     Fir index: 1
+06-17 17:00 RxNode       INFO     **************Finished FIR-Filter Config**************
+06-17 17:00 RxNode       INFO      Init Frame Generator
+06-17 17:00 RxNode       DEBUG     Configure NCO
+06-17 17:00 RxNode       INFO     data_out: DataOutType.BeamFormerData, num_beams: 8
+06-17 17:00 RxNode       INFO     Test signal frequency: 0.000 MHz
+
+06-17 17:00 RxNode       INFO     Set data source to RxInputSource.ADC
+06-17 17:00 RxNode       INFO     data_out: DataOutType.BeamFormerData, num_beams: 8
+06-17 17:00 RxNode       INFO     Set INIT flag to True
+06-17 17:00 SyntNode     INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-17 17:00 SyntNode     INFO     =============== Connected ==============
+06-17 17:00 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-17 17:00 SyntNode     DEBUG    synt_fpga_version: 00.13
+06-17 17:00 SyntNode     DEBUG    synt_board_type: Synt
+06-17 17:00 SyntNode     DEBUG    synt_serial_num: 02612
+06-17 17:00 SyntNode     DEBUG    Get board status
+06-17 17:00 SyntNode     DEBUG    synt_fpga_temp: 36
+06-17 17:00 SyntNode     DEBUG    synt_board_temp: 31.71
+06-17 17:00 SyntNode     DEBUG    synt_humidity: 33.42
+06-17 17:00 SyntNode     DEBUG    synt_AccelerometerX: 0.02
+06-17 17:00 SyntNode     DEBUG    synt_AccelerometerY: -0.01
+06-17 17:00 SyntNode     DEBUG    synt_AccelerometerZ: 0.99
+06-17 17:00 SyntNode     INFO      Init Frame Generator
+06-17 17:00 SyntNode     INFO      Init PLL
+06-17 17:00 SyntNode     INFO     Set INIT flag to True
+06-17 17:00 RadarManager DEBUG    propertyChanged
+06-17 17:00 SyntNode     ERROR    Synt: Property new_dbf_ready is not supported or failed to set.
+06-17 17:00 RxNode       ERROR    Rx: Property new_dbf_ready is not supported or failed to set.
+06-17 17:00 DataCollector ERROR    Data collector: Property is not supported or failed to set.
+06-17 17:00 RadarManager DEBUG    propertyChanged
+06-17 17:00 SyntNode     ERROR    Synt: Property new_dbf_ready is not supported or failed to set.
+06-17 17:00 DataCollector ERROR    Data collector: Property is not supported or failed to set.
+06-17 17:26 __main__     INFO     ________Start_________Main_________
+06-17 17:26 tools.Engine INFO     Engine Init
+06-17 17:26 tools.Engine INFO     Loading Configuration /ext_ssd/PrjGL/radar-control-v2/configurations/conf1.xml
+06-17 17:26 Modules.Helpers.Node DEBUG    init
+06-17 17:26 RxNode       DEBUG    init
+06-17 17:26 tools.EngineComponent DEBUG    init
+06-17 17:26 RadarLogic   DEBUG    RadarLogic init...
+06-17 17:26 tools.ObjectRepository INFO     Object Created RadarLogic
+06-17 17:26 tools.EngineComponent DEBUG    init
+06-17 17:26 RadarManager DEBUG    init
+06-17 17:26 tools.ObjectRepository INFO     Object Created RadarManager
+06-17 17:26 tools.EngineComponent DEBUG    init
+06-17 17:26 tools.ObjectRepository INFO     Object Created DataCollector
+06-17 17:26 Modules.Helpers.NodeManager DEBUG    init
+06-17 17:26 tools.ObjectRepository INFO     Object Created TxManager
+06-17 17:26 Modules.Helpers.NodeManager DEBUG    init
+06-17 17:26 tools.ObjectRepository INFO     Object Created RxManager
+06-17 17:26 Modules.Helpers.Node DEBUG    init
+06-17 17:26 SyntNode     DEBUG    init
+06-17 17:26 tools.ObjectRepository INFO     Object Created SyntNode
+06-17 17:26 Gil          DEBUG    I am small person
+06-17 17:26 tools.ObjectRepository INFO     Object Created Gil
+06-17 17:26 Engine       INFO     Engine Init
+06-17 17:26 RadarLogic   DEBUG    Initialize
+06-17 17:26 RadarLogic   INFO     Calculate beam forming matrix
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 SyntNode     INFO     SyntNode initializing
+06-17 17:26 Modules.Helpers.NodeManager DEBUG    Initialize
+06-17 17:26 Modules.Helpers.Node DEBUG    init
+06-17 17:26 TxNode       DEBUG    init
+06-17 17:26 tools.ObjectRepository INFO     Object Created TxNode
+06-17 17:26 Modules.Helpers.NodeManager DEBUG    Initialize
+06-17 17:26 Modules.Helpers.Node DEBUG    init
+06-17 17:26 RxNode       DEBUG    init
+06-17 17:26 tools.ObjectRepository INFO     Object Created RxNode
+06-17 17:26 RxNode       INFO     RxNode initializing
+06-17 17:26 RxNode       INFO     RxNode initialized
+06-17 17:26 RadarLogic   DEBUG    Start
+06-17 17:26 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-17 17:26 RxNode       INFO     =============== Connected ==============
+06-17 17:26 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-17 17:26 Modules.LowLevel.LowLevelI2C DEBUG    Going on I2C bus
+
+
+06-17 17:26 RxNode       INFO     rx_fpga_version: 00.11
+06-17 17:26 RxNode       INFO     rx_board_type: RX
+06-17 17:26 RxNode       INFO     rx_serial_num: 01234
+06-17 17:26 RxNode       INFO     FPGA Temp:  28.0.
+Rx temp: [0.0, 66.5, 66.5, 66.5, 66.5, 66.5, 68.0, 68.0, 68.0, 66.5, 66.5, 68.0, 66.5, 68.0, 68.0, 69.5]
+
+06-17 17:26 RxNode       INFO     Board temp:  43.3 C. Board Humidity: 19.17 %
+
+06-17 17:26 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.03])
+06-17 17:26 RxNode       INFO      ************** Init HW **************
+06-17 17:26 RxNode       DEBUG     ************** HW already Initialized**************
+06-17 17:26 RxNode       INFO     Decim ratio: 4, num_samples_out: 8192
+06-17 17:26 RxNode       INFO     Fir index: 1
+06-17 17:26 RxNode       INFO     **************Finished FIR-Filter Config**************
+06-17 17:26 RxNode       INFO      Init Frame Generator
+06-17 17:26 RxNode       DEBUG     Configure NCO
+06-17 17:26 RxNode       INFO     data_out: DataOutType.BeamFormerData, num_beams: 8
+06-17 17:26 RxNode       INFO     Test signal frequency: 0.000 MHz
+
+06-17 17:26 RxNode       INFO     Set data source to RxInputSource.ADC
+06-17 17:26 RxNode       INFO     data_out: DataOutType.BeamFormerData, num_beams: 8
+06-17 17:26 RxNode       INFO     Set INIT flag to True
+06-17 17:26 SyntNode     INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-17 17:26 SyntNode     INFO     =============== Connected ==============
+06-17 17:26 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-17 17:26 SyntNode     DEBUG    synt_fpga_version: 00.13
+06-17 17:26 SyntNode     DEBUG    synt_board_type: Synt
+06-17 17:26 SyntNode     DEBUG    synt_serial_num: 02612
+06-17 17:26 SyntNode     DEBUG    Get board status
+06-17 17:26 SyntNode     DEBUG    synt_fpga_temp: 35
+06-17 17:26 SyntNode     DEBUG    synt_board_temp: 31.53
+06-17 17:26 SyntNode     DEBUG    synt_humidity: 32.9
+06-17 17:26 SyntNode     DEBUG    synt_AccelerometerX: 0.02
+06-17 17:26 SyntNode     DEBUG    synt_AccelerometerY: -0.01
+06-17 17:26 SyntNode     DEBUG    synt_AccelerometerZ: 1.0
+06-17 17:26 SyntNode     INFO      Init Frame Generator
+06-17 17:26 SyntNode     INFO      Init PLL
+06-17 17:26 SyntNode     INFO     Set INIT flag to True
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 SyntNode     ERROR    Synt: Property new_dbf_ready is not supported or failed to set.
+06-17 17:26 RxNode       ERROR    Rx: Property new_dbf_ready is not supported or failed to set.
+06-17 17:26 DataCollector ERROR    Data collector: Property is not supported or failed to set.
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 SyntNode     ERROR    Synt: Property new_dbf_ready is not supported or failed to set.
+06-17 17:26 DataCollector ERROR    Data collector: Property is not supported or failed to set.
+06-17 17:26 __main__     INFO     ________Start_________Main_________
+06-17 17:26 tools.Engine INFO     Engine Init
+06-17 17:26 tools.Engine INFO     Loading Configuration /ext_ssd/PrjGL/radar-control-v2/configurations/conf1.xml
+06-17 17:26 Modules.Helpers.Node DEBUG    init
+06-17 17:26 RxNode       DEBUG    init
+06-17 17:26 tools.EngineComponent DEBUG    init
+06-17 17:26 RadarLogic   DEBUG    RadarLogic init...
+06-17 17:26 tools.ObjectRepository INFO     Object Created RadarLogic
+06-17 17:26 tools.EngineComponent DEBUG    init
+06-17 17:26 RadarManager DEBUG    init
+06-17 17:26 tools.ObjectRepository INFO     Object Created RadarManager
+06-17 17:26 tools.EngineComponent DEBUG    init
+06-17 17:26 tools.ObjectRepository INFO     Object Created DataCollector
+06-17 17:26 Modules.Helpers.NodeManager DEBUG    init
+06-17 17:26 tools.ObjectRepository INFO     Object Created TxManager
+06-17 17:26 Modules.Helpers.NodeManager DEBUG    init
+06-17 17:26 tools.ObjectRepository INFO     Object Created RxManager
+06-17 17:26 Modules.Helpers.Node DEBUG    init
+06-17 17:26 SyntNode     DEBUG    init
+06-17 17:26 tools.ObjectRepository INFO     Object Created SyntNode
+06-17 17:26 Gil          DEBUG    I am small person
+06-17 17:26 tools.ObjectRepository INFO     Object Created Gil
+06-17 17:26 Engine       INFO     Engine Init
+06-17 17:26 RadarLogic   DEBUG    Initialize
+06-17 17:26 RadarLogic   INFO     Calculate beam forming matrix
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 RadarManager DEBUG    propertyChanged
+06-17 17:26 SyntNode     INFO     SyntNode initializing
+06-17 17:26 Modules.Helpers.NodeManager DEBUG    Initialize
+06-17 17:26 Modules.Helpers.Node DEBUG    init
+06-17 17:26 TxNode       DEBUG    init
+06-17 17:26 tools.ObjectRepository INFO     Object Created TxNode
+06-17 17:26 Modules.Helpers.NodeManager DEBUG    Initialize
+06-17 17:26 Modules.Helpers.Node DEBUG    init
+06-17 17:26 RxNode       DEBUG    init
+06-17 17:26 tools.ObjectRepository INFO     Object Created RxNode
+06-17 17:26 RxNode       INFO     RxNode initializing
+06-17 17:26 RxNode       INFO     RxNode initialized
+06-17 17:26 RadarLogic   DEBUG    Start
+06-17 17:26 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-17 17:26 RxNode       INFO     =============== Connected ==============
+06-17 17:26 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-17 17:26 Modules.LowLevel.LowLevelI2C DEBUG    Going on I2C bus
+
+
+06-17 17:26 RxNode       INFO     rx_fpga_version: 00.11
+06-17 17:26 RxNode       INFO     rx_board_type: RX
+06-17 17:26 RxNode       INFO     rx_serial_num: 01234
+06-17 17:27 RxNode       INFO     FPGA Temp:  28.0.
+Rx temp: [0.0, 66.5, 66.5, 65.0, 66.5, 66.5, 66.5, 68.0, 69.5, 68.0, 66.5, 68.0, 66.5, 68.0, 68.0, 69.5]
+
+06-17 17:27 RxNode       INFO     Board temp:  43.3 C. Board Humidity: 19.2 %
+
+06-17 17:27 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.03])
+06-17 17:27 RxNode       INFO      ************** Init HW **************
+06-17 17:27 RxNode       DEBUG     ************** HW already Initialized**************
+06-17 17:27 RxNode       INFO     Decim ratio: 4, num_samples_out: 8192
+06-17 17:27 RxNode       INFO     Fir index: 1
+06-17 17:27 RxNode       INFO     **************Finished FIR-Filter Config**************
+06-17 17:27 RxNode       INFO      Init Frame Generator
+06-17 17:27 RxNode       DEBUG     Configure NCO
+06-17 17:27 RxNode       INFO     data_out: DataOutType.BeamFormerData, num_beams: 8
+06-17 17:27 RxNode       INFO     Test signal frequency: 0.000 MHz
+
+06-17 17:27 RxNode       INFO     Set data source to RxInputSource.ADC
+06-17 17:27 RxNode       INFO     data_out: DataOutType.BeamFormerData, num_beams: 8
+06-17 17:27 RxNode       INFO     Set INIT flag to True
+06-17 17:27 SyntNode     INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-17 17:27 SyntNode     INFO     =============== Connected ==============
+06-17 17:27 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-17 17:27 SyntNode     DEBUG    synt_fpga_version: 00.13
+06-17 17:27 SyntNode     DEBUG    synt_board_type: Synt
+06-17 17:27 SyntNode     DEBUG    synt_serial_num: 02612
+06-17 17:27 SyntNode     DEBUG    Get board status
+06-17 17:27 SyntNode     DEBUG    synt_fpga_temp: 36
+06-17 17:27 SyntNode     DEBUG    synt_board_temp: 31.55
+06-17 17:27 SyntNode     DEBUG    synt_humidity: 33.79
+06-17 17:27 SyntNode     DEBUG    synt_AccelerometerX: 0.02
+06-17 17:27 SyntNode     DEBUG    synt_AccelerometerY: -0.01
+06-17 17:27 SyntNode     DEBUG    synt_AccelerometerZ: 1.0
+06-17 17:27 SyntNode     INFO      Init Frame Generator
+06-17 17:27 SyntNode     INFO      Init PLL
+06-17 17:27 SyntNode     INFO     Set INIT flag to True
+06-17 17:27 RadarManager DEBUG    propertyChanged
+06-17 17:27 SyntNode     ERROR    Synt: Property new_dbf_ready is not supported or failed to set.
+06-17 17:27 RxNode       ERROR    Rx: Property new_dbf_ready is not supported or failed to set.
+06-17 17:27 DataCollector ERROR    Data collector: Property is not supported or failed to set.
+06-17 17:27 RadarManager DEBUG    propertyChanged
+06-17 17:27 SyntNode     ERROR    Synt: Property new_dbf_ready is not supported or failed to set.
+06-17 17:27 DataCollector ERROR    Data collector: Property is not supported or failed to set.
+06-17 17:29 __main__     INFO     ________Start_________Main_________
+06-17 17:29 tools.Engine INFO     Engine Init
+06-17 17:29 tools.Engine INFO     Loading Configuration /ext_ssd/PrjGL/radar-control-v2/configurations/conf1.xml
+06-17 17:29 Modules.Helpers.Node DEBUG    init
+06-17 17:29 RxNode       DEBUG    init
+06-17 17:29 tools.EngineComponent DEBUG    init
+06-17 17:29 RadarLogic   DEBUG    RadarLogic init...
+06-17 17:29 tools.ObjectRepository INFO     Object Created RadarLogic
+06-17 17:29 tools.EngineComponent DEBUG    init
+06-17 17:29 RadarManager DEBUG    init
+06-17 17:29 tools.ObjectRepository INFO     Object Created RadarManager
+06-17 17:29 tools.EngineComponent DEBUG    init
+06-17 17:29 tools.ObjectRepository INFO     Object Created DataCollector
+06-17 17:29 Modules.Helpers.NodeManager DEBUG    init
+06-17 17:29 tools.ObjectRepository INFO     Object Created TxManager
+06-17 17:29 Modules.Helpers.NodeManager DEBUG    init
+06-17 17:29 tools.ObjectRepository INFO     Object Created RxManager
+06-17 17:29 Modules.Helpers.Node DEBUG    init
+06-17 17:29 SyntNode     DEBUG    init
+06-17 17:29 tools.ObjectRepository INFO     Object Created SyntNode
+06-17 17:29 Gil          DEBUG    I am small person
+06-17 17:29 tools.ObjectRepository INFO     Object Created Gil
+06-17 17:29 Engine       INFO     Engine Init
+06-17 17:29 RadarLogic   DEBUG    Initialize
+06-17 17:29 RadarLogic   INFO     Calculate beam forming matrix
+06-17 17:29 RadarManager DEBUG    propertyChanged
+06-17 17:29 RadarManager DEBUG    propertyChanged
+06-17 17:29 RadarManager DEBUG    propertyChanged
+06-17 17:29 RadarManager DEBUG    propertyChanged
+06-17 17:29 RadarManager DEBUG    propertyChanged
+06-17 17:29 RadarManager DEBUG    propertyChanged
+06-17 17:29 RadarManager DEBUG    propertyChanged
+06-17 17:29 RadarManager DEBUG    propertyChanged
+06-17 17:29 RadarManager DEBUG    propertyChanged
+06-17 17:29 RadarManager DEBUG    propertyChanged
+06-17 17:29 RadarManager DEBUG    propertyChanged
+06-17 17:29 RadarManager DEBUG    propertyChanged
+06-17 17:29 RadarManager DEBUG    propertyChanged
+06-17 17:29 RadarManager DEBUG    propertyChanged
+06-17 17:29 RadarManager DEBUG    propertyChanged
+06-17 17:29 SyntNode     INFO     SyntNode initializing
+06-17 17:29 Modules.Helpers.NodeManager DEBUG    Initialize
+06-17 17:29 Modules.Helpers.Node DEBUG    init
+06-17 17:29 TxNode       DEBUG    init
+06-17 17:29 tools.ObjectRepository INFO     Object Created TxNode
+06-17 17:29 Modules.Helpers.NodeManager DEBUG    Initialize
+06-17 17:29 Modules.Helpers.Node DEBUG    init
+06-17 17:29 RxNode       DEBUG    init
+06-17 17:29 tools.ObjectRepository INFO     Object Created RxNode
+06-17 17:29 RxNode       INFO     RxNode initializing
+06-17 17:29 RxNode       INFO     RxNode initialized
+06-17 17:29 RadarLogic   DEBUG    Start
+06-17 17:29 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-17 17:29 RxNode       INFO     =============== Connected ==============
+06-17 17:29 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-17 17:29 Modules.LowLevel.LowLevelI2C DEBUG    Going on I2C bus
+
+
+06-17 17:29 RxNode       INFO     rx_fpga_version: 00.11
+06-17 17:29 RxNode       INFO     rx_board_type: RX
+06-17 17:29 RxNode       INFO     rx_serial_num: 01234
+06-17 17:29 RxNode       INFO     FPGA Temp:  28.0.
+Rx temp: [0.0, 66.5, 66.5, 65.0, 66.5, 65.0, 66.5, 68.0, 68.0, 68.0, 66.5, 66.5, 66.5, 68.0, 68.0, 71.0]
+
+06-17 17:29 RxNode       INFO     Board temp:  43.3 C. Board Humidity: 19.26 %
+
+06-17 17:29 RxNode       INFO     Rx Accelerometer: ([0.0, -1.0, 0.03])
+06-17 17:29 RxNode       INFO      ************** Init HW **************
+06-17 17:29 RxNode       DEBUG     ************** HW already Initialized**************
+06-17 17:29 RxNode       INFO     Decim ratio: 4, num_samples_out: 8192
+06-17 17:29 RxNode       INFO     Fir index: 1
+06-17 17:29 RxNode       INFO     **************Finished FIR-Filter Config**************
+06-17 17:29 RxNode       INFO      Init Frame Generator
+06-17 17:29 RxNode       DEBUG     Configure NCO
+06-17 17:29 RxNode       INFO     data_out: DataOutType.BeamFormerData, num_beams: 8
+06-17 17:29 RxNode       INFO     Test signal frequency: 0.000 MHz
+
+06-17 17:29 RxNode       INFO     Set data source to RxInputSource.ADC
+06-17 17:29 RxNode       INFO     data_out: DataOutType.BeamFormerData, num_beams: 8
+06-17 17:29 RxNode       INFO     Set INIT flag to True
+06-17 17:29 SyntNode     INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-17 17:29 SyntNode     INFO     =============== Connected ==============
+06-17 17:29 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-17 17:29 SyntNode     DEBUG    synt_fpga_version: 00.13
+06-17 17:29 SyntNode     DEBUG    synt_board_type: Synt
+06-17 17:29 SyntNode     DEBUG    synt_serial_num: 02612
+06-17 17:29 SyntNode     DEBUG    Get board status
+06-17 17:29 SyntNode     DEBUG    synt_fpga_temp: 36
+06-17 17:29 SyntNode     DEBUG    synt_board_temp: 31.6
+06-17 17:29 SyntNode     DEBUG    synt_humidity: 34.19
+06-17 17:29 SyntNode     DEBUG    synt_AccelerometerX: 0.02
+06-17 17:29 SyntNode     DEBUG    synt_AccelerometerY: -0.01
+06-17 17:29 SyntNode     DEBUG    synt_AccelerometerZ: 1.0
+06-17 17:29 SyntNode     INFO      Init Frame Generator
+06-17 17:29 SyntNode     INFO      Init PLL
+06-17 17:29 SyntNode     INFO     Set INIT flag to True
+06-17 17:29 RadarManager DEBUG    propertyChanged
+06-17 17:29 SyntNode     ERROR    Synt: Property new_dbf_ready is not supported or failed to set.
+06-17 17:29 RxNode       ERROR    Rx: Property new_dbf_ready is not supported or failed to set.
+06-17 17:29 DataCollector ERROR    Data collector: Property is not supported or failed to set.
+06-17 17:29 RadarManager DEBUG    propertyChanged
+06-17 17:29 SyntNode     ERROR    Synt: Property new_dbf_ready is not supported or failed to set.
+06-17 17:29 DataCollector ERROR    Data collector: Property is not supported or failed to set.
+06-17 17:56 __main__     INFO     ________Start_________Main_________
+06-17 17:56 tools.Engine INFO     Engine Init
+06-17 17:56 tools.Engine INFO     Loading Configuration /ext_ssd/PrjGL/radar-control-v2/configurations/conf1.xml
+06-17 17:56 Modules.Helpers.Node DEBUG    init
+06-17 17:56 RxNode       DEBUG    init
+06-17 17:56 matplotlib   DEBUG    CONFIGDIR=/home/nvidia/.config/matplotlib
+06-17 17:56 matplotlib   DEBUG    matplotlib data path: /ext_ssd/PrjGL/radar-control/venv/lib/python3.7/site-packages/matplotlib/mpl-data
+06-17 17:56 matplotlib   DEBUG    loaded rc file /ext_ssd/PrjGL/radar-control/venv/lib/python3.7/site-packages/matplotlib/mpl-data/matplotlibrc
+06-17 17:56 matplotlib   DEBUG    matplotlib version 3.2.0
+06-17 17:56 matplotlib   DEBUG    interactive is False
+06-17 17:56 matplotlib   DEBUG    platform is linux
+06-17 17:56 matplotlib   DEBUG    loaded modules: ['sys', 'builtins', '_frozen_importlib', '_imp', '_thread', '_warnings', '_weakref', 'zipimport', '_frozen_importlib_external', '_io', 'marshal', 'posix', 'encodings', 'codecs', '_codecs', 'encodings.aliases', 'encodings.utf_8', '_signal', '__main__', 'encodings.latin_1', 'io', 'abc', '_abc', 'site', 'os', 'stat', '_stat', '_collections_abc', 'posixpath', 'genericpath', 'os.path', '_sitebuiltins', '_bootlocale', '_locale', 'types', 'importlib', 'importlib._bootstrap', 'importlib._bootstrap_external', 'warnings', 'importlib.util', 'importlib.abc', 'importlib.machinery', 'contextlib', 'collections', 'operator', '_operator', 'keyword', 'heapq', '_heapq', 'itertools', 'reprlib', '_collections', 'functools', '_functools', 'mpl_toolkits', 'scikits', 'sitecustomize', 'imports', 'inspect', 'dis', 'opcode', '_opcode', 'collections.abc', 'enum', 'linecache', 'tokenize', 're', 'sre_compile', '_sre', 'sre_parse', 'sre_constants', 'copyreg', 'token', 'tools', 'tools.Engine', 'tools.EventBroker', 'dotmap', '__future__', 'json', 'json.decoder', 'json.scanner', '_json', 'json.encoder', 'pprint', 'tools.ObjectRepository', 'logging', 'time', 'traceback', 'weakref', '_weakrefset', 'string', '_string', 'threading', 'atexit', 'xml', 'xml.etree', 'xml.etree.ElementTree', 'xml.etree.ElementPath', 'copy', 'pyexpat.errors', 'pyexpat.model', 'pyexpat', '_elementtree', 'DataStore', 'Modules', 'Modules.Helpers', 'Modules.Helpers.eNums', 'Modules.Helpers.Enums', 'Modules.Helpers.Enums.RxEnums', 'Modules.Helpers.Enums.SyntEnums', 'numpy', 'numpy._globals', 'numpy.__config__', 'numpy.version', 'numpy._distributor_init', 'numpy.core', 'numpy.core.info', 'numpy.core.multiarray', 'numpy.core.overrides', 'textwrap', 'datetime', 'math', '_datetime', 'numpy.core._multiarray_umath', 'numpy.compat', 'numpy.compat._inspect', 'numpy.compat.py3k', 'pathlib', 'fnmatch', 'ntpath', 'errno', 'urllib', 'urllib.parse', 'pickle', 'struct', '_struct', '_compat_pickle', '_pickle', 'numpy.core.umath', 'numpy.core.numerictypes', 'numbers', 'numpy.core._string_helpers', 'numpy.core._type_aliases', 'numpy.core._dtype', 'numpy.core.numeric', 'numpy.core._exceptions', 'numpy.core._asarray', 'numpy.core._ufunc_config', 'numpy.core.fromnumeric', 'numpy.core._methods', 'numpy.core.arrayprint', 'numpy.core.defchararray', 'numpy.core.records', 'numpy.core.memmap', 'numpy.core.function_base', 'numpy.core.machar', 'numpy.core.getlimits', 'numpy.core.shape_base', 'numpy.core.einsumfunc', 'numpy.core._add_newdocs', 'numpy.core._multiarray_tests', 'numpy.core._dtype_ctypes', '_ctypes', 'ctypes', 'ctypes._endian', 'numpy.core._internal', 'platform', 'subprocess', 'signal', '_posixsubprocess', 'select', 'selectors', 'numpy._pytesttester', 'numpy.lib', 'numpy.lib.info', 'numpy.lib.type_check', 'numpy.lib.ufunclike', 'numpy.lib.index_tricks', 'numpy.matrixlib', 'numpy.matrixlib.defmatrix', 'ast', '_ast', 'numpy.linalg', 'numpy.linalg.info', 'numpy.linalg.linalg', 'numpy.lib.twodim_base', 'numpy.linalg.lapack_lite', 'numpy.linalg._umath_linalg', 'numpy.lib.function_base', 'numpy.lib.histograms', 'numpy.lib.stride_tricks', 'numpy.lib.mixins', 'numpy.lib.nanfunctions', 'numpy.lib.shape_base', 'numpy.lib.scimath', 'numpy.lib.polynomial', 'numpy.lib.utils', 'numpy.lib.arraysetops', 'numpy.lib.npyio', 'numpy.lib.format', 'numpy.lib._datasource', 'shutil', 'zlib', 'bz2', '_compression', '_bz2', 'lzma', '_lzma', 'pwd', 'grp', 'numpy.lib._iotools', 'numpy.lib.financial', 'decimal', '_decimal', 'numpy.lib.arrayterator', 'numpy.lib.arraypad', 'numpy.lib._version', 'numpy.fft', 'numpy.fft._pocketfft', 'numpy.fft._pocketfft_internal', 'numpy.fft.helper', 'numpy.polynomial', 'numpy.polynomial.polynomial', 'numpy.polynomial.polyutils', 'numpy.polynomial._polybase', 'numpy.polynomial.chebyshev', 'numpy.polynomial.legendre', 'numpy.polynomial.hermite', 'numpy.polynomial.hermite_e', 'numpy.polynomial.laguerre', 'numpy.random', 'numpy.random._pickle', 'numpy.random.mtrand', 'cython_runtime', 'numpy.random.common', 'numpy.random.bounded_integers', 'numpy.random.mt19937', 'numpy.random.bit_generator', '_cython_0_29_14', 'secrets', 'base64', 'binascii', 'hmac', '_hashlib', 'hashlib', '_blake2', '_sha3', 'random', 'bisect', '_bisect', '_random', 'numpy.random.philox', 'numpy.random.pcg64', 'numpy.random.sfc64', 'numpy.random.generator', 'numpy.ctypeslib', 'numpy.ma', 'numpy.ma.core', 'numpy.ma.extras', 'numpy.testing', 'unittest', 'unittest.result', 'unittest.util', 'unittest.case', 'difflib', 'unittest.suite', 'unittest.loader', 'unittest.main', 'argparse', 'gettext', 'locale', 'unittest.runner', 'unittest.signals', 'numpy.testing._private', 'numpy.testing._private.utils', 'gc', 'tempfile', 'numpy.testing._private.decorators', 'numpy.testing._private.nosetester', 'tools.DataStore', 'tools.EngineComponent', 'Modules.Helpers.ReadWriteLock', 'Logger', 'Modules.RadarLogic', 'Modules.Helpers.MathHelpers', 'scipy', 'scipy._distributor_init', 'scipy.__config__', 'scipy.version', 'scipy._lib', 'scipy._lib._testutils', 'scipy._lib._version', 'scipy._lib.six', 'scipy._lib._ccallback', 'scipy._lib._ccallback_c', 'scipy.constants', 'scipy.constants.codata', 'scipy.constants.constants', 'scipy.signal', 'scipy.signal.sigtools', 'scipy.signal.windows', 'scipy.signal.windows.windows', 'scipy.fftpack', 'scipy.fftpack.basic', 'scipy.fftpack._fftpack', 'scipy.fftpack.helper', 'scipy.fftpack.pseudo_diffs', 'scipy.fftpack.convolve', 'numpy.dual', 'scipy.fftpack.realtransforms', 'scipy.linalg', 'scipy.linalg.linalg_version', 'scipy.linalg.misc', 'scipy.linalg.blas', 'scipy.linalg._fblas', 'scipy.linalg._cblas', 'scipy.linalg.lapack', 'scipy.linalg._flapack', 'scipy._lib._util', 'multiprocessing', 'multiprocessing.context', 'multiprocessing.process', 'multiprocessing.reduction', 'socket', '_socket', 'array', '__mp_main__', 'scipy.linalg.basic', 'scipy.linalg.flinalg', 'scipy.linalg._flinalg', 'scipy.linalg.decomp', 'scipy.linalg.decomp_svd', 'scipy.linalg._solve_toeplitz', '_cython_0_29_13', 'scipy.linalg.decomp_lu', 'scipy.linalg._decomp_ldl', 'scipy.linalg.decomp_cholesky', 'scipy.linalg.decomp_qr', 'scipy.linalg._decomp_qz', 'scipy.linalg.decomp_schur', 'scipy.linalg._decomp_polar', 'scipy.linalg.matfuncs', 'scipy.linalg.special_matrices', 'scipy.linalg._expm_frechet', 'scipy.linalg._matfuncs_sqrtm', 'scipy.linalg._solvers', 'scipy.linalg._procrustes', 'scipy.linalg._decomp_update', 'scipy.linalg.cython_blas', 'scipy.linalg.cython_lapack', 'scipy.linalg._sketches', 'scipy.sparse', 'scipy.sparse.base', 'scipy._lib._numpy_compat', 'scipy.sparse.sputils', 'scipy.sparse.csr', 'scipy.sparse._sparsetools', 'scipy.sparse.compressed', 'scipy.sparse.data', 'scipy.sparse.dia', 'scipy.sparse._index', 'scipy.sparse.csc', 'scipy.sparse.lil', 'scipy.sparse._csparsetools', 'scipy.sparse.dok', 'scipy.sparse.coo', 'scipy.sparse.bsr', 'scipy.sparse.construct', 'scipy.sparse.extract', 'scipy.sparse._matrix_io', 'scipy.sparse.csgraph', 'scipy.sparse.csgraph._laplacian', 'scipy.sparse.csgraph._shortest_path', 'scipy.sparse.csgraph._validation', 'scipy.sparse.csgraph._tools', 'scipy.sparse.csgraph._traversal', 'scipy.sparse.csgraph._min_spanning_tree', 'scipy.sparse.csgraph._reordering', 'scipy.special', 'scipy.special.sf_error', 'scipy.special._ufuncs', 'scipy.special._ufuncs_cxx', 'scipy.special.basic', 'scipy.special.specfun', 'scipy.special.orthogonal', 'scipy.special._comb', 'scipy.special._logsumexp', 'scipy.special.spfun_stats', 'scipy.special._ellip_harm', 'scipy.special._ellip_harm_2', 'scipy.special.lambertw', 'scipy.special._spherical_bessel', 'scipy.signal.waveforms', 'scipy.signal._max_len_seq', 'scipy.signal._max_len_seq_inner', 'scipy.signal._upfirdn', 'scipy.signal._upfirdn_apply', 'scipy.signal.spline', 'scipy.signal.bsplines', 'scipy.signal.filter_design', 'scipy.optimize', 'scipy.optimize.optimize', 'scipy.optimize.linesearch', 'scipy.optimize.minpack2', 'scipy.optimize._minimize', 'scipy.optimize._trustregion_dogleg', 'scipy.optimize._trustregion', 'scipy.optimize._trustregion_ncg', 'scipy.optimize._trustregion_krylov', 'scipy.optimize._trlib', 'scipy.optimize._trlib._trlib', 'scipy._lib.messagestream', 'scipy.optimize._trustregion_exact', 'scipy.optimize._trustregion_constr', 'scipy.optimize._trustregion_constr.minimize_trustregion_constr', 'scipy.sparse.linalg', 'scipy.sparse.linalg.isolve', 'scipy.sparse.linalg.isolve.iterative', 'scipy.sparse.linalg.isolve._iterative', 'scipy.sparse.linalg.interface', 'scipy.sparse.linalg.isolve.utils', 'scipy._lib._threadsafety', 'scipy._lib.decorator', 'scipy.sparse.linalg.isolve.minres', 'scipy.sparse.linalg.isolve.lgmres', 'scipy.sparse.linalg.isolve._gcrotmk', 'scipy.sparse.linalg.isolve.lsqr', 'scipy.sparse.linalg.isolve.lsmr', 'scipy.sparse.linalg.dsolve', 'scipy.sparse.linalg.dsolve.linsolve', 'scipy.sparse.linalg.dsolve._superlu', 'scipy.sparse.linalg.dsolve._add_newdocs', 'scipy.sparse.linalg.eigen', 'scipy.sparse.linalg.eigen.arpack', 'scipy.sparse.linalg.eigen.arpack.arpack', 'scipy.sparse.linalg.eigen.arpack._arpack', 'scipy.sparse.linalg.eigen.lobpcg', 'scipy.sparse.linalg.eigen.lobpcg.lobpcg', 'scipy.sparse.linalg.matfuncs', 'scipy.sparse.linalg._onenormest', 'scipy.sparse.linalg._norm', 'scipy.sparse.linalg._expm_multiply', 'scipy.optimize._differentiable_functions', 'scipy.optimize._numdiff', 'scipy.optimize._group_columns', 'scipy.optimize._hessian_update_strategy', 'scipy.optimize._constraints', 'scipy.optimize._trustregion_constr.equality_constrained_sqp', 'scipy.optimize._trustregion_constr.projections', 'scipy.optimize._trustregion_constr.qp_subproblem', 'scipy.optimize._trustregion_constr.canonical_constraint', 'scipy.optimize._trustregion_constr.tr_interior_point', 'scipy.optimize._trustregion_constr.report', 'scipy.optimize.lbfgsb', 'scipy.optimize._lbfgsb', 'scipy.optimize.tnc', 'scipy.optimize.moduleTNC', 'scipy.optimize.cobyla', 'scipy.optimize._cobyla', 'scipy.optimize.slsqp', 'scipy.optimize._slsqp', 'scipy.optimize._root', 'scipy.optimize.minpack', 'scipy.optimize._minpack', 'scipy.optimize._lsq', 'scipy.optimize._lsq.least_squares', 'scipy.optimize._lsq.trf', 'scipy.optimize._lsq.common', 'scipy.optimize._lsq.dogbox', 'scipy.optimize._lsq.lsq_linear', 'scipy.optimize._lsq.trf_linear', 'scipy.optimize._lsq.givens_elimination', 'scipy.optimize._lsq.bvls', 'scipy.optimize._spectral', 'scipy.optimize.nonlin', 'scipy.optimize._root_scalar', 'scipy.optimize.zeros', 'scipy.optimize._zeros', 'scipy.optimize.nnls', 'scipy.optimize._nnls', 'scipy.optimize._basinhopping', 'scipy.optimize._linprog', 'scipy.optimize._linprog_ip', 'scipy.optimize._linprog_util', 'scipy.optimize._remove_redundancy', 'scipy.optimize._linprog_simplex', 'scipy.optimize._linprog_rs', 'scipy.optimize._bglu_dense', 'scipy.optimize._hungarian', 'scipy.optimize._differentialevolution', 'scipy.optimize._shgo', 'scipy.spatial', 'scipy.spatial.kdtree', 'scipy.spatial.ckdtree', 'scipy.spatial.qhull', 'scipy.spatial._spherical_voronoi', 'scipy.spatial._voronoi', 'scipy.spatial.distance', 'scipy.spatial._distance_wrap', 'scipy.spatial._hausdorff', 'scipy.spatial._plotutils', 'scipy.spatial._procrustes', 'scipy.spatial.transform', 'scipy.spatial.transform.rotation', 'scipy.spatial.transform._rotation_spline', 'scipy.optimize._shgo_lib', 'scipy.optimize._shgo_lib.sobol_seq', 'scipy.optimize._shgo_lib.triangulation', 'scipy.optimize._dual_annealing', 'scipy.signal.fir_filter_design', 'scipy.signal.ltisys', 'scipy.integrate', 'scipy.integrate.quadrature', 'scipy.integrate.odepack', 'scipy.integrate._odepack', 'scipy.integrate.quadpack', 'scipy.integrate._quadpack', 'scipy.integrate._ode', 'scipy.integrate.vode', 'scipy.integrate._dop', 'scipy.integrate.lsoda', 'scipy.integrate._bvp', 'scipy.integrate._ivp', 'scipy.integrate._ivp.ivp', 'scipy.integrate._ivp.bdf', 'scipy.integrate._ivp.common', 'scipy.integrate._ivp.base', 'scipy.integrate._ivp.radau', 'scipy.integrate._ivp.rk', 'scipy.integrate._ivp.lsoda', 'scipy.interpolate', 'scipy.interpolate.interpolate', 'scipy.interpolate.fitpack', 'scipy.interpolate._fitpack_impl', 'scipy.interpolate._fitpack', 'scipy.interpolate.dfitpack', 'scipy.interpolate._bsplines', 'scipy.interpolate._bspl', 'scipy.interpolate.polyint', 'scipy.interpolate._ppoly', 'scipy.interpolate.fitpack2', 'scipy.interpolate.interpnd', 'scipy.interpolate.rbf', 'scipy.interpolate._cubic', 'scipy.interpolate.ndgriddata', 'scipy.interpolate._pade', 'scipy.signal.lti_conversion', 'scipy.signal.signaltools', 'timeit', 'scipy.signal._arraytools', 'scipy.signal._savitzky_golay', 'scipy.ndimage', 'scipy.ndimage.filters', 'scipy.ndimage._ni_support', 'scipy.ndimage._nd_image', 'scipy.ndimage._ni_docstrings', 'scipy._lib.doccer', 'scipy.ndimage.fourier', 'scipy.ndimage.interpolation', 'scipy.ndimage.measurements', 'scipy.ndimage._ni_label', '_ni_label', 'scipy.ndimage.morphology', 'scipy.signal.spectral', 'scipy.signal._spectral', 'scipy.signal.wavelets', 'scipy.signal._peak_finding', 'scipy.stats', 'scipy.stats.stats', 'scipy.stats.distributions', 'scipy.stats._distn_infrastructure', 'scipy.stats._distr_params', 'scipy.misc', 'scipy.misc.doccer', 'scipy.misc.common', 'scipy.stats._constants', 'scipy.stats._continuous_distns', 'scipy.stats._stats', 'scipy.stats._tukeylambda_stats', 'scipy.stats._discrete_distns', 'scipy.stats.mstats_basic', 'scipy.stats._stats_mstats_common', 'scipy.stats._rvs_sampling', 'scipy.stats._hypotests', 'scipy.stats.morestats', 'scipy.stats.statlib', 'scipy.stats.contingency', 'scipy.stats._binned_statistic', 'scipy.stats.kde', 'scipy.stats.mvn', 'scipy.stats.mstats', 'scipy.stats.mstats_extras', 'scipy.stats._multivariate', 'scipy.signal._peak_finding_utils', 'Modules.Helpers.Constants', 'Gil', 'Engine', 'RxManager', 'EventBroker', 'EngineComponent', 'Modules.Helpers.NodeManager', 'Modules.Helpers.RxParams', 'TxManager', 'RxNode', 'Modules.Helpers.Node', 'Modules.RadarManager', 'Modules.LowLevel', 'Modules.LowLevel.LowLevelBase', 'Modules.LowLevel.LowLevelI2C', 'smbus2', 'smbus2.smbus2', 'fcntl', 'Modules.LowLevel.LowLevelSerial', 'serial', 'serial.utilities', 'serial.utilities.compatibility', 'future', 'future.standard_library', 'imp', 'future.utils', 'future.builtins', 'future.builtins.iterators', 'future.builtins.misc', 'unicodedata', 'typing', 'typing.io', 'typing.re', 'serial.abc', 'serial.abc.model', 'serial.abc.properties', 'serial.model', 'serial.properties', 'iso8601', 'iso8601.iso8601', 'serial.errors', 'serial.meta', 'serial.hooks', 'serial.marshal', 'yaml', 'yaml.error', 'yaml.tokens', 'yaml.events', 'yaml.nodes', 'yaml.loader', 'yaml.reader', 'yaml.scanner', 'yaml.parser', 'yaml.composer', 'yaml.constructor', 'yaml.resolver', 'yaml.dumper', 'yaml.emitter', 'yaml.serializer', 'yaml.representer', 'serial.test', 'serial.request', 'urllib.request', 'email', 'http', 'http.client', 'email.parser', 'email.feedparser', 'email.errors', 'email._policybase', 'email.header', 'email.quoprimime', 'email.base64mime', 'email.charset', 'email.encoders', 'quopri', 'email.utils', 'email._parseaddr', 'calendar', 'email.message', 'uu', 'email._encoded_words', 'email.iterators', 'ssl', '_ssl', 'urllib.error', 'urllib.response', 'Modules.LowLevel.LowLevelCanBus', 'canlib', 'canlib.frame', 'canlib.ean', 'canlib.versionnumber', 'canlib.exceptions', 'canlib.deprecation', 'canlib.device', 'canlib.canlib', 'canlib.canlib._channel', 'canlib.canlib.channel', 'canlib.canlib.constants', 'canlib.canlib.enums', 'canlib.cenum', 'canlib.canlib.iopin', 'canlib.canlib.wrapper', 'canlib.dllLoader', 'canlib.futureapi', 'canlib.canlib.dll', 'canlib.canlib.exceptions', 'canlib.canlib.structures', 'canlib.canlib.iocontrol', 'canlib.canlib.envvar', 'canlib.canlib.channeldata', 'canlib.canlib.txe', 'Modules.Helpers.FileHandling', 'tkinter', '_tkinter', 'tkinter.constants', 'tkinter.filedialog', 'tkinter.dialog', 'tkinter.commondialog', 'tkinter.messagebox', 'logging.handlers', 'queue', '_queue', 'TxNode', 'Modules.Helpers.TxParams', 'Modules.Helpers.Enums.TxEnums', 'RadarManager', 'SyntNode', 'Modules.Helpers.SyntParams', 'RadarLogic', 'DataCollector', 'Modules.Helpers.LogHelper', 'construct', 'construct.core', 'construct.lib', 'construct.lib.containers', 'construct.lib.py3compat', 'construct.lib.binary', 'construct.lib.bitstream', 'construct.lib.hex', 'construct.expr', 'construct.version', 'construct.debug', 'pdb', 'cmd', 'bdb', 'code', 'codeop', 'glob', 'Modules.V4L', 'Modules.V4L.V4L2Enums', 'Modules.V4L.V4L2MidLevel', 'Modules.V4L.RadarV4L2', 'v4l2', 'mmap', 'matplotlib', 'distutils', 'distutils.version', 'matplotlib.cbook', 'gzip', 'shlex', 'matplotlib.cbook.deprecation', 'matplotlib.rcsetup', 'matplotlib.fontconfig_pattern', 'pyparsing', 'matplotlib.colors', 'matplotlib.docstring', 'matplotlib._color_data', 'cycler', 'six', 'six.moves', 'matplotlib._version', 'matplotlib.ft2font', 'dateutil', 'dateutil._version', 'kiwisolver']
+06-17 17:56 matplotlib   DEBUG    CACHEDIR=/home/nvidia/.cache/matplotlib
+06-17 17:56 matplotlib.font_manager DEBUG    Using fontManager instance from /home/nvidia/.cache/matplotlib/fontlist-v310.json
+06-17 17:56 matplotlib.pyplot DEBUG    Loaded backend qt5agg version unknown.
+06-17 17:56 matplotlib.pyplot DEBUG    Loaded backend tkagg version unknown.
+06-17 17:56 matplotlib.pyplot DEBUG    Loaded backend TkAgg version unknown.
+06-17 17:56 tools.EngineComponent DEBUG    init
+06-17 17:56 RadarLogic   DEBUG    RadarLogic init...
+06-17 17:56 tools.ObjectRepository INFO     Object Created RadarLogic
+06-17 17:56 tools.EngineComponent DEBUG    init
+06-17 17:56 RadarManager DEBUG    init
+06-17 17:56 tools.ObjectRepository INFO     Object Created RadarManager
+06-17 17:56 tools.EngineComponent DEBUG    init
+06-17 17:56 tools.ObjectRepository INFO     Object Created DataCollector
+06-17 17:56 Modules.Helpers.NodeManager DEBUG    init
+06-17 17:56 tools.ObjectRepository INFO     Object Created TxManager
+06-17 17:56 Modules.Helpers.NodeManager DEBUG    init
+06-17 17:56 tools.ObjectRepository INFO     Object Created RxManager
+06-17 17:56 Modules.Helpers.Node DEBUG    init
+06-17 17:56 SyntNode     DEBUG    init
+06-17 17:56 tools.ObjectRepository INFO     Object Created SyntNode
+06-17 17:56 Gil          DEBUG    I am small person
+06-17 17:56 tools.ObjectRepository INFO     Object Created Gil
+06-17 17:56 Engine       INFO     Engine Init
+06-17 17:56 RadarLogic   DEBUG    Initialize
+06-17 17:56 RadarLogic   INFO     Calculate beam forming matrix
+06-17 17:56 RadarManager DEBUG    propertyChanged
+06-17 17:56 RadarManager DEBUG    propertyChanged
+06-17 17:56 RadarManager DEBUG    propertyChanged
+06-17 17:56 RadarManager DEBUG    propertyChanged
+06-17 17:56 RadarManager DEBUG    propertyChanged
+06-17 17:56 RadarManager DEBUG    propertyChanged
+06-17 17:56 RadarManager DEBUG    propertyChanged
+06-17 17:56 RadarManager DEBUG    propertyChanged
+06-17 17:56 RadarManager DEBUG    propertyChanged
+06-17 17:56 RadarManager DEBUG    propertyChanged
+06-17 17:56 RadarManager DEBUG    propertyChanged
+06-17 17:56 RadarManager DEBUG    propertyChanged
+06-17 17:56 RadarManager DEBUG    propertyChanged
+06-17 17:56 RadarManager DEBUG    propertyChanged
+06-17 17:56 RadarManager DEBUG    propertyChanged
+06-17 17:56 SyntNode     INFO     SyntNode initializing
+06-17 17:56 Modules.Helpers.NodeManager DEBUG    Initialize
+06-17 17:56 Modules.Helpers.Node DEBUG    init
+06-17 17:56 TxNode       DEBUG    init
+06-17 17:56 tools.ObjectRepository INFO     Object Created TxNode
+06-17 17:56 Modules.Helpers.NodeManager DEBUG    Initialize
+06-17 17:56 Modules.Helpers.Node DEBUG    init
+06-17 17:56 RxNode       DEBUG    init
+06-17 17:56 tools.ObjectRepository INFO     Object Created RxNode
+06-17 17:56 RxNode       INFO     RxNode initializing
+06-17 17:56 RxNode       INFO     RxNode initialized
+06-17 17:56 RadarLogic   DEBUG    Start
+06-17 17:56 RxNode       INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-17 17:56 RxNode       INFO     =============== Connected ==============
+06-17 17:56 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-17 17:56 Modules.LowLevel.LowLevelI2C DEBUG    Going on I2C bus
+
+
+06-17 17:56 RxNode       INFO     rx_fpga_version: 00.11
+06-17 17:56 RxNode       INFO     rx_board_type: RX
+06-17 17:56 RxNode       INFO     rx_serial_num: 01234
+06-17 17:56 RxNode       INFO     FPGA Temp:  28.0.
+Rx temp: [0.0, 68.0, 68.0, 65.0, 66.5, 66.5, 68.0, 69.5, 69.5, 68.0, 68.0, 68.0, 66.5, 68.0, 69.5, 69.5]
+
+06-17 17:56 RxNode       INFO     Board temp:  43.8 C. Board Humidity: 19.17 %
+
+06-17 17:56 RxNode       INFO     Rx Accelerometer: ([0.01, -1.0, 0.03])
+06-17 17:56 RxNode       INFO      ************** Init HW **************
+06-17 17:56 RxNode       DEBUG     ************** HW already Initialized**************
+06-17 17:56 RxNode       INFO     Decim ratio: 4, num_samples_out: 8192
+06-17 17:56 RxNode       INFO     Fir index: 1
+06-17 17:56 RxNode       INFO     **************Finished FIR-Filter Config**************
+06-17 17:56 RxNode       INFO      Init Frame Generator
+06-17 17:56 RxNode       DEBUG     Configure NCO
+06-17 17:56 RxNode       INFO     data_out: DataOutType.BeamFormerData, num_beams: 8
+06-17 17:56 RxNode       INFO     Test signal frequency: 0.000 MHz
+
+06-17 17:56 RxNode       INFO     Set data source to RxInputSource.ADC
+06-17 17:56 RxNode       INFO     data_out: DataOutType.BeamFormerData, num_beams: 8
+06-17 17:56 RxNode       INFO     Set INIT flag to True
+06-17 17:56 SyntNode     INFO     RxBase.init port: interface: HWInterfaceType.I2C
+06-17 17:56 SyntNode     INFO     =============== Connected ==============
+06-17 17:56 Modules.LowLevel.LowLevelI2C DEBUG    Opening I2C channel
+06-17 17:56 SyntNode     DEBUG    synt_fpga_version: 00.13
+06-17 17:56 SyntNode     DEBUG    synt_board_type: Synt
+06-17 17:56 SyntNode     DEBUG    synt_serial_num: 02612
+06-17 17:56 SyntNode     DEBUG    Get board status
+06-17 17:56 SyntNode     DEBUG    synt_fpga_temp: 37
+06-17 17:56 SyntNode     DEBUG    synt_board_temp: 32.73
+06-17 17:56 SyntNode     DEBUG    synt_humidity: 35.01
+06-17 17:56 SyntNode     DEBUG    synt_AccelerometerX: 0.02
+06-17 17:56 SyntNode     DEBUG    synt_AccelerometerY: -0.01
+06-17 17:56 SyntNode     DEBUG    synt_AccelerometerZ: 0.99
+06-17 17:56 SyntNode     INFO      Init Frame Generator
+06-17 17:56 SyntNode     INFO      Init PLL
+06-17 17:56 SyntNode     INFO     Set INIT flag to True
+06-17 17:56 RadarManager DEBUG    propertyChanged
+06-17 17:56 SyntNode     ERROR    Synt: Property new_dbf_ready is not supported or failed to set.
+06-17 17:56 RxNode       ERROR    Rx: Property new_dbf_ready is not supported or failed to set.
+06-17 17:56 DataCollector ERROR    Data collector: Property is not supported or failed to set.
+06-17 17:56 RadarManager DEBUG    propertyChanged
+06-17 17:56 SyntNode     ERROR    Synt: Property new_dbf_ready is not supported or failed to set.
+06-17 17:56 DataCollector ERROR    Data collector: Property is not supported or failed to set.
