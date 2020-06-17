@@ -37,11 +37,14 @@ class ReadWriteLock:
         acquired read or write locks. """
         self._read_ready.acquire()
         while self._readers > 0:
+
             self._read_ready.wait()
+        print("write aquire")
 
     def release_write(self):
         """ Release a write lock. """
         self._read_ready.release()
+        print("write lock released!")
 
 
 class Singleton(object):

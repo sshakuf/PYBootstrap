@@ -69,7 +69,7 @@ class RxNode(Node):
             # print(func)
             func()
         except:
-            logger.error("Rx: Property is not supported or failed to set.")
+            logger.error("Rx: Property %s is not supported or failed to set." % prop["Name"])
 
     def onAfterInitialized(self):
         logger.info("RxNode initialized")

@@ -123,7 +123,9 @@ if __name__ == "__main__":
             value = val.split("=")[1].strip()
             if key in engine.props:
                 engine.props[key] = int(value)  # TODO: PLEASE NOTE! we must cast the right type before assignment!
+                print("New val arrived!")
             engine.reader_writer_lock.release_write()
+            print("write released")
         if "?" in val:
             key = val.split("?")[0].strip()
             if key in engine.props:

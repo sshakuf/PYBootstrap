@@ -36,7 +36,7 @@ class SyntNode(Node):
             # print(func)
             func()
         except:
-            logger.error("Synt: Property is not supported or failed to set.")
+            logger.error("Synt: Property %s is not supported or failed to set." % prop["Name"])
 
     def onAfterInitialized(self):
         self.prop_handler = {

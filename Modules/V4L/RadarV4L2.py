@@ -31,7 +31,7 @@ import fcntl
 import mmap
 import select
 import time
-from HWModules.V4L import V4L2Enums
+from Modules.V4L.V4L2Enums import *
 
 
 class RadarV4L2:
@@ -80,7 +80,7 @@ class RadarV4L2:
         fmt.type = V4L2_BUF_TYPE_VIDEO_CAPTURE
         fmt.fmt.pix.width = self.width
         fmt.fmt.pix.height = self.height
-        fmt.fmt.pix.pixelformat = V4L2Enums.V4L2_PIX_FMT_RG12
+        fmt.fmt.pix.pixelformat = V4L2_PIX_FMT_RG12
         fmt.fmt.pix.field = V4L2_FIELD_NONE
         fmt.fmt.pix.bytesperline = 0
 
