@@ -187,6 +187,7 @@ def run_file_manager(file):
     if abs(file_size - MAX_FILE_SIZE) < 500000:
         close_file(file)
         return open_file()
+    return file
 
 
 class Menu:

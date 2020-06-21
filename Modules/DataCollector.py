@@ -65,6 +65,8 @@ class DataCollector(EngineComponent):
         self.thread_event = threading.Event()
         self._v4l2_collector_thread = threading.Thread(target=read_data, args=(self, self.thread_event, 0.01,))
         self.drawer_thread = threading.Thread(target=draw, args=(self.frame_ready,))
+        self._v4l2_collector_thread.daemon = True
+        self.drawer_thread.daemon = True
 
     # TODO: Change frame size, file save yes/no, data output mode change.
 
@@ -77,18 +79,18 @@ class DataCollector(EngineComponent):
         logger.info("Data collector initialized")
 
     def act_on_record_on(self):
-        print("ACTING ON RECORD ON!!!")
+        logger.info("Record property changed")
         self.record = self.global_props.record_on
         if self.record:
-            print("record is true, opening new file")
+            # print("record is true, opening new file")
             self.file = open_file()
-            comment = "test"# entry_box()  # lock released! "test0"  # build_file_meta will complete the comment with 0 to the desired size.
+            comment = "test"  # lock released! entry_box()
             write_to_file(self.file, build_file_meta(time.time(), self.v4l_mid.width, self.v4l_mid.height,
                                                      self.global_props.data_out_type, comment))
             self.thread_event.set()
         else:
             if self.file is not None:
-                print("file is not none and we closing it")
+                # print("file is not none and we closing it")
                 self.thread_event.clear()
                 close_file(self.file)
                 self.file = None
@@ -100,7 +102,7 @@ class DataCollector(EngineComponent):
         if self.file is not None:
             close_file(self.file)
         self.file = open_file()
-        comment = entry_box()  # "test0"  # build_file_meta will complete the comment with 0 to the desired size.
+        comment = "test0"  #entry_box()   TODO: entry_box does not work with graph drawings, check why.
         write_to_file(self.file, build_file_meta(time.time(), self.v4l_mid.width, self.v4l_mid.height,
                                                  self.global_props.data_out_type, comment))
 
@@ -109,7 +111,6 @@ class DataCollector(EngineComponent):
 
     def property_changed(self, prop):
         try:
-            print("PROP CHANEG!")
             func = self.prop_handler[prop["Name"]]
             func()
         except:
@@ -148,7 +149,7 @@ def read_data(collector, event, timeout):
 
         frame_counter += 1
         if time.time() - timer_start >= 1:
-            # print(str(frame_counter) + " Frames per second.")
+            print(str(frame_counter) + " Frames per second.")
             frame_counter = 0
             timer_start = time.time()
         if collector.file is not None:
