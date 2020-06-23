@@ -341,25 +341,25 @@ class RxNode(Node):
         logger.debug("Configure ADC mode")
         rx.write_reg(RXBlock.CpuRegisters, RxCpuBlockAddr.AdcTestMode.value, 5 * 16 + 0)
 
-        if ver < 6:
-            logger.debug("Configure ADC offsets")
-            offsets = (
-                14, 29, 11, 19, 33, 18, 33, 20,  # 00 - 07
-                13, 17, 28, 33, 16, 20, 1, 26,  # 08 - 15
-                17, -9, 17, 17, 19, 17, 25, 13,  # 16 - 23
-                8, 21, 18, 20, 14, 25, 28, 10,  # 24 - 31
-                34, 15, 23, 33, 18, 7, 19, 31,  # 32 - 39
-                17, 21, 14, 28, 18, 1, 10, 19)  # 40 - 47
-
-            for i, val in enumerate(offsets):
-                rx.write_reg(RXBlock.CpuRegisters, RxCpuBlockAddr.AdcOffsetBlockStart.value + i, val)
-
-            logger.debug("Adjust ADC chip phase")
-            phase_adjusts = (
-                7, 7, 7, 7, 7, 7)  # ADC #3 (0,1,2,3) should have phase offset 7, to avoid glitches
-
-            for i, val in enumerate(phase_adjusts):
-                rx.write_reg(RXBlock.CpuRegisters, RxCpuBlockAddr.AdcChipPhaseAdjBlockStart.value + i, val)
+        # if ver < 6:
+        #     logger.debug("Configure ADC offsets")
+        #     offsets = (
+        #         14, 29, 11, 19, 33, 18, 33, 20,  # 00 - 07
+        #         13, 17, 28, 33, 16, 20, 1, 26,  # 08 - 15
+        #         17, -9, 17, 17, 19, 17, 25, 13,  # 16 - 23
+        #         8, 21, 18, 20, 14, 25, 28, 10,  # 24 - 31
+        #         34, 15, 23, 33, 18, 7, 19, 31,  # 32 - 39
+        #         17, 21, 14, 28, 18, 1, 10, 19)  # 40 - 47
+        #
+        #     for i, val in enumerate(offsets):
+        #         rx.write_reg(RXBlock.CpuRegisters, RxCpuBlockAddr.AdcOffsetBlockStart.value + i, val)
+        #
+        #     logger.debug("Adjust ADC chip phase")
+        #     phase_adjusts = (
+        #         7, 7, 7, 7, 7, 7)  # ADC #3 (0,1,2,3) should have phase offset 7, to avoid glitches
+        #
+        #     for i, val in enumerate(phase_adjusts):
+        #         rx.write_reg(RXBlock.CpuRegisters, RxCpuBlockAddr.AdcChipPhaseAdjBlockStart.value + i, val)
 
         rx.modify_cpu_control_reg(RxCpuControlReg.InitADC.value)
 
