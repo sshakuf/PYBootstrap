@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Video Streaming Demonstration</title>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+
+    <script>
+
+      function getBaseAddress(){
+        url = window.location.href;
+        i = url.indexOf('//');
+        u =  url.substring(0,url.indexOf('/', i+2)+1);
+        return u.replace('8091','8090');
+      }
+    
+      var baseAddress = getBaseAddress();
+
+    
+      function xhr_(url, elementId){
+        var xhr = new XMLHttpRequest();
+      
+        xhr.open("GET", baseAddress + url, true);
+        xhr.send();
+    }
+    
+    </script>
+  </head>
+  <body>
+    <h1>Video Streaming Demonstration</h1>
+    <div>
+      <button id="btnstartcapture" onclick="xhr_('startcameratrack/0', 'texthtm')">Start Camera Track 0</button>
+      <button id="btnstartcapture" onclick="xhr_('stopcameratrack/0', 'texthtm')">Stop Camera Track 0</button>
+      <button id="btnstartcapture" onclick="xhr_('startsavingvideo/0', 'texthtm')">Start Saving Video 0</button>
+      <button id="btnstartcapture" onclick="xhr_('stopsavingvideo/0', 'texthtm')">Stop Saving Video 0</button>
+      
+      <img id="bg" src="{{ url_for('video_feed') }}">
+    </div>
+    <div>
+      <button id="btnstartcapture" onclick="xhr_('startcameratrack/1', 'texthtm')">Start Camera Track 1</button>
+      <button id="btnstartcapture" onclick="xhr_('stopcameratrack/1', 'texthtm')">Stop Camera Track 1</button>
+      <button id="btnstartcapture" onclick="xhr_('startsavingvideo/1', 'texthtm')">Start Saving Video 0</button>
+      <button id="btnstartcapture" onclick="xhr_('stopsavingvideo/1', 'texthtm')">Stop Saving Video 0</button>
+      <img id="bg" src="{{ url_for('video_feed2') }}">
+    </div>
+  </body>
+</html>
+
+

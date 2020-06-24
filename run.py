@@ -1,3 +1,4 @@
+import Site.FlaskAPI
 import imports
 from tools.Engine import *
 import logging
@@ -122,7 +123,8 @@ if __name__ == "__main__":
             key = val.split("=")[0].strip()
             value = val.split("=")[1].strip()
             if key in engine.props:
-                engine.props[key] = int(value)  # TODO: PLEASE NOTE! we must cast the right type before assignment!
+                # TODO: PLEASE NOTE! we must cast the right type before assignment!
+                engine.props[key] = int(value)
                 print("New val arrived!")
             engine.reader_writer_lock.release_write()
             print("write released")
